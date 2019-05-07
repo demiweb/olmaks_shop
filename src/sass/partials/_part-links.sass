@@ -1,0 +1,73 @@
+.parts-link
+  +flex(flex-start, center)
+  width: 100%
+  border: 1px solid $c-border
+  padding: 10px 12px
+  padding-left: 20px
+  padding-right: 30px
+  margin-bottom: 18px
+  position: relative
+  &__img
+    margin-right: 35px
+    width: 35px
+    display: block
+  &__title
+    max-width: calc(100% - 80px)
+    +text-overflow
+    display: inline-block
+    
+  +before    
+    display: inline-block
+    pointer-events: none
+    top: 50%
+    right: 14px
+    +icon-arrow(8, 8, 1, $c-text, -135)
+    transform: translate(0, -50%) rotate(-135deg)
+    position: absolute
+
+.part
+  $this: &
+  +cover
+  // background-size: 150%
+  background-size: contain
+  background-position: 100% 20%
+  position: relative
+  width: 100%
+  +flex(flex-end, normal, column)
+  border: 1px solid  $c-border
+  padding-top: 100%
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  +tr(box-shadow .3s)
+  +hover
+    box-shadow: 0px 0px 12.92px 4.08px rgba(0, 0, 1, 0.3)
+    #{$this}__btn
+      overflow: visible
+      max-height: 45px
+      padding-top: 15px
+      padding-bottom: 15px
+    #{$this}__title
+      transform: translate(0, -30px)
+  &__title
+    padding-left: 18px
+    padding-right: 18px
+    position: absolute
+    bottom: 30px
+    left: 0
+    +tr(transform .3s)
+  &__btn
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    max-height: 0
+    overflow: hidden
+    padding-top: 0
+    padding-bottom: 0
+    +tr(max-height .3s, padding .3s)
+
+  &--lg
+    padding-top: 0
+    +cover
+    #{$this}__title
+      color: #fff

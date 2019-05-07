@@ -1,0 +1,26 @@
+<!-- begin hero -->
+<section class="hero {{ hero.mod }}{% if hero.bgImage %} js-lazy{% endif %}" {% if hero.bgImage %}data-background-image="img/hero/{{ hero.bgImage }}"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% if hero.title %}
+        <div class="hero__block">
+          <div class="hero__title title-underlined title-underlined--center title-underlined--white">
+            <h1 class="h1">{{ hero.title }}</h1>
+            <div class="text text--white text--ttu">{{ hero.subttl }}</div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col-12">
+        {% include "partials/_hero-search.html" %}
+      </div>
+    </div>
+  </div>
+
+  {% if hero.bgBlock %}
+  <div class="hero__bg js-lazy" data-background-image="img/hero/{{ hero.bgBlock }}"></div>
+  {% endif %}
+</section>
+<!-- end hero -->

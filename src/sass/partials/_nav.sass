@@ -1,0 +1,23 @@
+.nav
+  a
+    text-transform: uppercase
+    color: $c-text-100
+    font-size: 16px
+    +light
+    +tr(color .3s)
+    +hover
+      color: #acacac
+  li
+    display: inline-block
+    +notlast
+      margin-right: 40px
+
+  &--footer
+    li
+      display: block
+      +notlast
+        margin-bottom: 20px
+    a
+      color: #727171
+      font-size: 15px
+      text-transform: none

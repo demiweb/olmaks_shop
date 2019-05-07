@@ -1,0 +1,7 @@
+{% macro btn(href = "#", title, mod, attributes) %}
+  {% if href %}
+  <a href="{{ href }}" class="btn {{ mod }}" {% for attr, attr_value in attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>{{ title | safe }}</a>
+  {% else %}
+  <button class="btn {{ mod }}" {% for attr, attr_value in attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>{{ title | safe }}</button>
+  {% endif %}
+{% endmacro %}

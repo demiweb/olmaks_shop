@@ -1,0 +1,81 @@
+<!-- begin header -->
+<header class="header js-menu">
+  
+
+  <div class="header__inner">
+    <div class="header__top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="/" class="logo">
+                {{ mixins.icon('logo') }}
+                <span>parts for electric cars</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="header__title">найбільший каталог запчастин для електромобілів в україні</div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="header__top-right">
+              <div class="header__btn">
+                <a href="" class="btn btn--full"><span>{{ mixins.icon('profile') }}</span> МІЙ кабінет</a>
+              </div>
+
+              <div class="header__controls">
+                <!-- begin header-controls -->
+                <div class="header-controls">
+                  <ul>
+                    <li><a href="#">{{ mixins.icon('heart') }}</a></li>
+                    <li><a href="#">{{ mixins.icon('cart') }}</a></li>
+                    <li><a href="#">{{ mixins.icon('search') }}</a></li>
+                    <li><a href="#">ua</a></li>
+                  </ul>
+                </div>
+                <!-- end header-controls -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-10">
+            <div class="header__bottom-in">
+              <div class="header__nav">
+                {{ mixins.list(
+                  name = 'nav',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { item: '', link: 'Каталог продукції', modItem: '', modLink: '' },
+                    { item: '', link: 'Про OLMAKS', modItem: '', modLink: '' },
+                    { item: '', link: 'Доставка і оплата', modItem: '', modLink: '' },
+                    { item: '', link: 'контакти', modItem: '', modLink: '' }
+                  ]
+                ) }}
+              </div>
+              
+              <div class="header__btn-bottom">
+                {{ mixins.btn(
+                  mod = 'btn--link',
+                  title = 'записатися на сервіс'
+                ) }}
+              </div>
+            </div>     
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+<!-- end header -->

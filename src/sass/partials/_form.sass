@@ -1,0 +1,14 @@
+.form
+  $this: &
+
+  &--hor
+    // +flex(space-between, center)
+    form
+      width: 100%
+      +flex(space-between, center)
+      margin-left: -15px
+      margin-right: -15px
+    #{$this}__field
+      flex-grow: 1
+      padding-left: 15px
+      padding-right: 15px

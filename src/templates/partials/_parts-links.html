@@ -1,0 +1,60 @@
+{%set
+partsLinks = [
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'},
+  { img: 'teslalogo.png', title: 'Tesla'},
+  { img: 'bmw.png', title: 'BMW'},
+  { img: 'nissan.png', title: 'Nissan'}
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section__title title-underlined title-underlined--long">
+          <h3 class="h3">доступні запчастини для електромобілей</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- begin parts-links -->
+    <div class="parts-links">
+      <div class="row">
+        {% for i in partsLinks %}
+        <div class="col-lg-3">
+          <!-- begin parts-link -->
+          <a href="#" class="parts-link">
+              <span class="parts-link__img">
+                <img class="js-lazy" data-src="img/brand-logos/{{ i.img }}" alt="">
+              </span>
+              <span class="parts-link__title">
+                {{ i.title }}
+              </span>
+          </a>
+          <!-- end parts-link -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end parts-links -->
+  </div>
+</section>
+<!-- end section -->

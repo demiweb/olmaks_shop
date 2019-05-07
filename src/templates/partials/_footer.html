@@ -1,0 +1,69 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="footer__logo">
+          {{ mixins.icon('logo-green') }}
+        </div>
+
+        <div class="footer__copy">&copy; 2019 OlmaksGroup - Час обирати якість</div>
+
+        <div class="footer__text-sm">Всі назви виробників, символи та описи, що використовуються в наших зображеннях і тексті, використовуються виключно для цілей ідентифікації.</div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="footer__title title-underlined title-underlined--gray">
+          <h5 class="h5">корисна Інформація</h5>
+        </div>
+
+        {{ mixins.list(
+          name = 'nav',
+          modifications = { wrap: 'nav--footer', item: '', link: '' },
+          list = [
+            { link: 'Про компанію Olmaks' },
+            { link: 'Доставка і оплата' },
+            { link: 'Сервісне обслуговування' },
+            { link: 'Контакти' }
+          ]
+        ) }}
+      </div>
+
+      <div class="col-lg-3">
+        <div class="footer__title title-underlined title-underlined--gray">
+          <h5 class="h5">КЛІЄНСЬКЕ ОБСЛУГОВУВАННЯ</h5>
+        </div>
+
+        {{ mixins.list(
+          name = 'nav',
+          modifications = { wrap: 'nav--footer', item: '', link: '' },
+          list = [
+            { link: 'Мій кабінет' },
+            { link: 'Рєестрація' },
+            { link: 'Обмін та повернення' },
+            { link: 'Політика конфіденційності' }
+          ]
+        ) }}
+      </div>
+
+      <div class="col-lg-3">
+        <div class="footer__title title-underlined title-underlined--gray">
+          <h5 class="h5">завжди на зв’язку</h5>
+        </div>
+
+         <!-- begin footer-contacts -->
+          <div class="footer-contacts">
+            <div class="footer-contacts__phone"><a href="tel:+380687767700">(068) 776-77-00</a></div>
+            <div class="footer-contacts__phone"><a href="tel:+380507767700">(050) 776-77-00</a></div>
+
+            <div class="footer-contacts__text">м. Київ, вул. Миколи Грінченко, 18</div>
+
+            <a href="mailto:info@olmaks.com.ua" class="footer-contacts__link">info@olmaks.com.ua</a>
+
+          </div>
+          <!-- end footer-contacts -->
+      </div>      
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

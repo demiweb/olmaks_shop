@@ -1,0 +1,87 @@
+{%set
+searchFields = [
+  {
+    name: 'select',
+    type: 'select',
+    fieldClass: '',
+    options: [
+      { value: 'placeholder', option: 'Оберіть рік ...' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' }
+    ]
+  },
+  {
+    name: 'select',
+    type: 'select',
+    fieldClass: '',
+    options: [
+      { value: 'placeholder', option: 'Оберіть рік ...' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' }
+    ]
+  },
+  {
+    name: 'select',
+    type: 'select',
+    fieldClass: '',
+    options: [
+      { value: 'placeholder', option: 'Оберіть рік ...' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' }
+    ]
+  },
+  {
+    name: 'select',
+    type: 'select',
+    fieldClass: '',
+    options: [
+      { value: 'placeholder', option: 'Оберіть рік ...' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' },
+      { value: 'рік', option: 'рік' }
+    ]
+  }
+]
+%}
+
+<!-- begin search -->
+<div class="search js-tabs">
+  <div class="search__tabs">
+    <a href="#" class="search__tab is-active js-tab" data-target-tab="model">пошук по марці авто</a>
+    <a href="#" class="search__tab js-tab" data-target-tab="number">пошук по номеру запчастини</a>
+  </div>
+  <div class="search__content">
+    <div class="search__block" data-tab="model">
+      <!-- begin form -->
+      <div class="form form--hor">
+        <form>
+          {% for i in searchFields %}
+          <div class="form__field">
+            
+            {{ mixins.input(
+              name = i.name,
+              type = i.type,
+              fieldClass= i.fieldClass,
+              options = i.options
+            ) }}            
+          </div>
+          {% endfor %}
+          <div class="form__field">
+            {{ mixins.btn(
+              href = false,
+              mod = 'btn--lg btn--arrow btn--full',
+              title = 'пошук запчастин'
+            ) }}
+          </div>
+        </form>
+      </div>
+      <!-- end form -->      
+    </div>
+
+    <div class="search__block"></div>
+  </div>
+</div>
+<!-- end search -->

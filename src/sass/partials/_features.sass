@@ -1,0 +1,25 @@
+.features
+  background-color: $c-black
+  padding-top: 45px
+  padding-bottom: 45px
+
+.feature
+  +flex(flex-start, top)
+  .icon
+    fill: $c-accent
+    font-size: 40px
+  &__icon
+    width: 35px
+    margin-right: 15px
+  &__content
+    flex-grow: 1
+  &__title
+    text-transform: uppercase
+    color: #fff
+    +medium
+    font-size: 15px
+  &__text
+    font-size: 15px
+    +light
+    color: #c1c1c1
+

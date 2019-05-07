@@ -1,0 +1,31 @@
+{%set
+features = [
+  { title: 'Гарантована якість', text: 'Завжди правильна частина' },
+  { title: 'сертифіковано', text: 'Текст опис переваги компанії' },
+  { title: 'сертифіковано', text: 'Текст опис переваги компанії' },
+  { title: 'сертифіковано', text: 'Текст опис переваги компанії' }
+]
+%}
+
+<!-- begin features -->
+<section class="features">
+  <div class="container">
+    <div class="row">
+      {% for i in features %}
+      <div class="col-lg-3">
+        <!-- begin feature -->
+        <div class="feature">
+          <div class="feature__icon">{{ mixins.icon('security') }}</div>
+
+          <div class="feature__content">
+            <div class="feature__title">{{ i.title }}</div>
+            <div class="feature__text">{{ i.text }}</div>
+          </div>
+        </div>
+        <!-- end feature -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end features -->

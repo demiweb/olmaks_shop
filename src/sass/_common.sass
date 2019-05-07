@@ -1,0 +1,141 @@
++font('helveticaneuecyr-bold', 'helveticaneuecyr-bold-webfont')
++font('helveticaneuecyr-roman', 'helveticaneuecyr-roman-webfont')
++font('helveticaneuecyr-light', 'helveticaneuecyr-light-webfont')
++font('helveticaneuecyr-medium', 'helveticaneuecyr-medium-webfont')
++font('helveticaneuecyr-thin', 'helveticaneuecyr-thin-webfont')
+
+=roman
+  font-family: 'helveticaneuecyr-roman', Arial, sans-serif
+=bold
+  font-family: 'helveticaneuecyr-bold', Arial, sans-serif
+=medium
+  font-family: 'helveticaneuecyr-medium', Arial, sans-serif
+=light
+  font-family: 'helveticaneuecyr-light', Arial, sans-serif
+=thin
+  font-family: 'helveticaneuecyr-thin', Arial, sans-serif
+
+
+=xl
+  +r(1440)
+    @content
+=lg
+  +r(1199)
+    @content
+=md
+  +r(991)
+    @content
+=sm
+  +r(767)
+    @content
+=xs
+  +r(575)
+    @content
+
+=lgmin
+  +r(1200)
+    @content
+=mdmin
+  +r(992)
+    @content
+=smmin
+  +r(768)
+    @content
+=xsmin
+  +r(576)
+    @content
+
+
+body
+  background: #FFF
+  line-height: 1.4
+  font-size: 15px
+  +light
+  color: $c-text
+  +no-scroll
+
+img
+  max-width: 100%
+
+.icon
+  display: inline-block
+
+.btn
+  font-size: 14px
+  text-transform: uppercase
+  color: #fff
+  background-color: $c-accent
+  +light
+  +inline-flex(center, center)
+  padding: 13px 11px
+  position: relative
+  span
+    margin-right: 10px
+    padding-right: 10px
+    border-right: 1px solid  #fff
+    display: inline-flex
+  .icon
+    fill: currentColor
+
+  &--full
+    width: 100%
+  &--link
+    background-color: transparent
+    color: $c-accent
+    font-size: 16px
+  &--lg
+    padding-top: 17px
+    padding-bottom: 17px
+  &--arrow
+    padding-right: 30px
+    +before
+      display: inline-block
+      pointer-events: none
+      +icon-arrow(12, 12, 1, #fff, -135)
+      position: absolute
+      top: 50%
+      right: 15px
+      transform: translate(0, -50%) rotate(-135deg)
+
+.btn-arrow
+  $this: &
+  color: #fff
+  +light
+  font-size: 15px
+  +inline-flex(flex-start, center)
+  padding: 15px 20px
+  padding-right: 10px
+  background-color: #2c2c2c
+  +hover
+    #{$this}__arrow
+      width: 40px
+  &__title
+    display: block
+    margin-right: 10px
+  &__arrow
+    position: relative
+    width: 25px
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    display: inline-block
+    transition: transform .3s, width .3s
+    &::before
+      width: 100%
+      content: ''
+      position: absolute
+      height: 1px
+      background-color: #fff
+      top: 50%
+      right: -1px
+      transform: translate(0, -50%)
+      transition: width .3s
+    &::after
+      display: inline-block
+      position: absolute
+      +icon-arrow(8, 8, 1, #fff, 225)
+      content: ''
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg)
+      right: 0
+
