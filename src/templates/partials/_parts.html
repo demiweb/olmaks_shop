@@ -1,21 +1,21 @@
 {%set
 parts = [
-  { img: '1_01.jpg', title: 'Трансмісія' },
-  { img: '1_03.jpg', title: 'Кузов' },
-  { img: '1_05.jpg', title: 'Кузовне обладнання' },
-  { img: '1_07.jpg', title: 'Гальма' },
-  { img: '1_13.jpg', title: 'Охолоджувальна 
+  { img: '1_03.jpg', title: 'Трансмісія' },
+  { img: '1_05.jpg', title: 'Кузов' },
+  { img: '1_07.jpg', title: 'Кузовне обладнання' },
+  { img: '1_09.jpg', title: 'Гальма' },
+  { img: '1_15.jpg', title: 'Охолоджувальна 
 система' },
-  { img: '1_15.jpg', title: 'Електрична система 
+  { img: '1_17.jpg', title: 'Електрична система 
 руху' },
-  { img: '1_17.jpg', title: 'Електричні' },
+  { img: '1_18.jpg', title: 'Електричні' },
   { img: '1_19.jpg', title: 'Передня вісь' },
-  { img: '1_26.jpg', title: 'Передня підвіска' },
-  { img: '1_28.jpg', title: 'HVAC' },
-  { img: '1_30.jpg', title: 'Технічне 
+  { img: '1_24.jpg', title: 'Передня підвіска' },
+  { img: '1_25.jpg', title: 'HVAC' },
+  { img: '1_26.jpg', title: 'Технічне 
 обслуговування та 
 змащення' },
-  { img: '1_31.jpg', title: 'Задня підвіска' },
+  { img: '1_27.jpg', title: 'Задня підвіска' },
   { img: 'wheel.png', title: 'Рульове управління' },
   { mod: 'part--lg', lg: true, img: 'accessories.jpg', title: 'АКСЕСУАРИ' }
 ]
@@ -36,7 +36,7 @@ parts = [
       {% for i in parts %}
       {% if i.lg %}
 
-      <div class="col-lg-9">
+      <div class="col-lg-9 col-md-8 col-sm-6">
         <!-- begin part -->
         <div class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
           <div class="part__title">
@@ -52,7 +52,7 @@ parts = [
       </div>
 
       {% else %}
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-4 col-sm-6">
         <!-- begin part -->
         <div class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
           <div class="part__title">

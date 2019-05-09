@@ -64,7 +64,7 @@ gulp.task('create-htmlicons', function () {
             parserOptions: { xmlMode: false }
         }))
         .pipe(rename({
-            // prefix: '_',
+            prefix: '_',
             extname: '.html'
         }))
         .pipe(gulp.dest(config.src.iconsHTML));

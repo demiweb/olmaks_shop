@@ -2,86 +2,127 @@
 searchFields = [
   {
     name: 'select',
-    type: 'select',
-    fieldClass: '',
+    mod: 'select--number',
+    type: 'with_input',
+    fieldClass: 'js-select has-placeholder',
     options: [
       { value: 'placeholder', option: 'Оберіть рік ...' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' }
-    ]
+    ],
+    attributes: {
+      'data-number': 1
+    }
   },
   {
     name: 'select',
-    type: 'select',
-    fieldClass: '',
+    mod: 'select--number',
+    type: 'with_input',
+    fieldClass: 'js-select has-placeholder',
     options: [
       { value: 'placeholder', option: 'Оберіть рік ...' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' }
-    ]
+    ],
+    attributes: {
+      'data-number': 2
+    }
   },
   {
     name: 'select',
-    type: 'select',
-    fieldClass: '',
+    mod: 'select--number',
+    type: 'with_input',
+    fieldClass: 'js-select has-placeholder',
     options: [
       { value: 'placeholder', option: 'Оберіть рік ...' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' }
-    ]
+    ],
+    attributes: {
+      'data-number': 3
+    }
   },
   {
     name: 'select',
-    type: 'select',
-    fieldClass: '',
+    mod: 'select--number',
+    type: 'with_input',
+    fieldClass: 'js-select has-placeholder',
     options: [
       { value: 'placeholder', option: 'Оберіть рік ...' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' },
       { value: 'рік', option: 'рік' }
-    ]
+    ],
+    attributes: {
+      'data-number': 4
+    }
   }
 ]
 %}
 
 <!-- begin search -->
-<div class="search js-tabs">
-  <div class="search__tabs">
-    <a href="#" class="search__tab is-active js-tab" data-target-tab="model">пошук по марці авто</a>
-    <a href="#" class="search__tab js-tab" data-target-tab="number">пошук по номеру запчастини</a>
-  </div>
-  <div class="search__content">
-    <div class="search__block" data-tab="model">
-      <!-- begin form -->
-      <div class="form form--hor">
-        <form>
-          {% for i in searchFields %}
-          <div class="form__field">
-            
-            {{ mixins.input(
-              name = i.name,
-              type = i.type,
-              fieldClass= i.fieldClass,
-              options = i.options
-            ) }}            
-          </div>
-          {% endfor %}
-          <div class="form__field">
-            {{ mixins.btn(
-              href = false,
-              mod = 'btn--lg btn--arrow btn--full',
-              title = 'пошук запчастин'
-            ) }}
-          </div>
-        </form>
-      </div>
-      <!-- end form -->      
+<div class="search__wrap js-search-fixed">
+  <a href="#" class="search__close js-search-fixed-close"></a>
+  <div class="search js-tabs">
+    <div class="search__tabs">
+      <a href="#" class="search__tab is-active js-tab" data-target-tab="model">пошук по марці авто</a>
+      <a href="#" class="search__tab js-tab" data-target-tab="number">пошук по номеру запчастини</a>
     </div>
+    <div class="search__content">
+      <div class="search__block js-tabs-item is-active" data-tab="model">
+        <!-- begin form -->
+        <div class="form form--hor">
+          <form>
+            {% for i in searchFields %}
+            <div class="form__field">
+              
+              {{ mixins.input(
+                name = i.name,
+                mod = i.mod,
+                type = i.type,
+                fieldClass= i.fieldClass,
+                options = i.options,
+                attributes = i.attributes
+              ) }}            
+            </div>
+            {% endfor %}
+            <div class="form__field form__field-lg-100">
+              {{ mixins.btn(
+                href = false,
+                mod = 'btn--lg btn--arrow btn--full',
+                title = 'пошук запчастин'
+              ) }}
+            </div>
+          </form>
+        </div>
+        <!-- end form -->      
+      </div>
 
-    <div class="search__block"></div>
+      <div class="search__block js-tabs-item" data-tab="number">
+        <!-- begin form -->
+        <div class="form form--hor">
+          <form>
+            <div class="form__field form__field-4 form__field-lg-100">
+              {{ mixins.input(
+                mod = 'input--lg',
+                name = 'input'
+              ) }}
+            </div>
+            <div class="form__field form__field-lg-100">
+              {{ mixins.btn(
+                href = false,
+                mod = 'btn--lg btn--arrow btn--full',
+                title = 'пошук запчастин'
+              ) }}
+            </div>
+          </form>
+        </div>
+        <!-- end form --> 
+      </div>
+    </div>
   </div>
 </div>
 <!-- end search -->

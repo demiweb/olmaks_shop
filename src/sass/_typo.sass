@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6
   +bold
   font-size: 48px
   line-height: 1
+  +css-lock(32, 48, 576, 1199, font-size)
 
 .h2, h2
 
@@ -15,6 +16,7 @@ h1, h2, h3, h4, h5, h6
   +bold
   color: $c-text-100
   font-size: 24px
+  +css-lock(21, 24, 576, 1199, font-size)
 
 .h4, h4
   text-transform: uppercase
@@ -33,6 +35,8 @@ h1, h2, h3, h4, h5, h6
   font-size: 15px
   +light
   color: $c-text
+  +xs
+    font-size: 14px
 
   &--white
     color: #fff
@@ -49,6 +53,8 @@ h1, h2, h3, h4, h5, h6
     background-color: $c-text
     bottom: 0
     left: 0
+  +xs
+    padding-bottom: 8px
 
   &--center
     +before

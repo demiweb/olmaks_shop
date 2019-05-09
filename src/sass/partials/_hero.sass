@@ -1,4 +1,5 @@
 .hero
+  $this: &
   background-color: #143649
   +cover
   position: relative
@@ -20,6 +21,14 @@
     height: calc(100vh - 93px)
     padding-bottom: 100px
     padding-top: 10%
+    +lg
+      height: calc(100vh - 45px)
+    +xs
+      height: auto
+      padding-top: 80px
+      padding-bottom: 40px
+      #{$this}__block
+        margin-bottom: 30px
     .container, .row
       height: 100%
     .col-12

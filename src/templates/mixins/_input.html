@@ -1,8 +1,8 @@
-{% macro input(name, mod, type = 'text', placeholder, value, options, fieldClass) %}
+{% macro input(name, mod, type = 'text', placeholder, value, options, fieldClass, attributes) %}
 <!-- begin {{ name }} -->
-<div class="{{ name }}{% if mod %} {{mod}}{% endif %}">
+<div class="{{ name }}{% if mod %} {{mod}}{% endif %}" {% for attr, attr_value in attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>
   {% if name === 'input' %}
-  <input type="{{ type }}" placeholder="{{ placeholder }}" value="{{value}}">
+  <input type="{{ type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} {% if value %}value="{{value}}"{% endif %}>
 
   {% elseif name === 'select' %}
 

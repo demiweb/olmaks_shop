@@ -1,17 +1,13 @@
 .header
-  // position: fixed
-  // width: 100%
-  // left: 0
-  // top: 0
-  // z-index: 15
+  position: relative
   +lg
     display: flex
     justify-content: flex-end
     align-items: center
-    height: 45px   
+    height: 45px
     &::before
       content: ''
-      z-index: 1
+      z-index: 15
       background-color: $c-black
       width: 100%
       height: 45px
@@ -26,6 +22,7 @@
     transition: transform .3s
     +lg
       position: absolute
+      z-index: 10
       width: 100%
       height: calc(100vh - 45px)
       top: 100%
@@ -34,28 +31,49 @@
       transform: translate(0, -100%)
       overflow: auto
       background-color: #e6e6e6
+  &__burger
+    display: none
+    position: relative
+    z-index: 20
+    padding-right: 15px
+    +lg
+      display: block
   &__logo
     position: absolute
-    z-index: 1
+    z-index: 20
     top: 0
     left: 0
+  &__logo-wrap
+    +lg
+      position: absolute
+      top: 0
+      left: 0  
   &__top
     background-color: $c-black
     position: relative
+    .container
+      +lg
+        max-width: none
     +lg
       padding-top: 10px
       padding-bottom: 10px
       padding-left: 160px
       padding-right: 0
     +md
-      padding-left: 110px
+      padding-left: 130px
     +xs
       padding-left: 15px
       padding-top: 40px
   &__top-right
     +flex(space-between)
-    .header__btn
+    +lg
+      display: block
+  &__btn
       flex-grow: 1
+      +lg
+        display: inline-block
+        margin-bottom: 10px
+        min-width: 185px
   &__title
     text-transform: uppercase
     font-size: 14px
@@ -66,9 +84,10 @@
     
   &__bottom
     background-color: #fff
-    +xl
-      padding-left: 75px
-      padding-right: 75px
+    .container
+      +lg
+        max-width: none
+
     +lg
       padding-left: 160px
       padding-right: 0
@@ -76,11 +95,13 @@
       padding-bottom: 15px
       background-color: #e6e6e6
     +md
-      padding-left: 110px
+      padding-left: 130px
     +xs
       padding-left: 15px
   &__bottom-in
     +flex(space-between, center)
+    +lg
+      display: block
  
 
 .logo
@@ -89,7 +110,19 @@
   overflow: hidden
   background-color: $c-accent  
   padding-top: 10px
-  color: #fff  
+  color: #fff
+  +lg
+    width: 148px
+  +md
+    width: 125px
+    // height: 85px
+    padding-top: 5px
+    .icon
+      font-size: 35px
+    span
+      font-size: 9px
+      padding-left: 3px
+      padding-right: 3px
   span
     font-size: 11px
     text-transform: uppercase
@@ -104,7 +137,7 @@
     font-size: 65px
     margin-bottom: 5px
 
-.toggle 
+.burger
   display: block
   width: 28px
   height: 28px

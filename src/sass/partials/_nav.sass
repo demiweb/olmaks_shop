@@ -7,16 +7,27 @@
     +tr(color .3s)
     +hover
       color: #acacac
+    +xs
+      font-size: 15px
   li
     display: inline-block
     +notlast
       margin-right: 40px
-
+    +lg
+      display: block
+      margin-bottom: 15px
+      margin-right: 0
+      +notlast
+        margin-right: 0
+    +xs
+      margin-bottom: 10px
   &--footer
     li
       display: block
       +notlast
         margin-bottom: 20px
+        +md
+          margin-bottom: 10px
     a
       color: #727171
       font-size: 15px

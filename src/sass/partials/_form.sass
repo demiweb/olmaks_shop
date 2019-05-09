@@ -5,10 +5,101 @@
     // +flex(space-between, center)
     form
       width: 100%
-      +flex(space-between, center)
-      margin-left: -15px
-      margin-right: -15px
+      +flex(space-between, center, row, wrap)
+      // margin-left: -15px
+      // margin-right: -15px
     #{$this}__field
-      flex-grow: 1
+      width: 20%
       padding-left: 15px
       padding-right: 15px
+      +lg
+        width: 50%
+        margin-bottom: 15px
+      +xs
+        width: 100%
+    #{$this}__field-lg-100
+      +lg
+        width: 100%
+    #{$this}__field-4
+      padding-left: 15px
+      padding-right: 15px
+      width: 80%
+
+.select
+  position: relative
+  width: 100%
+  select
+    opacity: 0
+    visibility: hidden
+    position: absolute
+
+  &--number
+    &::before
+      content: attr(data-number)
+      +inline-flex(center, center)
+      width: 26px
+      height: 26px
+      background-color: $c-accent
+      border-radius: 50%
+      color: #fff
+      font-size: 9px
+      +light
+      position: absolute
+      top: 0
+      left: 0
+      transform: translate(-50%, -50%)
+      z-index: 1
+
+.custom-select
+  $this: &
+  +light
+  font-size: 15px
+  position: relative
+  &.is-open
+    #{$this}__panel      
+      visibility: visible
+      opacity: 1
+  
+  &__opener
+    padding-top: 14px
+    padding-bottom: 14px
+    padding-right: 20px
+    padding-left: 18px
+    border: 1px solid  $c-border
+    position: relative
+    +text-overflow
+    +after
+      display: inline-block
+      +icon-arrow(7, 7, 1, $c-text, -45)
+      position: absolute
+      right: 10px
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      pointer-events: none
+    +sm
+      padding-top: 10px
+      padding-bottom: 10px
+  &__panel
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    background-color: #fff
+    z-index: 2
+    visibility: hidden
+    opacity: 0
+
+.input
+  input
+    border: 1px solid  $c-border
+    +light
+    width: 100%
+    padding: 5px
+    font-size: 15px
+  &--lg
+    input
+      height: 50px
+      padding-left: 18px
+      padding-right: 18px
+      +sm
+        height: 44px

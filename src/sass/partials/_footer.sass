@@ -1,28 +1,44 @@
 .footer
   padding-top: 80px
   padding-bottom: 90px
+  +md
+    padding-top: 40px
+    padding-bottom: 40px
   &__logo
     margin-bottom: 10px
     .icon
-      font-size: 60px
+      font-size: 69px
   &__copy
     font-size: 12px
     color: #727171
     margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
   &__text-sm
     color: #727171
     font-size: 11px
+    +sm
+      margin-bottom: 15px
   &__title
     margin-bottom: 25px
     padding-bottom: 20px
+    +md
+      margin-bottom: 10px
+      padding-bottom: 10px
 
 .footer-contacts
+  +xs
+    margin-bottom: 15px
   &__phone,
   &__text
     font-size: 15px
     color: #727171
     +notlast
       margin-bottom: 20px
+      +lg
+        margin-bottom: 15px
+      +xs
+        margin-bottom: 10px
   &__link
     color: $c-accent
     text-decoration: underline
