@@ -22,53 +22,63 @@ parts = [
 %}
 
 <!-- begin section -->
-<section class="section{% if parts.white %} section--color{% endif %}">
+<section class="section{% if not partsSection.white %} section--color{% endif %}">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="section__title title-underlined title-underlined--long">
-          <h2 class="h2 h2--lg">запчастини та аксесуари для твого електромобіля</h2>
+          {% if not partsSection.title %}
+          <h2 class="h2 h2--lg">доступні запчастини для 2018 bmw i3 range extender</h2>
+          {% else %}
+          <h2 class="h2 h2--lg">{{ partsSection.title }}</h2>
+          {% endif %}
         </div>
       </div>
     </div>
 
-    <div class="row">
-      {% for i in parts %}
-      {% if i.lg %}
+    <!-- begin parts -->
+    <div class="parts">  
+      <div class="row">
+        {% for i in parts %}
+        {% if i.lg %}
 
-      <div class="col-lg-9 col-md-8 col-sm-6">
-        <!-- begin part -->
-        <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
-          <span class="part__title">
-            <h5 class="h5">{{ i.title }}</h5>
-          </span>
+        <div class="col-lg-9 col-md-8 col-sm-8 col-6">
+          <!-- begin part -->
+          <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
+            <span class="part__title">
+              <h5 class="h5">{{ i.title }}</h5>
+            </span>
 
-          <span class="part__btn btn-arrow">
-            <span class="btn-arrow__title">Перейти до каталогу</span>
-            <span class="btn-arrow__arrow"></span>
-          </span>
-        </a>
-        <!-- end part -->
+            <span class="part__btn btn-arrow">
+              <span class="btn-arrow__title">Перейти до каталогу</span>
+              <span class="btn-arrow__arrow"></span>
+            </span>
+          </a>
+          <!-- end part -->
+        </div>
+
+        {% else %}
+        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+          <!-- begin part -->
+          <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
+            <span class="part__title">
+              <h5 class="h5">{{ i.title }}</h5>
+            </span>
+
+            <span class="part__btn btn-arrow">
+              <span class="btn-arrow__title">Перейти до каталогу</span>
+              <span class="btn-arrow__arrow"></span>
+            </span>
+          </a>
+          <!-- end part -->
+        </div>
+        {% endif %}
+        {% endfor %}
       </div>
 
-      {% else %}
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <!-- begin part -->
-        <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
-          <span class="part__title">
-            <h5 class="h5">{{ i.title }}</h5>
-          </span>
-
-          <span class="part__btn btn-arrow">
-            <span class="btn-arrow__title">Перейти до каталогу</span>
-            <span class="btn-arrow__arrow"></span>
-          </span>
-        </a>
-        <!-- end part -->
-      </div>
-      {% endif %}
-      {% endfor %}
     </div>
+    <!-- end parts -->
+
   </div>
 </section>
 <!-- end section -->

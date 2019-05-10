@@ -1,3 +1,13 @@
+.parts-links
+  .row
+    +xs
+      margin-left: -5px
+      margin-right: -5px
+  [class*="col-"]
+    +xs
+      padding-left: 5px
+      padding-right: 5px
+
 .parts-link
   +flex(flex-start, center)
   width: 100%
@@ -7,14 +17,32 @@
   padding-right: 30px
   margin-bottom: 18px
   position: relative
+  +md
+    padding-left: 10px
+    margin-bottom: 10px
+  +xs
+    padding-top: 5px
+    padding-bottom: 5px
+    margin-bottom: 5px
   &__img
     margin-right: 35px
     width: 35px
     display: block
+    font-size: 0
+    +md
+      margin-right: 15px
+    +xs
+      width: 20px
+      height: 20px
+      margin-right: 5px
   &__title
-    max-width: calc(100% - 80px)
+    max-width: calc(100% - 65px)
     +text-overflow
     display: inline-block
+    +md
+      max-width: calc(100% - 35px)
+    +xs
+      max-width: calc(100% - 25px)
     
   +before    
     display: inline-block
@@ -24,6 +52,22 @@
     +icon-arrow(8, 8, 1, $c-text, -135)
     transform: translate(0, -50%) rotate(-135deg)
     position: absolute
+
+.parts
+  .row
+    +sm
+      margin-left: -10px
+      margin-right: -10px
+    +xs
+      margin-left: -5px
+      margin-right: -5px
+  [class*="col-"]
+    +sm
+      padding-left: 10px
+      padding-right: 10px
+    +xs
+      padding-left: 5px
+      padding-right: 5px
 
 .part
   $this: &
@@ -49,6 +93,8 @@
       padding-bottom: 15px
     #{$this}__title
       transform: translate(0, -30px)
+      +sm
+        transform: translate(0, 0)
   &__title
     padding-left: 18px
     padding-right: 18px
@@ -56,6 +102,16 @@
     bottom: 30px
     left: 0
     +tr(transform .3s)
+    +sm
+      font-size: 12px
+      bottom: 20px
+      .h5, h5
+        font-size: 12px
+    +xs
+      bottom: 15px
+      font-size: 11px
+      .h5, h5
+        font-size: 11px
   &__btn
     position: absolute
     left: 0
@@ -66,6 +122,8 @@
     padding-top: 0
     padding-bottom: 0
     +tr(max-height .3s, padding .3s)
+    +sm
+      display: none
 
   &--lg
     padding-top: 0

@@ -14,6 +14,8 @@ h1, h2, h3, h4, h5, h6
   +bold
   color: $c-black
   font-size: 21px
+  line-height: 1.2
+  +css-lock(18, 21, 576, 1199, font-size)
   &--lg
     +css-lock(21, 24, 576, 1199, font-size)
 
@@ -29,6 +31,8 @@ h1, h2, h3, h4, h5, h6
   text-transform: uppercase
   +bold
   font-size: 18px
+  &--white
+    color: #fff
 
 .h6, h6
   +bold

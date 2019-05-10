@@ -1,0 +1,95 @@
+{%set
+accessoires = [
+  {
+    img: '1_03.jpg',
+    title: 'Cargo Management',
+    links: [
+      { link: 'Cargo Area' },
+      { link: 'Cargo Area Mats' },
+      { link: 'Hitch Mounted' },
+      { link: 'Roof Mounted' },
+      { link: 'Roof Rack' }
+    ]
+  },
+  {
+    img: '1_05.jpg',
+    title: 'Interior',
+    links: [
+      { link: 'Convenience' },
+      { link: 'Floor Mats' },
+      { link: 'Protection' },
+      { link: 'Safety' },
+      { link: 'Security' },
+      { link: 'Sill Plate' }
+    ]
+  },
+  {
+    img: '1_07.jpg',
+    title: 'Exterior',
+    links: [
+      { link: 'Appearance' },
+      { link: 'Protection' },
+      { link: 'Wheels' }
+    ]
+  },
+  {
+    img: '1_13.jpg',
+    title: 'Electronics',
+    links: [
+      { link: 'Audio' },
+      { link: 'Safety' },
+      { link: 'Video' }
+    ]
+  },
+  {
+    img: '1_14.jpg',
+    title: 'Merchandise',
+    links: [
+      { link: 'Personal' }
+    ]
+  },
+  {
+    img: '1_12.jpg',
+    title: 'Trailering',
+    links: [
+      { link: 'Hitch' }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section__title title-underlined title-underlined--long">
+          <h2 class="h2 h2--lg">доступні аксесуари для 2018 bmw i3 range extender</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- begin accessoires -->
+    <div class="accessoires">
+      {% for i in accessoires %}
+      <!-- begin  -->
+      <div class="accessoire">
+        <div class="accessoire__img js-lazy" data-background-image="img/accessoires/{{ i.img }}">
+          <div class="accessoire__title">
+            <h5 class="h5 h5--white">{{ i.title }}</h5>
+          </div>          
+        </div>
+
+        <div class="accessoire__links">
+          {% for j in i.links %}
+          <a href="#" class="accessoire__link">{{ j.link }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- end  -->
+      {% endfor %}
+    </div>
+    <!-- end accessoires -->
+  </div>
+</section>
+<!-- end section -->
