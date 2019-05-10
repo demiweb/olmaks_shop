@@ -247,3 +247,34 @@ img
   border: none
   margin-top: 25px
   margin-bottom: 25px
+
+.list-link
+  display: block
+  font-size: 18px
+  +light
+  color: #383838
+  border-bottom: 1px solid  $c-border
+  position: relative
+  padding-bottom: 5px
+  padding-right: 10px
+  +tr(color .3s)
+  +text-overflow
+  +md
+    font-size: 14px
+    margin-bottom: 3px
+    padding-bottom: 3px
+  +before
+    display: inline-block
+    +icon-arrow(10, 10, 1, currentColor, -135)
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%) rotate(-135deg)
+    right: 1px
+    +md
+      +icon-arrow(7, 7, 1, currentColor, -135)
+      transform: translate(0, -50%) rotate(-135deg)
+  +hover
+    text-decoration: underline
+    color: $c-accent
+  +notlast
+    margin-bottom: 15px

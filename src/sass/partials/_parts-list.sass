@@ -1,0 +1,50 @@
+.parts-list
+  +flex()
+  +sm
+    display: block
+  &__img
+    +cover
+    background-size: contain
+    background-position: 40px 20%
+    background-color: #fff
+    height: 270px
+    width: 270px
+    position: relative
+    padding: 30px 15px
+    +flex(flex-end, normal, column)
+    border: 1px solid  $c-border
+    +md
+      width: 130px
+      height: 130px
+      padding: 10px
+    +sm
+      width: 100%
+      background-position: 110% 20%
+  &__list
+    width: calc(100% - 270px)
+    border: 1px solid  $c-border
+    padding: 2% 4% 4%
+    +flex()
+    +md
+      width: calc(100% - 130px)
+    +sm
+      width: 100%
+    +xs
+      display: block
+  &__left
+    width: 50%
+    padding-right: 4%
+    +sm
+      padding-right: 10px
+    +xs
+      width: 100%
+      padding: 0
+      margin-bottom: 12px
+  &__right
+    width: 50%
+    padding-left: 4%
+    +sm
+      padding-left: 10px
+    +xs
+      width: 100%
+      padding: 0
