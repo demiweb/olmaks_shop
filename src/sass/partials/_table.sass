@@ -1,0 +1,105 @@
+.table
+  +light
+  th
+    text-align: left
+    font-weight: 400
+    +bold
+    font-size: 18px
+    background-color: $c-text-100
+    color: #fff
+    +md
+      font-size: 15px
+  tr
+    border: 1px solid  $c-border
+
+  td, th
+    padding-top: 15px
+    padding-bottom: 15px
+    padding-left: 25px
+    padding-right: 15px
+    vertical-align: middle
+    +md
+      padding-left: 10px
+      padding-right: 10px
+  td
+    font-size: 14px
+    color: $c-black
+
+  &--comp
+    +sm
+      overflow-x: auto
+    table
+      +sm
+        width: 690px
+    th
+      &:nth-child(1)
+        width: 60%
+      &:nth-child(2)
+        width: 10%
+      &:nth-child(3)
+        width: 10%
+      &:nth-child(4)
+        width: 30%
+
+  &--search
+    +md
+      overflow-x: auto
+    table
+      +md
+        width: 930px
+    td, th
+      padding-left: 15px
+      padding-right: 15px
+    th
+      padding-top: 11px
+      padding-bottom: 11px
+      &:nth-child(1)
+        width: 6%
+      &:nth-child(2)
+        width: 8%
+      &:nth-child(3)
+        width: 35%
+      &:nth-child(4)
+        width: 8%
+      &:nth-child(5)
+        width: 15%
+      &:nth-child(6)
+        width: 7%
+      &:nth-child(7)
+        width: 21%
+    td
+      padding-top: 3px
+      padding-bottom: 3px
+    tr
+      &:first-child
+        border-right: 1px solid  $c-border
+        border-left: 1px solid  $c-border
+      &.is-inactive
+        background-color: #f7f7f7
+        td
+          color: $c-gray
+    a
+      &:not(.btn)
+        color: $c-accent
+        text-decoration: underline
+    strong
+      +bold
+      text-transform: uppercase
+    &__img
+      border: 1px solid  $c-border
+      width: 42px
+      height: 42px
+      +flex(center, center)
+      position: relative
+      background-color: #fff
+      .icon
+        font-size: 21px
+        position: relative
+        z-index: 0
+        path
+          fill: $c-border !important
+      img
+        +coverdiv
+        object-fit: cover
+    &__price
+      +flex(space-between, center)

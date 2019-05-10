@@ -1,0 +1,86 @@
+{%set
+images = [
+  { active: true, img: 'img-1.jpg', thumb: 'thumb-1.jpg', index: '0' },
+  { img: 'img-1.jpg', thumb: 'thumb-1.jpg', index: '1' },
+  { img: 'img-1.jpg', thumb: 'thumb-1.jpg', index: '2' },
+  { img: 'img-1.jpg', thumb: 'thumb-1.jpg', index: '3' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--no-pad section--border">
+  <div class="container">
+    <!-- begin item-gallery -->
+    <div class="item-gallery">
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- begin item-preview -->
+          <div class="item-gallery__preview item-preview js-gallery">
+            {% for i in images %}
+            <div class="item-preview__img js-gallery-img js-lazy{% if i.active %} is-active{% endif %}" data-background-image="img/item/{{ i.img }}" data-index="{{ i.index }}"></div>
+            {% endfor %}
+            <div class="item-preview__thumbs">
+              {% for i in images %}
+              <a href="#" data-img-target="{{ i.index }}" class="item-preview__thumb js-gallery-thumb{% if i.active %} is-active{% endif %}">
+                <img class="js-lazy" data-src="img/item/{{ i.thumb }}" alt="">
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          <!-- end item-preview -->
+        </div>
+
+        <div class="col-lg-6">
+          <div class="item-gallery__block">
+            <div class="item-gallery__title">
+              <h2 class="h2 h2--lg">Bumper Cover - GM (42518918)</h2>
+            </div>
+
+            <div class="item-gallery__price">
+              <div class="price">1278.56 UAH</div>
+              {{ mixins.btn(
+                mod = 'btn--sm btn--combine btn--combine-double',
+                combine = { double: true },
+                title = 'у кошик' + mixins.icon('cart'),
+                icon = mixins.icon('heart')            
+                ) }}
+              </div>
+
+              <div class="item-gallery__meta">
+                <div class="check">
+                  <div class="check__icon"></div>
+                  <div class="check__title">в наявності</div>
+                </div>
+
+                <div class="item-gallery__meta-item text text--sm text--black">Стан: нова</div>
+                <div class="item-gallery__meta-item text text--sm text--black">На складі: <span class="highlighted">26</span></div>
+              </div>
+            </div>
+
+            <div class="item-gallery__block">
+              {{ mixins.list(
+                descr = true,
+                name = 'info-list',
+                modifications = { wrap: 'text text--sm text--black' },
+                list = [
+                  { dt: 'Manufacturer:', dd: 'GM' },
+                  { dt: 'Part Number:', dd: '42518918' },
+                  { dt: 'Part:', dd: 'Bumper Cover' }
+                ]
+              ) }}
+            </div>
+
+            <div class="item-gallery__block">
+              <div class="item-gallery__text text text--sm text--black">
+                BMW 3-Series 2018, Engine Coolant Thermostat with Housing by Gates®. If you want to keep your vehicle safe on the road for many years to come, go with this Gates product. Developed with the utmost attention to detail and manufactured from the highest quality materials, it is sure to provide a long-lasting service life. 
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end item-gallery -->
+    
+  </div>
+</section>
+<!-- end section -->

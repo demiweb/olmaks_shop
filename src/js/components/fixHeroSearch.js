@@ -5,6 +5,8 @@ import isTouch from '../lib/detectTouch';
 class SearchPanel {
   constructor() {
     this.$search = $('.js-search-fixed');
+    if (!this.$search.length) return;
+
     this.OFFSET = this.$search.offset().top - parseInt(this.$search.css('margin-top'));
     this.$close = this.$search.find('.js-search-fixed-close');
   };

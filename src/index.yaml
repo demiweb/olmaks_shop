@@ -2,3 +2,5 @@ ProjectTitle: template
 
 PageList:
 - file: home.html
+- file: product-page.html
+- file: search-by-part.html

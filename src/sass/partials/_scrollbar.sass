@@ -1,0 +1,35 @@
+.scrollbar--green
+  +hover
+    .ps
+      &__rail-y
+        opacity: 1
+  .ps
+    &__rail-y
+      display: block
+      visibility: visible
+      opacity: 1
+      width: 5px
+      +before
+        width: 1px
+        height: 100%
+        position: absolute
+        display: block
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        background-color: $c-border
+      &:active,
+      &:focus,
+      &:hover
+        background-color: transparent
+        .ps__thumb-y
+          width: 5px
+          background-color: $c-accent
+
+    &__thumb-y
+      border-radius: 0
+      background-color: $c-accent
+      width: 5px
+      right: 0
+    &__thumb-x
+      display: none

@@ -1,0 +1,72 @@
+{%set
+table = [
+  {
+    cols: [
+      { title: 'AUDI A5 (8T3) AUDI A5 (8T3) 1.8 TFSI' },
+      { title: '145 квт' },
+      { title: 'Седан' },
+      { title: '2016' }
+    ]
+  },
+  {
+    cols: [
+      { title: 'AUDI A5 (8T3) AUDI A5 (8T3) 1.8 TFSI' },
+      { title: '145 квт' },
+      { title: 'Седан' },
+      { title: '2016' }
+    ]
+  },
+  {
+    cols: [
+      { title: 'AUDI A5 (8T3) AUDI A5 (8T3) 1.8 TFSI' },
+      { title: '145 квт' },
+      { title: 'Седан' },
+      { title: '2016' }
+    ]
+  },
+  {
+    cols: [
+      { title: 'AUDI A5 (8T3) AUDI A5 (8T3) 1.8 TFSI' },
+      { title: '145 квт' },
+      { title: 'Седан' },
+      { title: '2016' }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--color">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section__title section__title-mb-sm">
+          <h2 class="h2 h2--lg">сумісність з електрокарами</h2>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <!-- begin table -->
+        <div class="table table--comp">
+          <table>
+            <tr>
+              <th>Авто</th>
+              <th>Батарея</th>
+              <th>Кузов</th>
+              <th>Рік випуску</th>
+            </tr>
+            {% for i in table %}
+            <tr>
+              {% for j in i.cols %}
+              <td>{{ j.title }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <!-- end table -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

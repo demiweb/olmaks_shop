@@ -10,31 +10,39 @@ h1, h2, h3, h4, h5, h6
   +css-lock(32, 48, 576, 1199, font-size)
 
 .h2, h2
-
-.h3, h3
   text-transform: uppercase
   +bold
-  color: $c-text-100
-  font-size: 24px
-  +css-lock(21, 24, 576, 1199, font-size)
+  color: $c-black
+  font-size: 21px
+  &--lg
+    +css-lock(21, 24, 576, 1199, font-size)
+
+.h3, h3
+  font-size: 16px
+  +bold
+  color: $c-black
+  text-transform: uppercase
 
 .h4, h4
+  
+.h5, h5
   text-transform: uppercase
   +bold
   font-size: 18px
 
-.h5, h5
+.h6, h6
   +bold
   text-transform: uppercase
   color: $c-black
   font-size: 15px
-
-.h6, h6
+  +xs
+    font-size: 14px
 
 .text
   font-size: 15px
   +light
   color: $c-text
+  text-align: justify
   +xs
     font-size: 14px
 
@@ -42,6 +50,12 @@ h1, h2, h3, h4, h5, h6
     color: #fff
   &--ttu
     text-transform: uppercase
+  &--gray
+    color: $c-gray
+  &--black
+    color: $c-black
+  &--sm
+    font-size: 14px
 
 .title-underlined
   position: relative

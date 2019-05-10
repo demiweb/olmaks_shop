@@ -1,0 +1,65 @@
+.item-gallery
+  &__title
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 0px
+  &__meta-item
+    +notlast
+      margin-right: 40px
+      +xs
+        margin-right: 10px
+    
+  &__price
+    +flex(space-between)
+    margin-bottom: 15px
+    +xs
+      display: block
+  &__meta
+    +flex(flex-start, center)
+    .check
+      margin-right: 40px
+      +xs
+        margin-right: 10px
+  &__block    
+    padding-bottom: 20px
+    padding-top: 15px
+    +notlast
+      border-bottom: 1px solid  $c-border
+    +sm
+      padding-bottom: 10px
+      padding-top: 10px
+  &__preview
+    height: 100%
+    border-left: 1px solid  $c-border
+    border-right: 1px solid  $c-border
+    +md
+      border: 0
+      border-bottom: 1px solid  $c-border
+      padding-top: 50%
+
+.item-preview
+  position: relative
+  &__img
+    visibility: hidden
+    opacity: 0
+    +cover
+    background-color: #fff
+    background-size: contain
+    +coverdiv
+    +tr(opacity .3s, visibility .3s)
+    &.is-active
+      visibility: visible
+      opacity: 1
+  &__thumbs
+    position: absolute
+    z-index: 2
+    bottom: 10px
+    left: 10px
+  &__thumb
+    +inline-flex(center, center)
+    border: 1px solid  $c-border
+    width: 48px
+    height: 48px
+    &.is-active
+      border-color: $c-accent
+

@@ -66,6 +66,7 @@ img
   display: inline-block
 
 .btn
+  $this: &
   font-size: 14px
   text-transform: uppercase
   color: #fff
@@ -110,6 +111,53 @@ img
   &--link
     padding-left: 0
     padding-right: 0
+  &--combine
+    padding-right: 52px
+    padding-left: 15px
+    span
+      margin: 0
+      padding: 0
+      border: 0
+    .icon
+      font-size: 16px
+    .icon-heart
+      font-size: 20px
+    #{$this}__title
+      +inline-flex(space-between, center)
+      width: 100%
+      +tr(background-color .3s)
+      .icon
+        margin-left: 15px
+    #{$this}__icon
+      +inline-flex(center, center)
+      background-color: #35383e
+      position: absolute
+      top: 0
+      right: 0
+      width: 42px
+      height: 100%
+      +tr(background-color .3s)
+  &--sm
+    padding: 8px
+    .icon
+      font-size: 21px
+  &--combine-double
+    +hover
+      background-color: $c-accent
+    #{$this}__title
+      +hover
+        background-color: #282822
+    &#{$this}--sm
+      padding: 0
+      #{$this}__title
+        padding-right: 52px
+        padding-left: 15px
+        padding-top: 8px
+        padding-bottom: 8px
+        height: 100%
+      #{$this}__icon
+        +hover
+          background-color: $c-text-100
 
 .btn-arrow
   $this: &
@@ -132,7 +180,7 @@ img
     right: 0
     top: 50%
     transform: translate(0, -50%)
-    display: inline-block
+    display: block
     transition: transform .3s, width .3s
     &::before
       width: 100%
@@ -150,6 +198,52 @@ img
       +icon-arrow(8, 8, 1, #fff, 225)
       content: ''
       top: 50%
-      transform: translate(0, -50%) rotate(225deg)
+      transform: translate(0, -50%) rotate(225deg) !important
       right: 0
 
+.price
+  +medium
+  font-size: 30px
+  color: $c-accent
+  +sm
+    font-size: 28px
+  +xs
+    font-size: 26px
+
+.check
+  color: $c-accent
+  +light
+  font-size: 14px
+  +inline-flex(flex-start, center)
+  &__title
+    display: block
+    // vertical-align: middle
+    margin-left: 5px
+  &__icon
+    display: block
+    // vertical-align: middle
+    border: 1px solid  $c-accent
+    height: 15px
+    width: 15px
+    position: relative
+    +before
+      +icon-arrow(8, 5, 1, $c-accent, -45)
+      display: inline-block
+      position: absolute
+      top: 2px
+      left: 2px
+
+.highlighted
+  display: inline-block
+  background-color: #d7fde4
+  padding-left: 2px
+  padding-right: 2px
+
+.hr, hr
+  height: 1px
+  width: 100%
+  background-color: $c-border
+  color: $c-border
+  border: none
+  margin-top: 25px
+  margin-bottom: 25px

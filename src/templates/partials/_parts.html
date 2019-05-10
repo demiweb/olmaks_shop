@@ -22,12 +22,12 @@ parts = [
 %}
 
 <!-- begin section -->
-<section class="section section--color">
+<section class="section{% if parts.white %} section--color{% endif %}">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="section__title title-underlined title-underlined--long">
-          <h3 class="h3">запчастини та аксесуари для твого електромобіля</h3>
+          <h2 class="h2 h2--lg">запчастини та аксесуари для твого електромобіля</h2>
         </div>
       </div>
     </div>
@@ -38,32 +38,32 @@ parts = [
 
       <div class="col-lg-9 col-md-8 col-sm-6">
         <!-- begin part -->
-        <div class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
-          <div class="part__title">
-            <h4 class="h4">{{ i.title }}</h4>
-          </div>
+        <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
+          <span class="part__title">
+            <h5 class="h5">{{ i.title }}</h5>
+          </span>
 
-          <a href="#" class="part__btn btn-arrow">
+          <span class="part__btn btn-arrow">
             <span class="btn-arrow__title">Перейти до каталогу</span>
             <span class="btn-arrow__arrow"></span>
-          </a>
-        </div>
+          </span>
+        </a>
         <!-- end part -->
       </div>
 
       {% else %}
       <div class="col-lg-3 col-md-4 col-sm-6">
         <!-- begin part -->
-        <div class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
-          <div class="part__title">
-            <h4 class="h4">{{ i.title }}</h4>
-          </div>
+        <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
+          <span class="part__title">
+            <h5 class="h5">{{ i.title }}</h5>
+          </span>
 
-          <a href="#" class="part__btn btn-arrow">
+          <span class="part__btn btn-arrow">
             <span class="btn-arrow__title">Перейти до каталогу</span>
             <span class="btn-arrow__arrow"></span>
-          </a>
-        </div>
+          </span>
+        </a>
         <!-- end part -->
       </div>
       {% endif %}

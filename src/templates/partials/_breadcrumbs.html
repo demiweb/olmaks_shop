@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {% if page === 'product-page' %}
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: 'title-underlined title-underlined--long', item: '', link: '' },
+        list = [
+          { item: '', link: 'Головна ', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: '2018 CHEVROLET BOLT EV', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: 'Bumper & Components - Front', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: '42518918', modItem: '', modLink: 'is-active' }
+        ]
+      ) }}
+      {% endif %}
+    </div>
+  </div>
+</div>

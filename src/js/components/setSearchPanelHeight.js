@@ -16,6 +16,8 @@ export default function setSearchPanelHeight() {
     };
     
     const $items = $panel.find('.search__block');
+    if ($items.lenght <= 1) return;
+    
     const contentPadding = parseInt($content.css('padding-top')) + parseInt($content.css('padding-bottom'));
     let heights = [];
 
