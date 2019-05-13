@@ -6,7 +6,7 @@ import setScrollbar from './components/setScrollbar';
 import fixHeroSearch from './components/fixHeroSearch';
 import toggleMenu from './components/toggleMenu';
 import setSearchPanelHeight from './components/setSearchPanelHeight';
-// import setGallery from './components/setGallery';
+import setGallery from './components/setGallery';
 
 $(function() {
   setTouchClassName();
@@ -17,8 +17,5 @@ $(function() {
   fixHeroSearch();
   toggleMenu();
   setSearchPanelHeight();
-  // setGallery();
+  setGallery();
 });
-
-window.jQuery = jQuery;
-window.$ = $;

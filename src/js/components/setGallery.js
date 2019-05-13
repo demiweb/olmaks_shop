@@ -1,13 +1,13 @@
 import { ACTIVE } from '../constants';
+import '../lib/fotorama';
 
-export default function setGallery(argument) {
+export default function setGallery() {
   const $gallery = $('.js-gallery');
 
   if (!$gallery.length) return;
 
-  // console.log(fotorama);
+  $gallery.fotorama();
 
-  // $gallery.fotorama();
 
   // const $thumbs = $gallery.find('.js-gallery-thumb');
   // const $imgs = $gallery.find('.js-gallery-img');
@@ -26,4 +26,4 @@ export default function setGallery(argument) {
   //   $(e.currentTarget).addClass(ACTIVE);
   //   $target.addClass(ACTIVE);
   // });
-}
+};
