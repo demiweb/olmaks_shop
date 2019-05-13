@@ -271,25 +271,17 @@
             <div class="row">
               <div class="col-lg-6">
                 <!-- begin item-preview -->
-                <div class="item-gallery__preview item-preview js-gallery">
-                  <div class="item-preview__img js-gallery-img js-lazy is-active" data-background-image="img/item/img-1.jpg" data-index="0"></div>
-                  <div class="item-preview__img js-gallery-img js-lazy" data-background-image="img/item/img-1.jpg" data-index="1"></div>
-                  <div class="item-preview__img js-gallery-img js-lazy" data-background-image="img/item/img-1.jpg" data-index="2"></div>
-                  <div class="item-preview__img js-gallery-img js-lazy" data-background-image="img/item/img-1.jpg" data-index="3"></div>
-                  <div class="item-preview__thumbs">
-                    <a href="#" data-img-target="0" class="item-preview__thumb js-gallery-thumb is-active">
-                      <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
-                    </a>
-                    <a href="#" data-img-target="1" class="item-preview__thumb js-gallery-thumb">
-                      <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
-                    </a>
-                    <a href="#" data-img-target="2" class="item-preview__thumb js-gallery-thumb">
-                      <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
-                    </a>
-                    <a href="#" data-img-target="3" class="item-preview__thumb js-gallery-thumb">
-                      <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
-                    </a>
-                  </div>
+                <div class="item-gallery__preview item-preview js-gallery" data-nav="thumbs" data-allowfullscreen="true" data-thumb-width="47" data-thumb-height="47" data-thumb-margin="10" data-thumb-border-width="1">
+                  <img src="img/item/img-1.jpg" alt="">
+                  <img src="img/item/img-1.jpg" alt="">
+                  <img src="img/item/img-1.jpg" alt="">
+                  <img src="img/item/img-1.jpg" alt="">
+                </div>
+                <div class="item-preview__thumbs" data-nav="thumbs">
+                  <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
+                  <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
+                  <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
+                  <img class="js-lazy" data-src="img/item/thumb-1.jpg" alt="">
                 </div>
                 <!-- end item-preview -->
               </div>
@@ -755,6 +747,15 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script>
+      var $gallery = $('.js-gallery');
+      if ($gallery.length > 0)
+      {
+        $gallery.fotorama();
+      };
+
+    </script>
     <!-- END scripts -->
   </body>
 </html>

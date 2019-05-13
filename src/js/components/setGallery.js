@@ -5,21 +5,25 @@ export default function setGallery(argument) {
 
   if (!$gallery.length) return;
 
-  const $thumbs = $gallery.find('.js-gallery-thumb');
-  const $imgs = $gallery.find('.js-gallery-img');
+  // console.log(fotorama);
 
-  $thumbs.on('click', (e) => {
-    e.preventDefault();
+  // $gallery.fotorama();
 
-    const index = e.currentTarget.getAttribute('data-img-target');
-    const $target = $gallery.find(`.js-gallery-img[data-index="${index}"]`);
+  // const $thumbs = $gallery.find('.js-gallery-thumb');
+  // const $imgs = $gallery.find('.js-gallery-img');
 
-    console.log($target, index);
+  // $thumbs.on('click', (e) => {
+  //   e.preventDefault();
 
-    $thumbs.removeClass(ACTIVE);
-    $imgs.removeClass(ACTIVE);
+  //   const index = e.currentTarget.getAttribute('data-img-target');
+  //   const $target = $gallery.find(`.js-gallery-img[data-index="${index}"]`);
 
-    $(e.currentTarget).addClass(ACTIVE);
-    $target.addClass(ACTIVE);
-  });
+  //   console.log($target, index);
+
+  //   $thumbs.removeClass(ACTIVE);
+  //   $imgs.removeClass(ACTIVE);
+
+  //   $(e.currentTarget).addClass(ACTIVE);
+  //   $target.addClass(ACTIVE);
+  // });
 }

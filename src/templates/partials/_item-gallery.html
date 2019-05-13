@@ -15,18 +15,28 @@ images = [
       <div class="row">
         <div class="col-lg-6">
           <!-- begin item-preview -->
-          <div class="item-gallery__preview item-preview js-gallery">
+          <div
+             class="item-gallery__preview item-preview js-gallery"
+             data-nav="thumbs"
+             data-allowfullscreen="true"
+             data-thumb-width="47"
+             data-thumb-height="47"
+             data-thumb-margin="10"
+             data-thumb-border-width="1">
             {% for i in images %}
-            <div class="item-preview__img js-gallery-img js-lazy{% if i.active %} is-active{% endif %}" data-background-image="img/item/{{ i.img }}" data-index="{{ i.index }}"></div>
+            {# <div class="item-preview__img js-gallery-img js-lazy{% if i.active %} is-active{% endif %}" data-background-image="img/item/{{ i.img }}" data-index="{{ i.index }}"></div> #}
+            <img src="img/item/{{ i.img }}" alt="">
             {% endfor %}
-            <div class="item-preview__thumbs">
+            
+          </div>
+          <div class="item-preview__thumbs" data-nav="thumbs">
               {% for i in images %}
-              <a href="#" data-img-target="{{ i.index }}" class="item-preview__thumb js-gallery-thumb{% if i.active %} is-active{% endif %}">
+{#               <a href="#" data-img-target="{{ i.index }}" class="item-preview__thumb js-gallery-thumb{% if i.active %} is-active{% endif %}">
                 <img class="js-lazy" data-src="img/item/{{ i.thumb }}" alt="">
-              </a>
+              </a> #}
+              <img class="js-lazy" data-src="img/item/{{ i.thumb }}" alt="">
               {% endfor %}
             </div>
-          </div>
           <!-- end item-preview -->
         </div>
 

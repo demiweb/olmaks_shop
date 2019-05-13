@@ -5,4 +5,5 @@ PageList:
 - file: product-page.html
 - file: search-by-part.html
 - file: search-car.html
-- file: search-car-category-1.html
+- file: search-car-category-2.html
+- file: search-car-category-3.html

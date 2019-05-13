@@ -1,0 +1,154 @@
+{%set
+components = [
+  {
+    title: 'Трансмісія',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' },
+      { link: 'Interior Trim - Rear Body' },
+      { link: 'Interior Trim - Rear Door' },
+      { link: 'Interior Trim - Roof' },
+      { link: 'Labels' },
+      { link: 'Liftgate' },
+      { link: 'Lock & Hardware' },
+      { link: 'Luggage Carrier' },
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Кузов',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' },
+      { link: 'Interior Trim - Rear Body' },
+      { link: 'Interior Trim - Rear Door' },
+      { link: 'Interior Trim - Roof' },
+      { link: 'Labels' },
+      { link: 'Liftgate' },
+      { link: 'Lock & Hardware' },
+      { link: 'Luggage Carrier' },
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Кузовне обладнання',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Гальма',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Охолоджувальна система',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Електрична система руху',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' }
+    ]
+  },
+  {
+    title: 'Електричні',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Передня вісь',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Передня подвіска',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'HVAC',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' },
+      { link: 'Interior Trim - Quarter Panels' }
+    ]
+  },
+  {
+    title: 'Технічне обслуговування та змащення',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' }
+    ]
+  },
+  {
+    title: 'Задня підвіска',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' }
+    ]
+  },
+  {
+    title: 'Рульове управління',
+    links: [
+      { link: 'Interior Trim' },
+      { link: 'Interior Trim - Front Door' },
+      { link: 'Interior Trim - Pillars' }
+    ]
+  }
+]
+%}
+
+<!-- begin components-list -->
+<div class="components-list js-accordion">
+  {% for i in components %}
+  <div class="components-list__item">
+    <a href="#" class="components-list__title js-acordion-title">{{ i.title }}</a>
+    <ul class="components-list__list js-accordion-item">
+      {% for j in i.links %}
+      <li class="components-list__list-item"><a href="#" class="components-list__list-link">{{ j.link }}</a></li>      
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  
+</div>
+<!-- end components-list -->
