@@ -32,3 +32,42 @@
       color: #727171
       font-size: 15px
       text-transform: none
+  &--aside
+    li
+      display: block
+      margin: 0
+      +notlast
+        margin: 0
+        border-bottom: 1px solid  $c-border
+    a
+      display: block
+      color: #383838
+      font-size: 14px
+      +bold
+      padding: 10px
+      background-color: #fff
+      +tr(background-color .3s)
+      +hover
+        color: #fff
+        background-color: $c-accent     
+      &.is-active
+        color: #fff
+        background-color: $c-accent
+
+.aside-nav-toggle
+  display: none
+  margin-bottom: 15px
+  +md
+    display: block
+
+.aside-nav
+  padding-top: 12px
+  box-shadow: 0px 0px 6px 0px rgba(0, 1, 1, 0.19)
+  &.is-active
+    // display: block
+  +md
+    display: none
+  &__title
+    padding-left: 10px
+    +before
+      left: 10px

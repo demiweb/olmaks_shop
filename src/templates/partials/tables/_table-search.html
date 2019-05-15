@@ -104,8 +104,138 @@ results = [
   }
 ]
 %}
+
+{%set
+resultsNumber = [
+  {
+    cols: [
+      { inner: 1 },
+      { inner: '42518918' },
+      { inner: '<a href="#">Bumper Cover 1</a>' },
+      { inner : 'нова' },
+      { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>' },
+      { inner : '<div class="highlighted">26</div>' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: 2 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'під замовлення' },
+      { inner : '-' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    mod: 'is-inactive',
+    cols: [
+      { inner: 3 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'немає в наявності' },
+      { inner : '-' },
+      { inner: '<strong>1246.75 UAH</strong>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: 4 },
+      { inner: '42518918' },
+      { inner: '<a href="#">Bumper Cover 1</a>' },
+      { inner : 'нова' },
+      { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>' },
+      { inner : '<div class="highlighted">26</div>' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: 5 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'під замовлення' },
+      { inner : '-' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    mod: 'is-inactive',
+    cols: [
+      { inner: 6 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'немає в наявності' },
+      { inner : '-' },
+      { inner: '<strong>1246.75 UAH</strong>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: 7 },
+      { inner: '42518918' },
+      { inner: '<a href="#">Bumper Cover 1</a>' },
+      { inner : 'нова' },
+      { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>' },
+      { inner : '<div class="highlighted">26</div>' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: 8 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'під замовлення' },
+      { inner : '-' },
+      { inner: '<div class="table--search__price"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>' }
+    ]
+  },
+  {
+    mod: 'is-inactive',
+    cols: [
+      { inner: 9 },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова' },
+      { inner: 'немає в наявності' },
+      { inner : '-' },
+      { inner: '<strong>1246.75 UAH</strong>' }
+    ]
+  }
+]
+%}
+
 <!-- begin table -->
 <div class="table table--search">
+  {% if searchTableNumber %}
+  <table>
+    <tr>
+      <th>№</th>
+      <th>Part Id</th>
+      <th>Назва запчастини</th>
+      <th>Тип</th>
+      <th>Наявність</th>
+      <th>Склад</th>
+      <th>Ціна</th>
+    </tr>
+    {% for i in resultsNumber %}
+    <tr {% if i.mod %}class="{{ i.mod }}"{% endif %}>
+      {% for j in i.cols %}
+      <td>{{ j.inner | safe }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% else %}
+
   <table>
     <tr>
       <th>Фото</th>
@@ -124,5 +254,7 @@ results = [
     </tr>
     {% endfor %}
   </table>
+
+  {% endif %}
 </div>
 <!-- end table -->

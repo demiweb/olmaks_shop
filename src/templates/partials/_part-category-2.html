@@ -1,5 +1,5 @@
 <!-- begin section -->
-<section class="section">
+<section class="section section--no-pad-bottom">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -11,28 +11,34 @@
   </div>
 
   <!-- begin components -->
-  <div class="components has-bd-top">
+  <div class="components">
     <div class="container">
       <div class="row">
-        <div class="col-3">
-          <div class="components__list">
+        <div class="col-lg-3">
+          <div class="components__show-btn">
+            {{ mixins.btn(
+              title = 'Показати компоненти',
+              mod = 'btn--full btn--arrow js-toggle-components'
+            ) }}
+          </div>
+          <div class="components__list js-components-list">            
             {% include "partials/_components-list.html" %}
           </div>
         </div>
 
-        <div class="col-9">
+        <div class="col-lg-9">
           <div class="components__img">
-            <img class="js-lazy" data-src="img/components.jpg" alt="">
+            <img class="js-lazy" data-src="img/components.jpg" width="463" height="341" alt="">
           </div>
 
-          <div class="components__table">
+          <div class="components__table js-bg-block">
+            <div class="components__table-bg"></div>
+            {% set searchTableNumber = true %}
             {% include "partials/tables/_table-search.html" %}
           </div>
         </div>
       </div>
     </div>
-
-    {# <div class="components__bottom"></div> #}
   </div>
   <!-- end components -->
 </section>

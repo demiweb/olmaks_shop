@@ -1,0 +1,35 @@
+.delivery-block
+  padding-top: 50px
+  +md
+    padding-top: 30px
+
+.delivery-item
+  border: 1px solid  $c-border
+  text-align: center
+  height: 100%
+  padding: 0 40px 20px
+  +md
+    padding-left: 10px
+    padding-right: 10px
+  +sm
+    margin-bottom: 10px
+    height: auto
+  &__img
+    height: 140px
+    +flex(flex-end, center, column)
+    margin-bottom: 15px
+    +md
+      height: 100px
+      margin-bottom: 5px
+      img
+        // width: 100px
+        height: 86px
+  &__title
+    +light
+    color: $c-accent
+    font-size: 14px
+    margin-bottom: 10px
+    +md
+      margin-bottom: 5px
+  &__text
+    text-align: center

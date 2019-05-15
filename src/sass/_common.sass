@@ -104,6 +104,9 @@ strong
       padding-bottom: 14px
   &--arrow
     padding-right: 30px
+    &.is-active
+      +before
+        transform: translate(0, -50%) rotate(-45deg)
     +before
       display: inline-block
       pointer-events: none
@@ -112,6 +115,7 @@ strong
       top: 50%
       right: 15px
       transform: translate(0, -50%) rotate(-135deg)
+      +tr(transform .3s)
   &--link
     padding-left: 0
     padding-right: 0
@@ -162,6 +166,10 @@ strong
       #{$this}__icon
         +hover
           background-color: $c-text-100
+  &--square
+    padding: 0
+    width: 40px
+    height: 40px
 
 .btn-arrow
   $this: &

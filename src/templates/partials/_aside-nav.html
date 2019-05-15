@@ -1,0 +1,25 @@
+<!-- begin aside-nav -->
+<div class="aside-nav js-menu" data-menu="aside">
+  <div class="aside-nav__inner">
+    <div class="aside-nav__title title-underlined title-underlined--long">
+      <h5 class="h5">Для клієнтів</h5>
+    </div>
+
+    <div class="aside-nav__nav">
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: 'nav--aside', item: '', link: '' },
+        list = [
+          { item: '', link: 'про компанію Olmaks' },
+          { item: '', link: 'Доставка і оплата', modItem: '', modLink: 'is-active' },
+          { item: '', link: 'Сервісне обслуговування' },
+          { item: '', link: 'Контакти' },
+          { item: '', link: 'Мій кабінет' },
+          { item: '', link: 'обмін та повернення' },
+          { item: '', link: 'політика конфіденційності' }
+        ]
+      ) }}
+    </div>
+  </div>
+</div>
+<!-- end aside-nav -->

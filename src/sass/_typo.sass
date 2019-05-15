@@ -18,6 +18,14 @@ h1, h2, h3, h4, h5, h6
   +css-lock(18, 21, 576, 1199, font-size)
   &--lg
     +css-lock(21, 24, 576, 1199, font-size)
+  &--white
+    color: #fff
+
+.h2-subttl
+  &--sm
+    font-size: 12px
+    +light
+    color: #a5a5a5
 
 .h3, h3
   font-size: 16px
@@ -62,6 +70,11 @@ h1, h2, h3, h4, h5, h6
     color: $c-black
   &--sm
     font-size: 14px
+  &--xs
+    font-size: 12px
+    line-height: 2
+    +md
+      line-height: 1.4
 
 .title-underlined
   position: relative

@@ -7,6 +7,9 @@ import fixHeroSearch from './components/fixHeroSearch';
 import toggleMenu from './components/toggleMenu';
 import setSearchPanelHeight from './components/setSearchPanelHeight';
 import setGallery from './components/setGallery';
+import { setBlockBgHeight } from './components/setBlockBgHeight';
+import setAccordion from './components/setAccordion';
+import toggleComponentsList from './components/toggleComponentsList';
 
 $(function() {
   setTouchClassName();
@@ -18,4 +21,7 @@ $(function() {
   toggleMenu();
   setSearchPanelHeight();
   setGallery();
+  setBlockBgHeight();
+  setAccordion();
+  toggleComponentsList();
 });

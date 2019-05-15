@@ -1,12 +1,10 @@
 ---
-title: search-car-category-2
-page: search-car-category-2
+title: delivery
+page: delivery
 hero: {
-  mod: '',
-  bgImage: 'bg-hero-sm.jpg'
-}
-search: {
-  sm: true
+  mod: 'hero--no-search',
+  bgImage: 'bg-hero-delivery.jpg',
+  titleSm: 'обмін та повернення'
 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -14,9 +12,11 @@ search: {
 {% block content %}
   {% include "partials/_header.html" %}
   {% include "partials/_hero.html" %}
-  {% include "partials/_part-category-1.html" %}
+  {% include "partials/_breadcrumbs.html" %}
+  {% include "partials/_s-delivery.html" %}
+
   {% include "partials/_features.html" %}
-  {% include "partials/_s-text.html" %}
+  
   {% include "partials/_footer.html" %}
 {% endblock %}
 
