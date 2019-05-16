@@ -2,26 +2,87 @@
 <section class="hero {{ hero.mod }}{% if hero.bgImage %} js-lazy{% endif %}" {% if hero.bgImage %}data-background-image="img/hero/{{ hero.bgImage }}"{% endif %}>
   <div class="container">
     <div class="row">
+      {% if hero.title %}
       <div class="col-12">
-        {% if hero.title %}
         <div class="hero__block">
           <div class="hero__title title-underlined title-underlined--center title-underlined--white">
             <h1 class="h1">{{ hero.title }}</h1>
             <div class="text text--white text--ttu">{{ hero.subttl }}</div>
           </div>
         </div>
-        {% endif %}
-
-        {% if hero.titleSm %}
-        <h2 class="h2 h2--white h2--lg">{{ hero.titleSm }}</h2>
-        {% endif %}
       </div>
+      {% endif %}
 
+      {% if hero.titleSm %}
       <div class="col-12">
-        {% if search  %}
-        {% include "partials/_hero-search.html" %}
-        {% endif %}
+        <h2 class="h2 h2--white h2--lg">{{ hero.titleSm }}</h2>
       </div>
+      {% endif %}
+
+      {% if search  %}
+      <div class="col-12">
+        {% include "partials/_hero-search.html" %}
+      </div>
+      {% endif %}
+
+      {% if hero.cabinet %}
+      <div class="col-10">
+        {{ mixins.list(
+            name = 'breadcrumbs',
+            modifications = { wrap: 'breadcrumbs--sm', item: '', link: '' },
+            list = [
+              { item: '', link: 'Головна ', modItem: '', modLink: '' },
+              { item: '/', link: '', modItem: '', modLink: '' },
+              { item: '', link: 'Мій кабінет', modItem: '', modLink: 'is-active' }
+            ]
+          ) }}
+      </div>
+
+      <div class="col-2">
+        <div class="hero__btn">
+          <a href="#" class="btn btn--md btn--transp-gray"><span>{{ mixins.icon('logout') }}</span> вийти</a>
+        </div>
+      </div>
+
+      <div class="col-10">
+        <div class="hero__user">
+          <!-- begin user -->
+          <div class="user">
+            <div class="user__img">
+              {{ mixins.icon('user') }}
+            </div>
+            <div class="user__title"><h2 class="h2 h2--lg h2--ttn">Вітаємо, Максим Олегович!</h2></div>
+          </div>
+          <!-- end user -->
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="hero__orders">
+          <!-- begin orders -->
+          <div class="orders">
+            <div class="order">
+              <div class="order__nmb">
+                <span>0</span>
+                {{ mixins.icon('cart') }}
+              </div>
+
+              <div class="order__title">Відкладених замовлень</div>
+            </div>
+
+            <div class="order">
+              <div class="order__nmb">
+                <span>6</span>
+                {{ mixins.icon('heart') }}
+              </div>
+
+              <div class="order__title">Листів побажання</div>
+            </div>
+          </div>
+          <!-- end orders -->
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 

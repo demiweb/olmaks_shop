@@ -1,0 +1,22 @@
+---
+title: cabinet
+page: cabinet
+hero: {
+  mod: 'hero--plain',
+  cabinet: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/cabinet/_cabinet-nav.html" %}
+
+  {% include "partials/cabinet/_cabinet-page.html" %}
+
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+

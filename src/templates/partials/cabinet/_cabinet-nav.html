@@ -1,0 +1,17 @@
+<!-- begin cabinet-nav -->
+<div class="cabinet-nav has-bd-bottom">
+  <div class="container">
+    {{ mixins.list(
+      name = 'nav',
+      modifications = { wrap: 'nav--cabinet', item: '', link: '' },
+      list = [
+        { item: 'Мій кабінет', link: '', modItem: '', modLink: '' },
+        { item: '', link: 'Зміна особистих даних', modItem: '', modLink: 'is-active' },
+        { item: '', link: 'Історія замовлень', modItem: '', modLink: '' },
+        { item: '', link: 'Обрані товари', modItem: '', modLink: '' },
+        { item: '', link: 'Підписка на новини', modItem: '', modLink: '' }
+      ]
+    ) }}
+  </div>  
+</div>
+<!-- end cabinet-nav -->

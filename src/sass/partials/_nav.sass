@@ -53,6 +53,35 @@
       &.is-active
         color: #fff
         background-color: $c-accent
+  &--cabinet
+    li      
+      &:first-child
+        +medium
+        color: $c-text-100
+        position: relative
+        padding-right: 35px
+        +before
+          width: 1px
+          height: 25px
+          position: absolute
+          background-color: $c-border
+          top: 50%
+          transform: translate(0, -50%)
+          right: 0
+    a
+      display: block
+      text-transform: none
+      color: #a5a5a5
+      font-size: 14px
+      +light
+      padding-top: 20px
+      padding-bottom: 20px
+      border-bottom: 2px solid transparent
+      +tr(border-color .3s)
+      &.is-active
+        border-color: $c-accent
+      +hover
+        border-color: $c-accent
 
 .aside-nav-toggle
   display: none
