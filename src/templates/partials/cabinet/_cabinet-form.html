@@ -1,0 +1,45 @@
+{%set
+form = [
+  { label: 'ПІБ:', type: 'text', value: 'Іваненко Дмитро Олегович' },  
+  { label: 'Місто:', type: 'text', value: 'Київ' },
+  { label: 'Телефон:', type: 'tel', value: '+38 (099) 555-44-44' },
+  { label: 'Адреса доставки:', type: 'text', value: 'вул. Марии Приймаченко 1/27' },
+  { label: 'E-mail:', type: 'email', value: 'test@demiweb.pro' },
+  { label: 'Спосіб доставки:', type: 'text', value: 'Нова Пошта' },
+  { label: 'Пароль:', type: 'password', value: '***************' },
+  { label: 'Метод оплати:', type: 'text', value: 'Liqpay' }
+]
+%}
+
+<!-- begin form -->
+<div class="form form--cabinet">
+  <form>
+    <div class="form__top">
+      <div class="form__title">
+        <h5 class="h5 h5--gray h5--ttn">Ваші особисті дані</h5>
+      </div>
+
+      <div class="form__top-btn">
+        {{ mixins.btn(
+          href = false,
+          title = 'редагувати',
+          mod = 'btn--arrow'
+        ) }}
+      </div>
+    </div>
+
+    <div class="form__block">
+      {% for i in form %}
+      <div class="form__field">
+        {{ mixins.input(
+          name = 'input',
+          mod = 'input--sm input--label',
+          type = i.type,
+          label = i.label
+        ) }}
+      </div>
+      {% endfor %}
+    </div>
+  </form>
+</div>
+<!-- end form -->

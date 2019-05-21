@@ -1,0 +1,114 @@
+{%set
+orders = [
+  {
+    mod: 'is-active',
+    number: '',
+    date: '',
+    ammount: '',
+    price: '',
+    status: ''
+  },
+  {
+    number: '',
+    date: '',
+    ammount: '',
+    price: '',
+    status: ''
+  },{
+    number: '',
+    date: '',
+    ammount: '',
+    price: '',
+    status: ''
+  }
+]
+%}
+
+<!-- begin orders -->
+<div class="orders">
+  <div class="orders__title">
+    <h5 class="h5 h5--gray h5--ttn">Останні замовлення</h5>
+  </div>
+
+  <div class="orders__top">
+    <div class="orders__top-th">№ Замовлення</div>
+    <div class="orders__top-th">Дата</div>
+    <div class="orders__top-th">Товарів</div>
+    <div class="orders__top-th">Вартість</div>
+    <div class="orders__top-th">Статус</div>
+  </div>
+
+  <div class="orsers__items js-accordion">
+    {% for i in orders %}
+    <!-- begin orders-item -->
+    <div class="orders-item {{ i.mod }}">
+      <a href="#" class="orders-item__title">
+        <div class="orders-item__td">9</div>
+        <div class="orders-item__td">4 квітня 2019 09:45</div>
+        <div class="orders-item__td"><span class="highlighted">8</span></div>
+        <div class="orders-item__td"><strong>1246.75 UAH</strong></div>
+        <div class="orders-item__td">
+          <div class="check">
+            <div class="check__icon"></div>
+            <div class="check__title">Доставлено</div>
+          </div>
+
+          <span href="#" class="more">Детальніше</span>
+        </div>
+      </a>
+
+      <div class="orders-item__content orders-item-content">
+        <div class="orders-item-content__left">
+          {% for i in range(0, 2) %}
+          <div class="orders-item-content__row">
+            <div class="orders-item-content__img">
+              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+            </div>
+
+            <div class="orders-item-content__meta">
+              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+              <div class="orders-item-content__nmb">№ 42518918</div>
+              <div class="orders-item-content__price-sm">246.75 UAH</div>
+            </div>
+
+            <div class="orders-item-content__ammount">2 шт.</div>
+
+            <div class="orders-item-content__price">2553.5 UAH</div>
+          </div>
+          {% endfor %}
+
+          <div class="orders-item-content__row orders-item-content__row-bottom">
+            <span>Доставка (Самовивіз з наших магазинів)</span>
+            <span>Безкоштовно</span>
+          </div>
+          <div class="orders-item-content__row orders-item-content__row-bottom">
+            <div>Оплата (Готівкою)</div>
+            <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
+          </div>
+        </div>
+
+        <div class="orders-item-content__right">
+          <div class="orders-item-content__right-title">Статус замовлення:</div>
+          <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
+          <div class="orders-item-content__right-time">
+            {{ mixins.icon('clock') }}
+            <span>Запланований час видачі
+            4 квітня 2019 09:45</span>
+          </div>
+          <div class="orders-item-content__right-btn">
+            <span>Бажаєте продовжити покупики?</span>
+            {{ mixins.btn(
+              title = 'перейти до каталогу',
+              mod = 'btn--arrow'
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end orders-item -->
+    {% endfor %}
+  </div>
+
+  
+</div>
+<!-- end orders -->

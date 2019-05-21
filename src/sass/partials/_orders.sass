@@ -1,0 +1,138 @@
+.orders
+  background-color: #fff
+  border: 1px solid  $c-border
+  padding: 25px 30px
+  &__title
+    margin-bottom: 25px
+  &__top
+    +flex(flex-start, center)
+    background-color: $c-text-100
+    color: #fff
+    padding: 12px 0
+    // padding-left: 0
+  &__top-th
+    font-size: 18px
+    +bold
+    &:nth-child(1)
+      width: percentage(205/1105)
+      text-align: center
+    &:nth-child(2)
+      width: percentage(170/1105)      
+    &:nth-child(3)
+      width: percentage(160/1105)
+      text-align: center
+    &:nth-child(4)
+      width: percentage(245/1105)
+    &:nth-child(5)
+      width: percentage(275/1105)
+
+.orders-item-content
+  font-size: 14px
+  +flex()
+  &__left
+    width: 68%
+  &__right
+    width: 32%
+    padding: 15px
+    +flex(flex-start, normal, column)
+    border-left: 1px solid  $c-border
+    margin-top: -45px
+    background-color: #fff
+    z-index: 1
+  &__row
+    +flex(space-between, center)    
+    padding-top: 8px
+    padding-bottom: 8px
+    padding-left: 15px
+    padding-right: 15px
+    +notlast
+      border-bottom: 1px solid  $c-border
+  &__row-bottom
+    padding-top: 14px
+    padding-bottom: 14px
+    color: $c-gray
+    strong
+      color: $c-text
+      padding-left: 10px
+  &__img
+    width: 15%
+    text-align: center
+  &__ammount
+    width: 12%
+  &__price
+    +bold
+    width: 12%
+  &__meta
+    flex-grow: 1
+  &__price-sm
+    +bold
+  &__title
+    color: $c-accent
+    text-decoration: underline
+    display: inline-block
+  &__nmb
+    color: #acacac
+    font-size: 12px
+    display: inline-block
+  &__right-title
+    +medium
+    max-width: 150px
+    margin-bottom: 25px
+  &__right-label
+    margin-bottom: 25px
+
+  &__right-time
+    color: $c-gray
+    font-size: 12px
+    position: relative
+    padding-left: 35px    
+    padding-bottom: 25px
+    border-bottom: 1px solid  $c-border
+    margin-bottom: 15px
+    span
+      display: block
+      max-width: 175px
+    .icon
+      fill: currentColor
+      font-size: 28px
+      position: absolute
+      top: 0
+      left: 0
+  &__right-btn
+    font-size: 12px
+    color: $c-gray
+    span
+      display: inline-block
+      margin-bottom: 5px
+
+.orders-item
+  &.is-active
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.26)
+  &__title
+    +flex(flex-start, centet)
+    +notlast
+      border-bottom: 1px solid  $c-border
+  &__content
+    display: none
+  &__td
+    padding-top: 12px
+    padding-bottom: 12px
+    font-size: 14px
+    .check
+      z-index: 0
+    .more
+      z-index: 2
+    &:nth-child(1)
+      width: percentage(205/1105)
+      text-align: center
+    &:nth-child(2)
+      width: percentage(170/1105)
+    &:nth-child(3)
+      width: percentage(160/1105)
+      text-align: center
+    &:nth-child(4)
+      width: percentage(245/1105)
+    &:nth-child(5)
+      width: percentage(275/1105)
+      +flex(space-between, center)
+

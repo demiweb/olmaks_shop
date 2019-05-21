@@ -1,4 +1,5 @@
 .table
+  $this: &
   +light
   th
     text-align: left
@@ -42,15 +43,32 @@
         width: 30%
 
   &--search
+    display: table
+    border-collapse: collapse
+    width: 100%
     +md
-      overflow-x: auto
-    table
-      +md
-        width: 930px
-    td, th
+      display: block
+    #{$this}__td,
+    #{$this}__th
+      padding-top: 15px
+      padding-bottom: 15px
+      vertical-align: middle
       padding-left: 15px
       padding-right: 15px
-    th
+      display: table-cell
+      +md
+        padding-left: 10px
+        padding-right: 10px
+        display: block
+    #{$this}__th
+      text-align: left
+      font-weight: 400
+      +bold
+      font-size: 18px
+      background-color: $c-text-100
+      color: #fff
+      +md
+        font-size: 15px
       padding-top: 11px
       padding-bottom: 11px
       &:nth-child(1)
@@ -67,16 +85,27 @@
         width: 7%
       &:nth-child(7)
         width: 21%
-    td
+    #{$this}__td
+      font-size: 14px
+      color: $c-black
       padding-top: 3px
       padding-bottom: 3px
-    tr
+      
+    #{$this}__tr
+      border: 1px solid  $c-border
+      display: table-row
+      position: relative
+      +md
+        display: block
+        padding-left: 60px
       &:first-child
         border-right: 1px solid  $c-border
         border-left: 1px solid  $c-border
+        +md
+          display: none
       &.is-inactive
         background-color: #f7f7f7
-        td
+        #{$this}__td
           color: $c-gray
     a
       &:not(.btn)
@@ -92,14 +121,47 @@
       +flex(center, center)
       position: relative
       background-color: #fff
+      +md
+        position: absolute
+        display: block
+        height: 100%
+        width: 60px
+        padding: 10px
+        border: 0
+        border-right: 1px solid  $c-border
+        top: 0
+        left: 0
+        img
+          position: relative
+          width: auto
+          height: auto
       .icon
         font-size: 21px
-        position: relative
+        position: absolute
         z-index: 0
         path
           fill: $c-border !important
       img
         +coverdiv
         object-fit: cover
-    &__price
+    &__price-inner
       +flex(space-between, center)
+      width: 100%
+    &__price
+      +md
+        border-top: 1px solid  $c-border
+        padding-right: 0 !important
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+        height: 35px
+        display: flex !important
+        +flex(space-between, center)
+        .btn
+          height: 35px
+          width: 110px
+    &__check,
+    &__condition,
+    &__ammount
+      +md
+        display: inline-block !important
+ 
