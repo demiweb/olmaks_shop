@@ -47,6 +47,11 @@ export default function setAccordion() {
   accordion.onToggle = (title, $item, $itemsElse, $titlesElse) => {
     $item.slideToggle(SLIDE_DURATION);
     setTimeout(setHeight, SLIDE_DURATION);
+
+    const $orderItem = $item.closest('.orders-item');
+    if (!$orderItem.length) return;
+
+    $orderItem.toggleClass(ACTIVE);
   };
   accordion.init();
 };

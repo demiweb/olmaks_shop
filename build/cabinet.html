@@ -379,70 +379,81 @@
                   </div>
                   <div class="orsers__items js-accordion">
                     <!-- begin orders-item -->
-                    <div class="orders-item is-active">
-                      <a href="#" class="orders-item__title">
+                    <div class="orders-item ">
+                      <a href="#" class="orders-item__title js-accordion-title">
                         <div class="orders-item__td">9</div>
                         <div class="orders-item__td">4 квітня 2019 09:45</div>
                         <div class="orders-item__td"><span class="highlighted">8</span></div>
                         <div class="orders-item__td"><strong>1246.75 UAH</strong></div>
                         <div class="orders-item__td">
-                          <div class="check">
-                            <div class="check__icon"></div>
-                            <div class="check__title">Доставлено</div>
+                          <div class="check is-intransport">
+                            <div class="check__icon">
+                              <!-- begin icon-truck -->
+                              <svg viewBox="0 0 512 512" class="icon icon-truck" width="1.000em" height="1em">
+                                <path d="M119.467 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2s51.2-22.963 51.2-51.2c0-28.237-22.964-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133s34.133 15.309 34.133 34.133c0 18.824-15.309 34.133-34.133 34.133zM409.6 337.067c-28.237 0-51.2 22.963-51.2 51.2 0 28.237 22.963 51.2 51.2 51.2 28.237 0 51.2-22.963 51.2-51.2 0-28.237-22.963-51.2-51.2-51.2zm0 85.333c-18.825 0-34.133-15.309-34.133-34.133 0-18.825 15.309-34.133 34.133-34.133 18.825 0 34.133 15.309 34.133 34.133 0 18.824-15.308 34.133-34.133 34.133z" />
+                                <path d="M510.643 289.784l-76.8-119.467a8.535 8.535 0 0 0-7.177-3.917H332.8a8.53 8.53 0 0 0-8.533 8.533v213.333a8.525 8.525 0 0 0 8.533 8.533h34.133v-17.067h-25.6V183.467h80.674l72.926 113.442v82.825h-42.667V396.8h51.2a8.525 8.525 0 0 0 8.533-8.533V294.4a8.51 8.51 0 0 0-1.356-4.616z" />
+                                <path d="M375.467 277.333V217.6h68.267v-17.067h-76.8a8.53 8.53 0 0 0-8.533 8.533v76.8a8.525 8.525 0 0 0 8.533 8.533h128v-17.067H375.467zM332.8 106.667H8.533A8.536 8.536 0 0 0 0 115.2v273.067a8.53 8.53 0 0 0 8.533 8.533H76.8v-17.067H17.067v-256h307.2v256H162.133V396.8H332.8a8.525 8.525 0 0 0 8.533-8.533V115.2a8.53 8.53 0 0 0-8.533-8.533z" />
+                                <path d="M8.533 345.6h51.2v17.067h-51.2zM179.2 345.6h145.067v17.067H179.2zM469.333 345.6h34.133v17.067h-34.133zM34.133 140.8H332.8v17.067H34.133zM110.933 379.733H128V396.8h-17.067zM401.067 379.733h17.067V396.8h-17.067zM34.133 72.533H153.6V89.6H34.133zM0 72.533h17.067V89.6H0z" />
+                              </svg>
+                              <!-- end icon-truck -->
+                            </div>
+                            <div class="check__title">В дорозі</div>
                           </div>
                           <span href="#" class="more">Детальніше</span>
                         </div>
                       </a>
-                      <div class="orders-item__content orders-item-content">
-                        <div class="orders-item-content__left">
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                      <div class="orders-item__content-wrap js-accordion-content">
+                        <div class="orders-item__content orders-item-content ">
+                          <div class="orders-item-content__left">
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
-                          </div>
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <span>Доставка (Самовивіз з наших магазинів)</span>
+                              <span>Безкоштовно</span>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <div>Оплата (Готівкою)</div>
+                              <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
                           </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <span>Доставка (Самовивіз з наших магазинів)</span>
-                            <span>Безкоштовно</span>
-                          </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <div>Оплата (Готівкою)</div>
-                            <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
-                          </div>
-                        </div>
-                        <div class="orders-item-content__right">
-                          <div class="orders-item-content__right-title">Статус замовлення:</div>
-                          <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
-                          <div class="orders-item-content__right-time">
-                            <!-- begin icon-clock -->
-                            <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
-                              <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
-                              <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
-                            </svg>
-                            <!-- end icon-clock -->
-                            <span>Запланований час видачі 4 квітня 2019 09:45</span>
-                          </div>
-                          <div class="orders-item-content__right-btn">
-                            <span>Бажаєте продовжити покупики?</span>
-                            <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                          <div class="orders-item-content__right">
+                            <div class="orders-item-content__right-title">Статус замовлення:</div>
+                            <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
+                            <div class="orders-item-content__right-time">
+                              <!-- begin icon-clock -->
+                              <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
+                                <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
+                                <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
+                              </svg>
+                              <!-- end icon-clock -->
+                              <span>Запланований час видачі 4 квітня 2019 09:45</span>
+                            </div>
+                            <div class="orders-item-content__right-btn">
+                              <span>Бажаєте продовжити покупики?</span>
+                              <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -450,69 +461,71 @@
                     <!-- end orders-item -->
                     <!-- begin orders-item -->
                     <div class="orders-item ">
-                      <a href="#" class="orders-item__title">
+                      <a href="#" class="orders-item__title js-accordion-title">
                         <div class="orders-item__td">9</div>
                         <div class="orders-item__td">4 квітня 2019 09:45</div>
                         <div class="orders-item__td"><span class="highlighted">8</span></div>
                         <div class="orders-item__td"><strong>1246.75 UAH</strong></div>
                         <div class="orders-item__td">
-                          <div class="check">
+                          <div class="check is-rejected">
                             <div class="check__icon"></div>
-                            <div class="check__title">Доставлено</div>
+                            <div class="check__title">Відхилено</div>
                           </div>
                           <span href="#" class="more">Детальніше</span>
                         </div>
                       </a>
-                      <div class="orders-item__content orders-item-content">
-                        <div class="orders-item-content__left">
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                      <div class="orders-item__content-wrap js-accordion-content">
+                        <div class="orders-item__content orders-item-content ">
+                          <div class="orders-item-content__left">
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
-                          </div>
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <span>Доставка (Самовивіз з наших магазинів)</span>
+                              <span>Безкоштовно</span>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <div>Оплата (Готівкою)</div>
+                              <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
                           </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <span>Доставка (Самовивіз з наших магазинів)</span>
-                            <span>Безкоштовно</span>
-                          </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <div>Оплата (Готівкою)</div>
-                            <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
-                          </div>
-                        </div>
-                        <div class="orders-item-content__right">
-                          <div class="orders-item-content__right-title">Статус замовлення:</div>
-                          <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
-                          <div class="orders-item-content__right-time">
-                            <!-- begin icon-clock -->
-                            <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
-                              <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
-                              <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
-                            </svg>
-                            <!-- end icon-clock -->
-                            <span>Запланований час видачі 4 квітня 2019 09:45</span>
-                          </div>
-                          <div class="orders-item-content__right-btn">
-                            <span>Бажаєте продовжити покупики?</span>
-                            <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                          <div class="orders-item-content__right">
+                            <div class="orders-item-content__right-title">Статус замовлення:</div>
+                            <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
+                            <div class="orders-item-content__right-time">
+                              <!-- begin icon-clock -->
+                              <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
+                                <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
+                                <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
+                              </svg>
+                              <!-- end icon-clock -->
+                              <span>Запланований час видачі 4 квітня 2019 09:45</span>
+                            </div>
+                            <div class="orders-item-content__right-btn">
+                              <span>Бажаєте продовжити покупики?</span>
+                              <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -520,7 +533,7 @@
                     <!-- end orders-item -->
                     <!-- begin orders-item -->
                     <div class="orders-item ">
-                      <a href="#" class="orders-item__title">
+                      <a href="#" class="orders-item__title js-accordion-title">
                         <div class="orders-item__td">9</div>
                         <div class="orders-item__td">4 квітня 2019 09:45</div>
                         <div class="orders-item__td"><span class="highlighted">8</span></div>
@@ -533,56 +546,58 @@
                           <span href="#" class="more">Детальніше</span>
                         </div>
                       </a>
-                      <div class="orders-item__content orders-item-content">
-                        <div class="orders-item-content__left">
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                      <div class="orders-item__content-wrap js-accordion-content">
+                        <div class="orders-item__content orders-item-content ">
+                          <div class="orders-item-content__left">
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row">
+                              <div class="orders-item-content__img">
+                                <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                              </div>
+                              <div class="orders-item-content__meta">
+                                <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
+                                <div class="orders-item-content__nmb">№ 42518918</div>
+                                <div class="orders-item-content__price-sm">246.75 UAH</div>
+                              </div>
+                              <div class="orders-item-content__ammount">2 шт.</div>
+                              <div class="orders-item-content__price">2553.5 UAH</div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
-                          </div>
-                          <div class="orders-item-content__row">
-                            <div class="orders-item-content__img">
-                              <img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <span>Доставка (Самовивіз з наших магазинів)</span>
+                              <span>Безкоштовно</span>
                             </div>
-                            <div class="orders-item-content__meta">
-                              <a href="#" class="orders-item-content__title">Trim Molding Retainer Nut</a>
-                              <div class="orders-item-content__nmb">№ 42518918</div>
-                              <div class="orders-item-content__price-sm">246.75 UAH</div>
+                            <div class="orders-item-content__row orders-item-content__row-bottom">
+                              <div>Оплата (Готівкою)</div>
+                              <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
                             </div>
-                            <div class="orders-item-content__ammount">2 шт.</div>
-                            <div class="orders-item-content__price">2553.5 UAH</div>
                           </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <span>Доставка (Самовивіз з наших магазинів)</span>
-                            <span>Безкоштовно</span>
-                          </div>
-                          <div class="orders-item-content__row orders-item-content__row-bottom">
-                            <div>Оплата (Готівкою)</div>
-                            <div><span>Разом до сплати:</span><strong>122553.5 UAH</strong></div>
-                          </div>
-                        </div>
-                        <div class="orders-item-content__right">
-                          <div class="orders-item-content__right-title">Статус замовлення:</div>
-                          <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
-                          <div class="orders-item-content__right-time">
-                            <!-- begin icon-clock -->
-                            <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
-                              <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
-                              <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
-                            </svg>
-                            <!-- end icon-clock -->
-                            <span>Запланований час видачі 4 квітня 2019 09:45</span>
-                          </div>
-                          <div class="orders-item-content__right-btn">
-                            <span>Бажаєте продовжити покупики?</span>
-                            <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                          <div class="orders-item-content__right">
+                            <div class="orders-item-content__right-title">Статус замовлення:</div>
+                            <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
+                            <div class="orders-item-content__right-time">
+                              <!-- begin icon-clock -->
+                              <svg viewBox="0 0 372.96 372.96" class="icon icon-clock" width="1.000em" height="1em">
+                                <path d="M186.48 0C83.49 0 0 83.49 0 186.48s83.49 186.48 186.48 186.48 186.48-83.49 186.48-186.48C372.828 83.545 289.415.132 186.48 0zm8 356.56v-32.8a8 8 0 0 0-16 0v32.8C90.759 352.372 20.588 282.201 16.4 194.48h32.8a8 8 0 0 0 0-16H16.4C20.588 90.759 90.759 20.588 178.48 16.4v32.8a8 8 0 0 0 16 0V16.4c87.721 4.188 157.892 74.359 162.08 162.08h-32.8a8 8 0 0 0 0 16H356.64c-4.191 87.75-74.408 157.932-162.16 162.08z" />
+                                <path d="M270.88 260.88l-76.4-77.68v-80.72a8 8 0 0 0-16 0v84a8 8 0 0 0 2.32 5.6l78.64 80a8.005 8.005 0 1 0 11.44-11.2z" />
+                              </svg>
+                              <!-- end icon-clock -->
+                              <span>Запланований час видачі 4 квітня 2019 09:45</span>
+                            </div>
+                            <div class="orders-item-content__right-btn">
+                              <span>Бажаєте продовжити покупики?</span>
+                              <a href="#" class="btn btn--arrow">перейти до каталогу</a>
+                            </div>
                           </div>
                         </div>
                       </div>

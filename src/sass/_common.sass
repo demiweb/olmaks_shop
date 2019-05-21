@@ -241,6 +241,7 @@ strong
     font-size: 26px
 
 .check
+  $this: &
   color: $c-accent
   +light
   font-size: 14px
@@ -252,16 +253,36 @@ strong
   &__icon
     display: block
     // vertical-align: middle
-    border: 1px solid  $c-accent
+    border: 1px solid  currentColor
     height: 15px
     width: 15px
     position: relative
     +before
-      +icon-arrow(8, 5, 1, $c-accent, -45)
+      +icon-arrow(8, 5, 1, currentColor, -45)
       display: inline-block
       position: absolute
       top: 2px
       left: 2px
+
+  &.is-intransport
+    color: $c-text
+    #{$this}__icon
+      border: 0
+      +before
+        display: none
+      .icon
+        font-size: 16px
+  &.is-rejected
+    color: #ad1010
+    #{$this}__icon
+      position: relative
+      +before
+        border: 0
+        width: 7px
+        border-bottom: 1px solid currentColor
+        +rotate(0)
+        left: 3px
+
 
 .highlighted
   display: inline-block
@@ -367,12 +388,14 @@ strong
   +light
   color: #8388c7
   text-decoration: underline
+  +tr(color .3s)
   +before
     display: inline-block
     +icon-arrow(6, 6, 1, currentColor, -45)
     position: absolute
     top: .4em
     left: 0
+    +tr(transform .3s)
 
 .status
   border: 1px solid  $c-accent

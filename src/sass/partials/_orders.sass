@@ -110,10 +110,23 @@
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.26)
   &__title
     +flex(flex-start, centet)
+    +tr(background-color .3s)
     +notlast
       border-bottom: 1px solid  $c-border
-  &__content
+    +hover
+      background-color: #f3f3f3
+      .more
+        color: $c-accent
+        +before
+          // +rotate(-135)
+    &.is-active
+      .more
+        +before
+          +rotate(-225)
+  &__content-wrap
     display: none
+    // &.is-active
+    //   // display: flex
   &__td
     padding-top: 12px
     padding-bottom: 12px
