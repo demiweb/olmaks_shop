@@ -23,24 +23,56 @@
       padding-left: 15px
       padding-right: 15px
       width: 80%
+
   &--cabinet
     background-color: #fff
     #{$this}__top
       border-bottom: 1px solid  $c-border
       padding: 18px 34px 12px
       +flex(space-between, center)
+      +sm
+        padding: 10px 20px 12px
+      +xs
+        padding: 10px
     #{$this}__block
       padding: 30px 34px 15px
       font-size: 0
+      +sm
+        padding: 20px 20px 15px
+      +xs
+        padding: 10px
     #{$this}__field
       width: 50%
       display: inline-block
       vertical-align: top
       margin-bottom: 15px
+      +lg
+        input
+          width: 70%
+        label
+          width: 30%
+      +md
+        input
+          width: 75%
+        label
+          width: 25%
+      +sm
+        width: 100%
+        margin-bottom: 10px
+        input, label
+          width: 100%
       &:nth-child(even)
         padding-left: 40px
+        +md
+          padding-left: 20px
+        +sm
+          padding-left: 0
       &:nth-child(odd)
         padding-right: 40px
+        +md
+          padding-right: 20px
+        +sm
+          padding-right: 0
       input
         width: 365px
 
@@ -135,6 +167,13 @@
     color: #a5a5a5
     input
       font-size: 14px
+      padding-left: 15px
+      padding-right: 15px
       color: inherit
   &--label
     +flex(space-between, center)
+    +sm
+      display: block
+      label
+        display: block
+        margin-bottom: 5px

@@ -1,5 +1,5 @@
 <!-- begin section -->
-<section class="section cabinet section--color">
+<section class="section section--no-pad-bottom cabinet section--color">
   <div class="container">
     <div class="cabinet__block">
       <div class="row">
@@ -30,6 +30,29 @@
         </div>
       </div>
     </div>
+
+    <div class="cabinet__block">
+      <div class="row">
+        <div class="col-12">
+          <div class="section__title-mb-sm">
+            <h2 class="h2 h2--lg">обрані товари</h2>
+            <div class="h2-subttl--sm">Додавайте будь-які товари легко</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          {% set searchTableCloseBtn = true %}
+          {% include "partials/tables/_table-search.html" %}
+        </div>
+      </div>
+    </div>
+
+    <div class="section__title-mb-sm">
+      <h2 class="h2 h2--lg">Підписка на новини</h2>
+      <div class="h2-subttl--sm">Дізнавайтеся першими про наші новини та будьте в курсі про всі наші акції</div>
+    </div>
   </div>
+
+  {% include "partials/_subscribe.html" %}
 </section>
 <!-- end section -->

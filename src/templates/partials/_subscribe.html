@@ -1,0 +1,37 @@
+<!-- begin subscribe -->
+<div class="subscribe">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="subscribe__title">
+          <h2 class="h2 h2--light">Підпишіться на наші акції, розпродажі та знижки.</h2>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="subscribe__form">
+          <form>
+            <div class="row">
+              <div class="col-sm-6">
+                {{ mixins.input(
+                name = 'input',
+                mod = 'input--sm',
+                type = 'email',
+                placeholder = 'Введіть E-mail'
+              ) }}
+              </div>
+              <div class="col-sm-6">
+                {{ mixins.btn(
+                title = 'підписатися',
+                mod = 'btn--arrow btn--mds'
+              ) }}
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- end subscribe -->

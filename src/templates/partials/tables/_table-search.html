@@ -33,6 +33,40 @@ results = [
       { inner : '-', mod: 'table--search__ammount' },
       { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
     ]
+  },
+  {
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
+      { inner: '42518918' },
+      { inner: '<a href="#">Bumper Cover 1</a>' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>', mod: 'table--search__check' },
+      { inner : '<div class="highlighted">26</div>', mod: 'table--search__ammount' },
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+    ]
+  },
+  {
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'</div>' },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'під замовлення', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+    ]
+  },
+  {
+    mod: 'is-inactive',
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'немає в наявності', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
+    ]
   }
 ]
 %}
@@ -55,9 +89,9 @@ resultsNumber = [
       { inner: 2 },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'під замовлення' },
-      { inner : '-' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'під замовлення', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
       { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
     ]
   },
@@ -67,15 +101,15 @@ resultsNumber = [
       { inner: 3 },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'немає в наявності' },
-      { inner : '-' },
-      { inner: '<strong>1246.75 UAH</strong>' }
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'немає в наявності', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
     ]
   },
   {
     cols: [
-      { inner: 4 },
+      { inner: 1 },
       { inner: '42518918' },
       { inner: '<a href="#">Bumper Cover 1</a>' },
       { inner : 'нова' },
@@ -86,59 +120,98 @@ resultsNumber = [
   },
   {
     cols: [
-      { inner: 5 },
+      { inner: 2 },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'під замовлення' },
-      { inner : '-' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'під замовлення', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
       { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
     ]
   },
   {
     mod: 'is-inactive',
     cols: [
-      { inner: 6 },
+      { inner: 3 },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'немає в наявності' },
-      { inner : '-' },
-      { inner: '<strong>1246.75 UAH</strong>' }
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'немає в наявності', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
     ]
-  },
+  }
+]
+%}
+
+{%set
+resultsBtnClose = [
   {
     cols: [
-      { inner: 7 },
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
       { inner: '42518918' },
       { inner: '<a href="#">Bumper Cover 1</a>' },
-      { inner : 'нова' },
+      { inner : 'нова', mod: 'table--search__condition' },
       { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>', mod: 'table--search__check' },
       { inner : '<div class="highlighted">26</div>', mod: 'table--search__ammount' },
-      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn-close"></a><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
     ]
   },
   {
     cols: [
-      { inner: 8 },
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'</div>' },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'під замовлення' },
-      { inner : '-' },
-      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'під замовлення', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn-close"></a><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
     ]
   },
   {
     mod: 'is-inactive',
     cols: [
-      { inner: 9 },
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
       { inner: '42518918' },
       { inner: 'Fender Liner Bolt' },
-      { inner : 'нова' },
-      { inner: 'немає в наявності' },
-      { inner : '-' },
-      { inner: '<strong>1246.75 UAH</strong>' }
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'немає в наявності', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
+    ]
+  },
+  {
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
+      { inner: '42518918' },
+      { inner: '<a href="#">Bumper Cover 1</a>' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: '<div class="check"><div class="check__icon"></div><div class="check__title">в наявності</div></div>', mod: 'table--search__check' },
+      { inner : '<div class="highlighted">26</div>', mod: 'table--search__ammount' },
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn-close"></a><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+    ]
+  },
+  {
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'</div>' },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'під замовлення', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<div class="table--search__price-inner"><strong>1246.75 UAH</strong><a href="#" class="btn-close"></a><a href="#" class="btn btn--sm">'+ mixins.icon('cart') +'</a></div>', mod: 'table--search__price' }
+    ]
+  },
+  {
+    mod: 'is-inactive',
+    cols: [
+      { inner: '<div class="table--search__img">'+ mixins.icon('logo') +'<img src="img/search/img-1.jpg" alt=""></div>' },
+      { inner: '42518918' },
+      { inner: 'Fender Liner Bolt' },
+      { inner : 'нова', mod: 'table--search__condition' },
+      { inner: 'немає в наявності', mod: 'table--search__check' },
+      { inner : '-', mod: 'table--search__ammount' },
+      { inner: '<strong>1246.75 UAH</strong>', mod: 'table--search__price' }
     ]
   }
 ]
@@ -160,6 +233,25 @@ resultsNumber = [
     <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
       {% for j in i.cols %}
       <div class="table__td">{{ j.inner | safe }}</div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+  {% elseif searchTableCloseBtn %}
+
+  <div class="table__tr">
+      <div class="table__th">Фото</div>
+      <div class="table__th">Part Id</div>
+      <div class="table__th">Назва запчастини</div>
+      <div class="table__th">Тип</div>
+      <div class="table__th">Наявність</div>
+      <div class="table__th">Склад</div>
+      <div class="table__th">Ціна</div>
+    </div>
+    {% for i in resultsBtnClose %}
+    <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
+      {% for j in i.cols %}
+      <div class="table__td{% if j.mod %} {{ j.mod }}{% endif %}">{{ j.inner | safe }}</div>
       {% endfor %}
     </div>
     {% endfor %}

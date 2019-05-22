@@ -60,6 +60,21 @@
     padding-top: 15px
     padding-bottom: 20px
     text-align: left
+    +lg
+      // padding-top: 40px
+    +xs
+      padding-top: 50px
     #{$this}__btn
       text-align: right
+      +xs
+        .btn
+          font-size: 0
+          padding: 8px
+          span
+            margin: 0
+            padding: 0
+            border: 0
+    #{$this}__user
+      +xs
+        margin-bottom: 10px
 

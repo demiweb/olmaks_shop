@@ -26,7 +26,7 @@
       {% endif %}
 
       {% if hero.cabinet %}
-      <div class="col-10">
+      <div class="col-md-10 col-sm-8 col-8">
         {{ mixins.list(
             name = 'breadcrumbs',
             modifications = { wrap: 'breadcrumbs--sm', item: '', link: '' },
@@ -38,13 +38,13 @@
           ) }}
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 col-sm-4 col-4">
         <div class="hero__btn">
           <a href="#" class="btn btn--md btn--transp-gray"><span>{{ mixins.icon('logout') }}</span> вийти</a>
         </div>
       </div>
 
-      <div class="col-10">
+      <div class="col-md-10 col-sm-8">
         <div class="hero__user">
           <!-- begin user -->
           <div class="user">
@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 col-sm-4">
         <div class="hero__orders">
           <!-- begin orders-thumbs -->
           <div class="orders-thumbs">

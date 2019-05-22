@@ -45,6 +45,7 @@
   &--search
     display: table
     border-collapse: collapse
+    background-color: #fff
     width: 100%
     +md
       display: block
@@ -107,8 +108,9 @@
         background-color: #f7f7f7
         #{$this}__td
           color: $c-gray
+
     a
-      &:not(.btn)
+      &:not([class*='btn'])
         color: $c-accent
         text-decoration: underline
     strong
@@ -147,6 +149,10 @@
     &__price-inner
       +flex(space-between, center)
       width: 100%
+      strong
+        flex-grow: 1
+      .btn-close
+        margin-right: 10px
     &__price
       +md
         border-top: 1px solid  $c-border
