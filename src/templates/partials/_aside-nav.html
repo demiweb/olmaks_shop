@@ -1,3 +1,11 @@
+<div class="aside-nav-toggle">
+  {{ mixins.btn(
+    title = '',
+    mod = 'btn--arrow btn--square js-burger',
+    attributes = { 'data-target': 'aside' }
+  ) }}
+</div>
+
 <!-- begin aside-nav -->
 <div class="aside-nav js-menu" data-menu="aside">
   <div class="aside-nav__inner">
@@ -6,6 +14,7 @@
     </div>
 
     <div class="aside-nav__nav">
+      {% if page === 'delivery' %}
       {{ mixins.list(
         name = 'nav',
         modifications = { wrap: 'nav--aside', item: '', link: '' },
@@ -19,6 +28,37 @@
           { item: '', link: 'політика конфіденційності' }
         ]
       ) }}
+      {% elseif page === 'contacts' %}
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: 'nav--aside', item: '', link: '' },
+        list = [
+          { item: '', link: 'про компанію Olmaks' },
+          { item: '', link: 'Доставка і оплата', modItem: '' },
+          { item: '', link: 'Сервісне обслуговування' },
+          { item: '', link: 'Контакти', modLink: 'is-active' },
+          { item: '', link: 'Мій кабінет' },
+          { item: '', link: 'обмін та повернення' },
+          { item: '', link: 'політика конфіденційності' }
+        ]
+      ) }}
+
+      {% else %}
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: 'nav--aside', item: '', link: '' },
+        list = [
+          { item: '', link: 'про компанію Olmaks' },
+          { item: '', link: 'Доставка і оплата', modItem: '', modLink: 'is-active' },
+          { item: '', link: 'Сервісне обслуговування' },
+          { item: '', link: 'Контакти' },
+          { item: '', link: 'Мій кабінет' },
+          { item: '', link: 'обмін та повернення' },
+          { item: '', link: 'політика конфіденційності' }
+        ]
+      ) }}
+      {% endif %}
+
     </div>
   </div>
 </div>

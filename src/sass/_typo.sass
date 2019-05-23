@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6
   text-transform: uppercase
   +bold
   font-size: 18px
+  color: $c-text
   +xs
     font-size: 16px
   &--white
@@ -92,7 +93,7 @@ h1, h2, h3, h4, h5, h6
     position: absolute
     width: 53px
     height: 1px
-    background-color: $c-text
+    background-color: currentColor
     bottom: 0
     left: 0
   +xs
@@ -109,3 +110,8 @@ h1, h2, h3, h4, h5, h6
     +before
       width: 170px
       background-color: $c-accent
+  &--inherit
+    +before
+      background-color: currentColor
+  &--sm
+    padding-bottom: 8px
