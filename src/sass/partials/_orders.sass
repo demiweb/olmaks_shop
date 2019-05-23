@@ -2,6 +2,11 @@
   background-color: #fff
   border: 1px solid  $c-border
   padding: 25px 30px
+  &__items
+    +md
+      border-right: 1px solid  $c-border
+      border-left: 1px solid  $c-border
+      border-top: 1px solid  $c-border
   &__title
     margin-bottom: 25px
   &__top
@@ -10,6 +15,8 @@
     color: #fff
     padding: 12px 0
     // padding-left: 0
+    +md
+      display: none
   &__top-th
     font-size: 18px
     +bold
@@ -29,8 +36,12 @@
 .orders-item-content
   font-size: 14px
   +flex()
+  +sm
+    display: block
   &__left
     width: 68%
+    +sm
+      width: 100%
   &__right
     width: 32%
     padding: 15px
@@ -39,6 +50,12 @@
     margin-top: -45px
     background-color: #fff
     z-index: 1
+    +md
+      margin-top: 0
+    +sm
+      width: 100%
+      border-left: 0
+      border-top: 1px solid  $c-border
   &__row
     +flex(space-between, center)    
     padding-top: 8px
@@ -47,6 +64,8 @@
     padding-right: 15px
     +notlast
       border-bottom: 1px solid  $c-border
+    +sm
+      flex-wrap: wrap
   &__row-bottom
     padding-top: 14px
     padding-bottom: 14px
@@ -54,16 +73,29 @@
     strong
       color: $c-text
       padding-left: 10px
+    > div:first-child
+      +sm
+        padding-right: 10px
   &__img
     width: 15%
     text-align: center
+    +sm
+      margin-bottom: 10px
   &__ammount
     width: 12%
+    +sm
+      width: auto
   &__price
     +bold
     width: 12%
+    +sm
+      width: auto
   &__meta
     flex-grow: 1
+    +sm
+      flex-grow: unset
+      width: 85%
+      margin-bottom: 10px
   &__price-sm
     +bold
   &__title
@@ -108,6 +140,8 @@
       margin-bottom: 5px
 
 .orders-item
+  +md
+    
   &.is-active
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.26)
   &__title
@@ -121,6 +155,13 @@
         color: $c-accent
         +before
           // +rotate(-135)
+    +md
+      // display: block
+      position: relative
+      padding-left: 60px
+      flex-wrap: wrap
+      justify-content: space-between
+
     &.is-active
       .more
         +before
@@ -137,17 +178,49 @@
       z-index: 0
     .more
       z-index: 2
+    +md
+      padding-left: 10px
+      padding-right: 10px
+    +sm
+      padding-top: 5px
+      padding-bottom: 5px
     &:nth-child(1)
       width: percentage(205/1105)
       text-align: center
+      +md
+        width: 60px
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        border-right: 1px solid  $c-border
+
     &:nth-child(2)
       width: percentage(170/1105)
+      +md
+        width: 100%
     &:nth-child(3)
       width: percentage(160/1105)
       text-align: center
+      +md
+        width: 10%
+      +sm
+        width: auto
     &:nth-child(4)
       width: percentage(245/1105)
+      +md
+        width: 45%
+      +sm
+        width: auto
     &:nth-child(5)
       width: percentage(275/1105)
       +flex(space-between, center)
+      +md
+        width: 45%
+        .check
+          position: relative
+          top: .2em
+          margin-right: 10px
+      +sm
+        width: 100%
 

@@ -38,7 +38,7 @@ orders = [
     <div class="orders__top-th">Статус</div>
   </div>
 
-  <div class="orsers__items js-accordion">
+  <div class="orders__items js-accordion">
     {% for i in orders %}
     <!-- begin orders-item -->
     <div class="orders-item {{ i.mod }}">
@@ -86,8 +86,8 @@ orders = [
             {% endfor %}
 
             <div class="orders-item-content__row orders-item-content__row-bottom">
-              <span>Доставка (Самовивіз з наших магазинів)</span>
-              <span>Безкоштовно</span>
+              <div>Доставка (Самовивіз з наших магазинів)</div>
+              <div>Безкоштовно</div>
             </div>
             <div class="orders-item-content__row orders-item-content__row-bottom">
               <div>Оплата (Готівкою)</div>
