@@ -3,6 +3,7 @@
 +font('helveticaneuecyr-light', 'helveticaneuecyr-light-webfont')
 +font('helveticaneuecyr-medium', 'helveticaneuecyr-medium-webfont')
 +font('helveticaneuecyr-thin', 'helveticaneuecyr-thin-webfont')
++font('helveticaneuecyr-lightitalic', 'helveticaneuecyr-lightitalic-webfont')
 
 =roman
   font-family: 'helveticaneuecyr-roman', Arial, sans-serif
@@ -14,6 +15,8 @@
   font-family: 'helveticaneuecyr-light', Arial, sans-serif
 =thin
   font-family: 'helveticaneuecyr-thin', Arial, sans-serif
+=italic-light
+  font-family: 'helveticaneuecyr-lightitalic', Arial, sans-serif
 
 
 =xl
@@ -213,6 +216,24 @@ strong
     top: 50%
     transform: translate(0, -50%) rotate(-45deg)
 
+.btn-delete
+  display: inline-block
+  height: 22px
+  width: 22px
+  color: #ff6f6f
+  border: 1px solid currentColor
+  position: relative
+  +icon-close(20, 1, currentColor)
+  +tr(color .3s)
+  +before
+    height: 60%
+    top: 50%
+    transform: translate(0, -50%) rotate(45deg)
+  +after
+    height: 60%
+    top: 50%
+    transform: translate(0, -50%) rotate(-45deg)
+
 .btn-arrow
   $this: &
   color: #fff
@@ -254,6 +275,40 @@ strong
       top: 50%
       transform: translate(0, -50%) rotate(225deg) !important
       right: 0
+
+.counter
+  input
+    height: 30px
+    width: 30px
+    border: 1px solid  $c-gray
+    font-family: inherit
+    font-size: inherit
+    padding: 5px
+    text-align: center
+    margin-left: 5px
+    margin-right: 5px
+    display: inline-block
+    vertical-align: middle
+  button
+    background-color: transparent
+    color: $c-gray
+    +light
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    width: 30px
+    height: 30px
+    +before
+      width: 12px
+      border-bottom: 1px solid  $c-gray
+      +vcenter
+    +after
+      height: 12px
+      +vcenter
+      border-right: 1px solid  $c-gray
+    &:first-child
+      +after
+        display: none
 
 .price
   +medium

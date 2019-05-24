@@ -1,6 +1,82 @@
 .table
   $this: &
+  display: table
+  border-collapse: collapse
+  background-color: #fff
+  width: 100%
+  +md
+    display: block
   +light
+  #{$this}__td,
+  #{$this}__th
+    padding-top: 15px
+    padding-bottom: 15px
+    vertical-align: middle
+    padding-left: 15px
+    padding-right: 15px
+    display: table-cell
+    +md
+      padding-left: 10px
+      padding-right: 10px
+      display: block
+  #{$this}__th
+    text-align: left
+    font-weight: 400
+    +bold
+    font-size: 18px
+    background-color: $c-text-100
+    color: #fff
+    +md
+      font-size: 15px
+    padding-top: 11px
+    padding-bottom: 11px
+    &:nth-child(1)
+      width: 6%
+    &:nth-child(2)
+      width: 8%
+    &:nth-child(3)
+      width: 35%
+    &:nth-child(4)
+      width: 8%
+    &:nth-child(5)
+      width: 15%
+    &:nth-child(6)
+      width: 7%
+    &:nth-child(7)
+      width: 21%
+  #{$this}__td
+    font-size: 14px
+    color: $c-black
+    padding-top: 3px
+    padding-bottom: 3px    
+  #{$this}__tr
+    border: 1px solid  $c-border
+    display: table-row
+    position: relative
+    +md
+      display: block
+      padding-left: 60px
+    &:first-child
+      border-right: 1px solid  $c-border
+      border-left: 1px solid  $c-border
+      +md
+        display: none
+    &.is-inactive
+      background-color: #f7f7f7
+      #{$this}__td
+        color: $c-gray
+
+  a
+    &:not([class*='btn'])
+      color: $c-accent
+      text-decoration: underline
+  strong
+    +bold
+    text-transform: uppercase
+  small
+    font-size: 12px
+    +light
+    color: $c-gray
   th
     text-align: left
     font-weight: 400
@@ -42,80 +118,7 @@
       &:nth-child(4)
         width: 30%
 
-  &--search
-    display: table
-    border-collapse: collapse
-    background-color: #fff
-    width: 100%
-    +md
-      display: block
-    #{$this}__td,
-    #{$this}__th
-      padding-top: 15px
-      padding-bottom: 15px
-      vertical-align: middle
-      padding-left: 15px
-      padding-right: 15px
-      display: table-cell
-      +md
-        padding-left: 10px
-        padding-right: 10px
-        display: block
-    #{$this}__th
-      text-align: left
-      font-weight: 400
-      +bold
-      font-size: 18px
-      background-color: $c-text-100
-      color: #fff
-      +md
-        font-size: 15px
-      padding-top: 11px
-      padding-bottom: 11px
-      &:nth-child(1)
-        width: 6%
-      &:nth-child(2)
-        width: 8%
-      &:nth-child(3)
-        width: 35%
-      &:nth-child(4)
-        width: 8%
-      &:nth-child(5)
-        width: 15%
-      &:nth-child(6)
-        width: 7%
-      &:nth-child(7)
-        width: 21%
-    #{$this}__td
-      font-size: 14px
-      color: $c-black
-      padding-top: 3px
-      padding-bottom: 3px
-      
-    #{$this}__tr
-      border: 1px solid  $c-border
-      display: table-row
-      position: relative
-      +md
-        display: block
-        padding-left: 60px
-      &:first-child
-        border-right: 1px solid  $c-border
-        border-left: 1px solid  $c-border
-        +md
-          display: none
-      &.is-inactive
-        background-color: #f7f7f7
-        #{$this}__td
-          color: $c-gray
-
-    a
-      &:not([class*='btn'])
-        color: $c-accent
-        text-decoration: underline
-    strong
-      +bold
-      text-transform: uppercase
+  &--search    
     &__img
       border: 1px solid  $c-border
       width: 42px
@@ -170,4 +173,49 @@
     &__ammount
       +md
         display: inline-block !important
+
+  &--cart
+    #{$this}__th
+      text-align: center
+      &:nth-child(1)
+        width: percentage(130/1170)
+      &:nth-child(2)
+        width: percentage(265/1170)
+      &:nth-child(3)
+        width: percentage(210/1170)
+        text-align: left
+      &:nth-child(4)
+        width: percentage(120/1170)
+      &:nth-child(5)
+        width: percentage(205/1170)
+      &:nth-child(6)
+        width: percentage(240/1170)
+    #{$this}__td
+      &:nth-child(1)
+      &:nth-child(2)
+        +md
+          padding-right: 35px
+      &:nth-child(3)        
+      &:nth-child(4)
+        +md
+          display: inline-block
+      &:nth-child(5)
+        text-align: center
+        +md
+          display: inline-block
+      &:nth-child(6)
+    img
+      +md
+        position: absolute
+        top: 10px
+        left: 0
+        max-width: 60px
+    .btn-delete
+      +md
+        position: absolute
+        top: 10px
+        right: 10px
+
+    &__price
+      +flex(space-between, center)
  

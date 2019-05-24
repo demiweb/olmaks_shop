@@ -1,0 +1,17 @@
+<!-- begin section -->
+<section class="section section--no-pad-top section--color">
+  <div class="container">
+    {{ mixins.list(
+      name = 'breadcrumbs',
+      modifications = { wrap: 'title-underlined title-underlined--long', item: '', link: '' },
+      list = [
+        { item: '', link: 'Головна' },
+        { item: '/', link: '' },
+        { item: '', link: 'Кошик', modItem: '', modLink: 'is-active' }
+      ]
+    ) }}
+
+    {% include "partials/tables/_table-cart.html" %}
+  </div>
+</section>
+<!-- end section -->

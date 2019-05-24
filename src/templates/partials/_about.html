@@ -1,0 +1,128 @@
+{%set
+features = [
+  { img: 'item-1.jpg', title: 'наша команда' },
+  { img: 'item-2.jpg', title: 'оплата та доставка' },
+  { img: 'item-3.jpg', title: 'наша політика' }
+]
+%}
+
+{%set
+partners = [
+  { img: '1.jpg' },
+  { img: '2.jpg' },
+  { img: '3.jpg' },
+  { img: '4.jpg' },
+  { img: '5.jpg' },
+  { img: '6.jpg' },
+  { img: '7.jpg' },
+  { img: '8.jpg' }
+]
+%}
+
+{%set
+team = [
+  { img: 'team.1jpg' },
+  { img: 'team.2jpg' },
+  { img: 'team.3jpg' },
+  { img: 'team.4jpg' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="section__block">
+    <div class="container">
+      <div class="ssection__title">
+        <h2 class="h2--lg">про олмакс</h2>
+      </div>
+
+      <div class="text terxt--gray">Електромобілі - це комфортні, сучасні та екологічно чисті автомобілі, які приводяться в рух електродвигуном, а не двигуном внутрішнього згоряння. Електромобілі працюють за допомогою сучасних батарей і чистої відновлюваної енергії електрики.</div>
+    </div>
+  </div>  
+
+  <div class="section__gray-block">
+    <div class="container">
+      <div class="section__title title-underlined title-underlined--long">
+        <h2 class="h2--lg">наша місія</h2>
+        <div class="text">Чому ми існуємо</div>
+      </div>
+
+      <div class="text text-block">
+        <p>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</p>
+
+        <img data-src="img/about/car.jpg" alt="" class="js-lazy">
+
+        <p>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</p>
+        <em>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="section__block">
+    <div class="container">
+      <div class="row">
+       {% for i in features %}
+       <div class="col-4">
+         <!-- begin about-item -->
+         <div class="about-item">
+           <div class="about-item__img js-lazy" data-background-image="img/about/{{ i.img }}"></div>
+
+           <div class="about-item__title title-underlined title-underlined--long">
+             <h2 class="h2--lg">{{ i.title }}</h2>
+           </div>
+
+           <div class="about-item__text text">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія </div>
+         </div>
+         <!-- end about-item -->
+       </div>
+       {% endfor %}
+      </div>
+
+      <!-- begin partners -->
+      <div class="partners">
+        <div class="row">
+          {% for i in partners %}
+          <div class="col-3">
+            <!-- begin partner -->
+            <div class="partner">
+              <img data-src="img/partners/{{ i.img }}" alt="" class="js-lazy">
+            </div>
+            <!-- end partner -->
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- end partners -->
+    </div>
+  </div>
+
+  <div class="section__block">
+    <div class="container">
+      <div class="section__title title-underlined title-underlined--long">
+        <h2 class="h2--lg">як ми досягли успіху</h2>
+        <div class="text">Наша команда</div>
+      </div>
+
+      <!-- begin team -->
+      <div class="team">
+        <div class="row">
+          {% for i in team %}
+          <div class="col-3">
+            <!-- begin member -->
+            <div class="member">
+              <div class="member__img js-lazy" data-background-image="img/team/{{ i.img }}"></div>
+
+              <div class="member__title">Володимир Іванов</div>
+
+              <div class="member__subttl">Адміністратор салону</div>
+            </div>
+            <!-- end member -->
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- end team -->
+    </div>
+  </div>
+</section>
+<!-- end section -->

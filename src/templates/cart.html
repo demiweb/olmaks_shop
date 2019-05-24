@@ -1,0 +1,21 @@
+---
+title: cart
+page: cart
+hero: {
+  mod: 'hero--sm',
+  bgImage: 'bg-hero-cart.jpg',
+  titleSm: 'кошик',
+  subttlSm: 'Переглядайте та керуйте вашими замовленнями у власному кошику'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_cart.html" %}
+  
+
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

@@ -10,3 +10,5 @@ PageList:
 - file: delivery.html
 - file: cabinet.html
 - file: contacts.html
+- file: cart.html
+- file: about.html

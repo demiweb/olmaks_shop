@@ -1,0 +1,28 @@
+.cart
+  background-color: #fff
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.26)
+  &__total
+    text-align: center
+    background-color: #f5f5f5
+    padding-top: 35px
+    padding-bottom: 35px
+    +flex(center, center)
+    +md
+      padding: 20px
+  &__total-title
+    margin-top: .5em
+    margin-right: 10px
+  &__btns
+    padding: 30px
+    +flex(space-between, center)
+    +md
+      padding: 15px
+    +xs
+      display: block
+      text-align: center
+  &__btn
+    +xs
+      .btn
+        width: 100%
+      +notlast
+        margin-bottom: 10px

@@ -19,6 +19,12 @@
       </div>
       {% endif %}
 
+      {% if hero.subttlSm %}
+      <div class="col-12">
+        <div class="text text--xs text--gray">{{ hero.subttlSm }}</div>
+      </div>
+      {% endif %}
+
       {% if search  %}
       <div class="col-12">
         {% include "partials/_hero-search.html" %}

@@ -1,0 +1,70 @@
+{%set
+cart = [
+  {
+    cols: [
+      { inner: '<img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">' },
+      { inner: '<a href="#">Trim Molding Retainer Nut</a>' },
+      { inner: '<small>№ 42518918</small>' },
+      { inner: '<strong>1246.75 UAH</strong>' },
+      { inner: '<div class="counter"><button></button><input type="text" value="1"><button></button></div>' },
+      { inner: '<div class="table--cart__price"><strong>2553.5 UAH</strong><a href="#" class="btn-delete"></a></div>' }
+    ]
+  },
+  {
+    cols: [
+      { inner: '<img data-src="img/orders/table-img.jpg" alt="" class="js-lazy">' },
+      { inner: '<a href="#">Trim Molding Retainer Nut</a>' },
+      { inner: '<small>№ 42518918</small>' },
+      { inner: '<strong>1246.75 UAH</strong>' },
+      { inner: '<div class="counter"><button></button><input type="text" value="1"><button></button></div>' },
+      { inner: '<div class="table--cart__price"><strong>2553.5 UAH</strong><a href="#" class="btn-delete"></a></div>' }
+    ]
+  }
+]
+%}
+
+<!-- begin cart -->
+<div class="cart">
+  <!-- begin table -->
+  <div class="table table--cart">
+    <div class="table__tr">
+      <div class="table__th">Фото</div>
+      <div class="table__th">Назва товару</div>
+      <div class="table__th">Номер запчастини</div>
+      <div class="table__th">Ціна</div>
+      <div class="table__th">Кількість</div>
+      <div class="table__th">Сума</div>
+    </div>
+
+    {% for i in cart %}
+    <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
+      {% for j in i.cols %}
+      <div class="table__td">{{ j.inner | safe }}</div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  <!-- end table -->
+
+  <div class="cart__total">
+    <div class="cart__total-title">Разом до сплати:</div>
+    <div class="price">1278.56 UAH</div>
+  </div>
+
+  <div class="cart__btns">
+    <div class="cart__btn">
+      {{ mixins.btn(
+        title = 'продовжити покупки',
+        mod = 'btn--transp-gray'
+      ) }}
+    </div>
+
+    <div class="cart__btn">
+      {{ mixins.btn(
+        title = 'оформити замовлення',
+        mod = 'btn--arrow'
+      ) }}
+    </div>
+  </div>
+</div>
+<!-- end cart -->
