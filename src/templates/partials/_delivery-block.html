@@ -1,0 +1,29 @@
+<!-- begin delivery-block -->
+<div class="delivery-block">
+  <div class="row">
+    <div class="col-12">
+      <div class="section__title-mb-sm">
+        <h2 class="h2 h2--lg">{{ i.title}}</h2>
+        <div class="h2-subttl--sm">{{ i.subttl }}</div>
+      </div>
+    </div>
+
+    {% for j in i.items %}
+    <div class="col-md-4">
+      <!-- begin delivery-item -->
+      <div class="delivery-item">
+        <div class="delivery-item__img">
+          <img class="js-lazy" data-src="img/delivery/{{ j.img }}" alt="">
+        </div>
+
+        <div class="delivery-item__title">{{ j.title }}</div>
+
+        <div class="delivery-item__text text text--xs text--gray">{{ j.text | safe }}</div>
+      </div>
+      <!-- end delivery-item -->
+    </div>
+    {% endfor %}
+    
+  </div>
+</div>
+<!-- end delivery-block -->

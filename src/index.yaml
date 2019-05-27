@@ -12,3 +12,5 @@ PageList:
 - file: contacts.html
 - file: cart.html
 - file: about.html
+- file: conditions.html
+- file: application.html

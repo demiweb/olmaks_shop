@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header js-menu" data-menu="main">
+<header class="header{% if header.mod %} {{ header.mod }}{% endif %} js-menu" data-menu="main">
 
   <div class="header__burger">
     <a href="#" class="burger js-burger" data-target="main"><span></span></a>

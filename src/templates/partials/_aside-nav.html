@@ -43,6 +43,21 @@
         ]
       ) }}
 
+      {% elseif page === 'conditions' %}
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: 'nav--aside', item: '', link: '' },
+        list = [
+          { item: '', link: 'про компанію Olmaks' },
+          { item: '', link: 'Доставка і оплата', modItem: '' },
+          { item: '', link: 'Сервісне обслуговування' },
+          { item: '', link: 'Контакти' },
+          { item: '', link: 'Мій кабінет' },
+          { item: '', link: 'обмін та повернення', modLink: 'is-active' },
+          { item: '', link: 'політика конфіденційності' }
+        ]
+      ) }}
+
       {% else %}
       {{ mixins.list(
         name = 'nav',

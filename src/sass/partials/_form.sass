@@ -76,6 +76,31 @@
       input
         width: 365px
 
+  &--block
+    #{$this}__row
+      font-size: 0
+      margin-left: -15px
+      margin-right: -15px
+    #{$this}__field
+      margin-bottom: 15px
+      width: 50%
+      display: inline-block
+      vertical-align: top
+      padding-left: 15px
+      padding-right: 15px
+
+    #{$this}__field-full
+      width: 100%
+      .select
+        max-width: calc(50% - 15px)
+
+.form-block
+  background-color: #fff
+  padding: 30px 30px 15px
+  margin-bottom: 30px
+  &__title
+    margin-bottom: 15px
+
 .select
   position: relative
   width: 100%
@@ -100,6 +125,24 @@
       left: 0
       transform: translate(-50%, -50%)
       z-index: 1
+  &--sm
+    color: #a5a5a5
+    font-size: 15px
+    label
+      font-size: inherit
+      display: block
+      margin-bottom: 3px
+      color: $c-text
+      sup
+        color: #fbcf3a
+        font-size: inherit
+        display: inline-block
+        margin-left: .2em
+    .custom-select
+      &__opener
+        font-size: 14px
+        padding: 10px 15px
+        color: inherit
 
 .custom-select
   $this: &
@@ -170,6 +213,15 @@
       padding-left: 15px
       padding-right: 15px
       color: inherit
+    label
+      color: $c-text
+      margin-bottom: 5px
+      display: block
+      sup
+        color: #fbcf3a
+        font-size: inherit
+        display: inline-block
+        margin-left: .2em
   &--label
     +flex(space-between, center)
     +sm

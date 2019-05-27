@@ -1,0 +1,167 @@
+{%set
+formBlocks = [
+  {
+    title: 'ваші дані',
+    subttl: 'Укажіть адресу, за якою бажаєте отримувати замовлення',
+    fields: [
+      { name: 'input', inputMod: 'input--sm', type: 'text', placeholder: 'Введіть ПІБ', label: 'ПІБ<sup>*</sup>', mod: 'form__field-full' },
+      { name: 'input', inputMod: 'input--sm', type: 'tel', placeholder: 'Введіть телефон', label: 'E-mail<sup>*</sup>'},
+      { name: 'input', inputMod: 'input--sm', type: 'email', placeholder: 'Введіть E-mail', label: 'ПІБ<sup>*</sup>'}
+    ]
+  },
+  {
+    title: 'доставка та оплата',
+    subttl: 'Укажіть спосіб доставки та оплати товару',
+    fields: [
+      { name: 'input', inputMod: 'input--sm', type: 'text', placeholder: 'Введіть місто', label: 'Місто<sup>*</sup>' },
+      {
+        name: 'select',
+        inputMod: 'select--sm',
+        fieldClass: 'js-select has-placeholder',
+        type: 'default',
+        label: 'Спосіб оплати<sup>*</sup>',
+        options: [
+          { value: 'placeholder', option: 'Оберіть спосіб оплати' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '2', option: 'спосіб оплати2' }
+        ]
+      },
+      {
+        mod: 'form__field-full',
+        name: 'select',
+        inputMod: 'select--sm',
+        fieldClass: 'js-select has-placeholder',
+        type: 'default',
+        label: 'Спосіб доставки<sup>*</sup>',
+        options: [
+          { value: 'placeholder', option: 'Оберіть спосіб доставки' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '2', option: 'спосіб оплати2' }
+        ]
+      },
+      {
+        mod: 'form__field-full',
+        name: 'select',
+        inputMod: 'select--sm',
+        fieldClass: 'js-select has-placeholder',
+        type: 'default',
+        label: 'Номер відділення<sup>*</sup>',
+        options: [
+          { value: 'placeholder', option: 'Оберіть Номер відділення' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '2', option: 'спосіб оплати2' }
+        ]
+      }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--color">
+  <div class="container">
+    {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: 'title-underlined title-underlined--long', item: '', link: '' },
+        list = [
+          { item: '', link: 'Головна ', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: 'Кошик', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: 'Оформлення замовлення', modItem: '', modLink: 'is-active' }
+        ]
+      ) }}
+
+    <form>
+      <div class="row">
+        <div class="col-8">
+          <div class="section__title">
+            <h2 class="h2 h2--lg">Оформлення замовлення</h2>
+          </div>
+
+          {% for i in formBlocks %}
+          <!-- begin form-block -->
+          <div class="form-block form form--block">
+            <div class="form-block__title">
+              <h5 class="h5">{{ i.title }}</h5>
+              <div class="text text--xs text--gray">{{ i.subttl }}</div>
+            </div>
+
+            <div class="form__row">
+            {% for j in i.fields %}
+            <div class="form__field{% if j.mod %} {{ j.mod }}{% endif %}">
+              {{ mixins.input(
+                name = j.name,
+                type = j.type,
+                mod = j.inputMod,
+                placeholder = j.placeholder,
+                label = j.label | safe,
+                options = j.options,
+                fieldClass = j.fieldClass
+              ) }}
+            </div>
+            {% endfor %}
+            </div>
+          </div>
+          <!-- end form-block -->
+          {% endfor %}
+          
+
+
+          {{ mixins.btn(
+            title = 'підтвердити замовлення',
+            href = false,
+            mod = 'btn--full'
+          ) }}
+
+          
+        </div>
+
+
+        <div class="col-4">
+          <!-- begin order-info -->
+          <div class="order-info">
+            <div class="order-info__title">
+              <h5 class="h5">Сума заказу</h5>
+              <div class="text text--xs text--gray">1 товар у вашій корзині</div>
+            </div>
+
+            <div class="order-info__list">
+              <div class="order-info__item">
+                <span>Проміжна сума</span>
+                <strong>1246.75 UAH</strong>
+              </div>
+
+              <div class="order-info__item">
+                <span>Сума доставки</span>
+                <strong>122.75 UAH</strong>
+              </div>
+
+              <div class="order-info__item">
+                <span>Загальна сума</span>
+                <strong>11369.5 UAH</strong>
+              </div>
+            </div>
+
+            <div class="order-info__btn">
+              {{ mixins.btn(
+                title = 'підтвердити замовлення',
+                mod = 'btn--full',
+                href = false
+              ) }}
+            </div>
+          </div>
+          <!-- end order-info -->
+
+          <div class="application__help">
+              {{ mixins.icon('lock') }}
+            Здійснюйте покупки безпечно на OLMAKS.com Ваша інформація під захистом
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</section>
+<!-- end section -->

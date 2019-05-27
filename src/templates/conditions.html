@@ -1,0 +1,20 @@
+---
+title: conditions
+page: conditions
+hero: {
+  mod: 'hero--sm',
+  bgImage: 'bg-hero-conditions.jpg',
+  titleSm: 'обмін та повернення'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_breadcrumbs.html" %}
+  {% include "partials/_conditions.html" %}
+
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
