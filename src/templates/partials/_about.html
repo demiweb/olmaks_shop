@@ -8,29 +8,33 @@ features = [
 
 {%set
 partners = [
-  { img: '1.jpg' },
-  { img: '2.jpg' },
-  { img: '3.jpg' },
-  { img: '4.jpg' },
-  { img: '5.jpg' },
-  { img: '6.jpg' },
-  { img: '7.jpg' },
-  { img: '8.jpg' }
+  { img: '1.png' },
+  { img: '2.png' },
+  { img: '3.png' },
+  { img: '4.png' },
+  { img: '5.png' },
+  { img: '6.png' },
+  { img: '7.png' },
+  { img: '8.png' }
 ]
 %}
 
 {%set
 team = [
-  { img: 'team.1jpg' },
-  { img: 'team.2jpg' },
-  { img: 'team.3jpg' },
-  { img: 'team.4jpg' }
+  { img: 'team-1.jpg' },
+  { img: 'team-2.jpg' },
+  { img: 'team-3.jpg' },
+  { img: 'team-4.jpg' },
+  { img: 'team-1.jpg' },
+  { img: 'team-2.jpg' },
+  { img: 'team-3.jpg' },
+  { img: 'team-4.jpg' }
 ]
 %}
 
 <!-- begin section -->
-<section class="section">
-  <div class="section__block">
+<section class="section section--no-pad">
+  <div class="section__block has-no-pt">
     <div class="container">
       <div class="ssection__title">
         <h2 class="h2--lg">про олмакс</h2>
@@ -40,7 +44,7 @@ team = [
     </div>
   </div>  
 
-  <div class="section__gray-block">
+  <div class="section__gray-block section__block">
     <div class="container">
       <div class="section__title title-underlined title-underlined--long">
         <h2 class="h2--lg">наша місія</h2>
@@ -50,10 +54,10 @@ team = [
       <div class="text text-block">
         <p>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</p>
 
-        <img data-src="img/about/car.jpg" alt="" class="js-lazy">
+        <img data-src="img/about/img-1.jpg" alt="" class="js-lazy">
 
         <p>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</p>
-        <em>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</em>
+        <blockquote>Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</blockquote>
       </div>
     </div>
   </div>
@@ -62,7 +66,7 @@ team = [
     <div class="container">
       <div class="row">
        {% for i in features %}
-       <div class="col-4">
+       <div class="col-lg-4 col-md-6">
          <!-- begin about-item -->
          <div class="about-item">
            <div class="about-item__img js-lazy" data-background-image="img/about/{{ i.img }}"></div>
@@ -71,7 +75,7 @@ team = [
              <h2 class="h2--lg">{{ i.title }}</h2>
            </div>
 
-           <div class="about-item__text text">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія </div>
+           <div class="about-item__text text text--gray">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія </div>
          </div>
          <!-- end about-item -->
        </div>
@@ -82,7 +86,7 @@ team = [
       <div class="partners">
         <div class="row">
           {% for i in partners %}
-          <div class="col-3">
+          <div class="col-lg-3 col-md-4 col-sm-6">
             <!-- begin partner -->
             <div class="partner">
               <img data-src="img/partners/{{ i.img }}" alt="" class="js-lazy">
@@ -96,7 +100,7 @@ team = [
     </div>
   </div>
 
-  <div class="section__block">
+  <div class="section__block has-no-pt">
     <div class="container">
       <div class="section__title title-underlined title-underlined--long">
         <h2 class="h2--lg">як ми досягли успіху</h2>
@@ -107,7 +111,7 @@ team = [
       <div class="team">
         <div class="row">
           {% for i in team %}
-          <div class="col-3">
+          <div class="col-md-3 col-sm-4 col-6">
             <!-- begin member -->
             <div class="member">
               <div class="member__img js-lazy" data-background-image="img/team/{{ i.img }}"></div>

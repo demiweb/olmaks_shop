@@ -1,0 +1,46 @@
+.about-item
+  margin-bottom: 65px
+  +md
+    margin-bottom: 40px
+  +xs
+    margin-bottom: 20px
+  &__img
+    +cover
+    padding-top: 80%
+    margin-bottom: 20px
+    +sm
+      padding-top: 40%
+    +xs
+      padding-top: 60%
+  &__title
+    margin-bottom: 10px
+
+.partners
+
+.partner
+  background-color: #fafafa
+  padding: 20px
+  +flex(center, center)
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  +xs
+    margin-bottom: 15px
+    height: calc(100% - 15px)
+
+.team
+
+.member
+  text-align: center
+  margin-bottom: 30px
+  +xs
+    margin-bottom: 15px
+  &__img
+    padding-top: 100%
+    +cover
+    margin-bottom: 15px
+  &__title
+    +bold
+  &__subttl
+    font-size: 12px
+    color: $c-gray
+    +light
