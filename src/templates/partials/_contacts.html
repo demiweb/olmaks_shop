@@ -2,8 +2,29 @@
 contacts = [  
   {
     title: 'Телефони',
-    meta: '<p>(068) 776-77-00</p><p>(050) 776-77-00</p>',
-    icon: 'call'
+    meta: mixins.list(
+      name = 'info-list',
+      descr = true,
+      modifications = { wrap: 'info-list--simple', item: '', link: '' },
+      list = [
+        { dt: 'Відділ продажу:', dd: '(068) 776-77-00' },
+        { dt: 'Підримка клієнтів:', dd: '(050) 776-77-00' }
+      ]
+    ),
+    icon: 'phone'
+  },
+  {
+    title: 'Робочі години:',
+    meta: mixins.list(
+      name = 'info-list',
+      descr = true,
+      modifications = { wrap: 'info-list--simple', item: '', link: '' },
+      list = [
+        { dt: 'Пн - Сб:', dd: '10:00 - 19:00' },
+        { dt: 'Нд:', dd: '10:00 - 17:00' }
+      ]
+    ),
+    icon: 'clock'
   },
   {
     title: 'Email',
@@ -13,14 +34,21 @@ contacts = [
   {
     title: 'Адреса',
     meta: 'м. Київ, вул. Миколи Грінченко, 18',
-    icon: 'pin'
+    icon: 'location'
   }
 ]
 %}
 
+{%set
+fields = [
+  { mod: 'input--sm', name: 'input', type: 'text', label: 'ПІБ<sup>*</sup>', placeholder: 'Введіть ПІБ', fieldClass: '' },
+  { mod: 'input--sm', name: 'input', type: 'tel', label: 'Телефон<sup>*</sup>', placeholder: 'Введіть телефон', fieldClass: '' },
+  { name: 'textarea', type: '', label: 'Ваше повідомлення', placeholder: 'Введіть ваше питання', fieldClass: '' }
+]
+%}
+
 <!-- begin section -->
-<section class="section section--color section--no-pad-top has-bd-bottom">
-  {% include "partials/_breadcrumbs.html" %}
+<section class="section section--up section--no-pad-top">
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
@@ -70,14 +98,72 @@ contacts = [
 </section>
 <!-- end section -->
 
-<!-- begin section -->
-<section class="section">
+<!-- begin contact-manager -->
+<div class="contact-manager js-lazy" data-background-image="img/bg-contact.jpg">
   <div class="container">
-    <div class="section__title is-center">
-      <h2 class="h2 h2--lg">нам можна знайти на карті</h2>
+    <div class="contact-manager__img">
+      <img data-src="img/manager.png" alt="" class="js-lazy ">
     </div>
 
-    <div class="map" id="map"></div>
+    <div class="contact-manager__block">
+      <div class="contact-manager__title">
+        <h2 class="h2 h2--lg h2--white">Бажаєте зв’язатися з менеджером?</h2>
+        <div class="text text--xs">Наш менеджер допоможе вам у вирішенні будь-яких питань</div>
+      </div>
+
+      <div class="contact-manager__btn">
+        {{ mixins.btn(
+          title = 'зв’язатися з менеджером',
+          mod = ''
+        ) }}
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end contact-manager -->
+
+<!-- begin section -->
+<section class="section section--pad-lg">
+  <div class="container">
+    <div class="col-6">
+      <!-- begin form-block -->
+      <div class="form-block contact-block form form--block">
+        <div class="form-block__title">
+          <h6 class="h5 h5--ttn">Дорогі клієнти,</h6>
+          <div class="text text--gray text--sm">Заповнюючі форму, ви можете бути впевнені, що наш консультант відповість на будь-яке ваше питання</div>
+        </div>
+
+        <form>
+          <div class="form__row">
+            {% for i in fields %}
+            <div class="form__field form__field-full">
+              {{ mixins.input(
+                name = i.name,
+                label = i.label | safe,
+                mod = i.mod,
+                type = i.type,
+                placeholder = i.placeholder,
+                fieldClass = ''
+              ) }}
+            </div>
+            {% endfor %}
+            <div class="form__field form__field-full">
+              {{ mixins.btn(
+                title = 'відправити',
+                href = false,
+                mod = 'btn--full'
+              ) }}
+            </div>
+          </div>
+
+          <div class="form__conf">Залишаючи ваші дані, ви погоджуєтеся з нашою <a href="#">політикою конфіденційності</a></div>
+        </form>
+      </div>
+      <!-- end form-block -->
+    </div>
+
+    <div class="col-6"></div>
   </div>
 </section>
 <!-- end section -->

@@ -25,6 +25,16 @@
       </div>
       {% endif %}
 
+      {% if hero.breadcrumbs %}
+      <div class="col-12">
+        {{ mixins.list(
+          name = 'breadcrumbs',
+          modifications = { wrap: 'breadcrumbs--hero title-underlined title-underlined--long', item: '', link: '' },
+          list = hero.breadcrumbs
+        ) }}
+      </div>
+      {% endif %}
+
       {% if search  %}
       <div class="col-12">
         {% include "partials/_hero-search.html" %}
