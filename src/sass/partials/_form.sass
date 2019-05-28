@@ -77,111 +77,45 @@
         width: 365px
 
   &--block
+    --form-block-gap: 15px
+    +md
+      --form-block-gap: 10px
+    +sm
+      --form-block-gap: 0
     #{$this}__row
       font-size: 0
-      margin-left: -15px
-      margin-right: -15px
+      margin-left: calc(0px - var(--form-block-gap))
+      margin-right: calc(0px - var(--form-block-gap))
     #{$this}__field
       margin-bottom: 15px
       width: 50%
       display: inline-block
       vertical-align: top
-      padding-left: 15px
-      padding-right: 15px
+      padding-left: var(--form-block-gap)
+      padding-right: var(--form-block-gap)
+      +sm
+        width: 100%
 
     #{$this}__field-full
       width: 100%
       .select
         max-width: calc(50% - 15px)
+        +sm
+          max-width: none
 
 .form-block
+  --form-block-padding: 30px
   background-color: #fff
-  padding: 30px 30px 15px
+  padding: var(--form-block-padding) var(--form-block-padding) calc(var(--form-block-padding) / 2)
   margin-bottom: 30px
+  +md
+    --form-block-padding: 15px
+  +md
+    margin-bottom: 15px
   &__title
     margin-bottom: 15px
 
-.select
-  position: relative
-  width: 100%
-  select
-    opacity: 0
-    visibility: hidden
-    position: absolute
 
-  &--number
-    &::before
-      content: attr(data-number)
-      +inline-flex(center, center)
-      width: 26px
-      height: 26px
-      background-color: $c-accent
-      border-radius: 50%
-      color: #fff
-      font-size: 9px
-      +light
-      position: absolute
-      top: 0
-      left: 0
-      transform: translate(-50%, -50%)
-      z-index: 1
-  &--sm
-    color: #a5a5a5
-    font-size: 15px
-    label
-      font-size: inherit
-      display: block
-      margin-bottom: 3px
-      color: $c-text
-      sup
-        color: #fbcf3a
-        font-size: inherit
-        display: inline-block
-        margin-left: .2em
-    .custom-select
-      &__opener
-        font-size: 14px
-        padding: 10px 15px
-        color: inherit
-
-.custom-select
-  $this: &
-  +light
-  font-size: 15px
-  position: relative
-  &.is-open
-    #{$this}__panel      
-      visibility: visible
-      opacity: 1
-  
-  &__opener
-    padding-top: 14px
-    padding-bottom: 14px
-    padding-right: 20px
-    padding-left: 18px
-    border: 1px solid  $c-border
-    position: relative
-    +text-overflow
-    +after
-      display: inline-block
-      +icon-arrow(7, 7, 1, $c-text, -45)
-      position: absolute
-      right: 10px
-      top: 50%
-      transform: translate(0, -50%) rotate(-45deg)
-      pointer-events: none
-    +sm
-      padding-top: 10px
-      padding-bottom: 10px
-  &__panel
-    position: absolute
-    top: 100%
-    left: 0
-    width: 100%
-    background-color: #fff
-    z-index: 2
-    visibility: hidden
-    opacity: 0
 
 .input
   input

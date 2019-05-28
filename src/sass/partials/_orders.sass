@@ -224,3 +224,30 @@
       +sm
         width: 100%
 
+.order-info
+  @extend .form-block
+  +md
+    margin-top: 15px
+  &__title
+    margin-bottom: 20px
+  &__item
+    border-bottom: 1px solid  $c-border
+    padding: 9px 0
+    +flex(space-between, center)
+    margin-left: calc(0px - var(--form-block-padding))
+    margin-right: calc(0px - var(--form-block-padding))
+    padding-left: var(--form-block-padding)
+    padding-right: var(--form-block-padding)
+    &:last-child
+      border-bottom: 0
+      strong
+        color: #e64b45
+    &:first-child
+      border-top: 1px solid  $c-border
+  &__list
+    margin-bottom: 10px
+  &__btn
+    margin-bottom: 15px
+    
+
+

@@ -1,0 +1,127 @@
+.select
+  position: relative
+  width: 100%
+  select
+    opacity: 0
+    visibility: hidden
+    position: absolute
+
+  &--number
+    &::before
+      content: attr(data-number)
+      +inline-flex(center, center)
+      width: 26px
+      height: 26px
+      background-color: $c-accent
+      border-radius: 50%
+      color: #fff
+      font-size: 9px
+      +light
+      position: absolute
+      top: 0
+      left: 0
+      transform: translate(-50%, -50%)
+      z-index: 1
+  &--sm
+    color: #a5a5a5
+    font-size: 15px
+    label
+      font-size: inherit
+      display: block
+      margin-bottom: 3px
+      color: $c-text
+      sup
+        color: #fbcf3a
+        font-size: inherit
+        display: inline-block
+        margin-left: .2em
+    .custom-select
+      font-size: 14px
+      &__opener        
+        padding: 10px 15px
+        color: inherit
+      &__panel-item
+        padding-left: 15px
+        padding-right: 15px
+      &__option
+        padding-left: 15px
+        padding-right: 15px
+
+.custom-select
+  $this: &
+  +light
+  font-size: 15px
+  position: relative
+  cursor: pointer
+  &.is-open
+    #{$this}__panel
+      visibility: visible
+      opacity: 1
+  
+  &__opener
+    padding-top: 14px
+    padding-bottom: 14px
+    padding-right: 20px
+    padding-left: 18px
+    border: 1px solid  $c-border
+    position: relative
+    +text-overflow
+    +after
+      display: inline-block
+      +icon-arrow(7, 7, 1, $c-text, -45)
+      position: absolute
+      right: 10px
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      pointer-events: none
+    +sm
+      padding-top: 10px
+      padding-bottom: 10px
+  &__panel
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    background-color: #fff
+    z-index: 2
+    visibility: hidden
+    opacity: 0
+    border: 1px solid  $c-border
+    padding-top: 40px
+  &__option
+    padding-right: 20px
+    padding-left: 18px
+    padding-top: 5px
+    padding-bottom: 5px
+    +tr(background-color .3s, color .3s)
+    cursor: pointer
+    +hover
+      background-color: $c-accent
+      color: #fff
+    &[data-value="placeholder"]
+      display: none
+  &__panel-item
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: 5px
+    padding-left: 18px
+    padding-right: 20px
+    input
+      border: 1px solid  $c-border
+      font-family: inherit
+      font-size: inherit
+      padding: 5px 10px
+      padding-left: 30px
+      color: inherit
+      width: 100%
+    .icon
+      position: absolute
+      fill: currentColor
+      top: 12px
+      left: 25px
+  &__options
+    overflow: hidden
+    position: relative
+    max-height: 200px

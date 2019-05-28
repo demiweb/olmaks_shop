@@ -18,7 +18,7 @@ formBlocks = [
         name: 'select',
         inputMod: 'select--sm',
         fieldClass: 'js-select has-placeholder',
-        type: 'default',
+        type: 'with_input',
         label: 'Спосіб оплати<sup>*</sup>',
         options: [
           { value: 'placeholder', option: 'Оберіть спосіб оплати' },
@@ -31,10 +31,20 @@ formBlocks = [
         name: 'select',
         inputMod: 'select--sm',
         fieldClass: 'js-select has-placeholder',
-        type: 'default',
+        type: 'with_input',
         label: 'Спосіб доставки<sup>*</sup>',
         options: [
           { value: 'placeholder', option: 'Оберіть спосіб доставки' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
+          { value: '1', option: 'спосіб оплати1' },
           { value: '1', option: 'спосіб оплати1' },
           { value: '2', option: 'спосіб оплати2' }
         ]
@@ -44,7 +54,7 @@ formBlocks = [
         name: 'select',
         inputMod: 'select--sm',
         fieldClass: 'js-select has-placeholder',
-        type: 'default',
+        type: 'with_input',
         label: 'Номер відділення<sup>*</sup>',
         options: [
           { value: 'placeholder', option: 'Оберіть Номер відділення' },
@@ -74,10 +84,14 @@ formBlocks = [
 
     <form>
       <div class="row">
-        <div class="col-8">
+        <div class="col-12">
           <div class="section__title">
             <h2 class="h2 h2--lg">Оформлення замовлення</h2>
           </div>
+        </div>
+
+        <div class="col-lg-8">
+          
 
           {% for i in formBlocks %}
           <!-- begin form-block -->
@@ -118,27 +132,27 @@ formBlocks = [
         </div>
 
 
-        <div class="col-4">
+        <div class="col-lg-4">
           <!-- begin order-info -->
           <div class="order-info">
             <div class="order-info__title">
-              <h5 class="h5">Сума заказу</h5>
+              <h5 class="h5">Сума замовлення</h5>
               <div class="text text--xs text--gray">1 товар у вашій корзині</div>
             </div>
 
             <div class="order-info__list">
               <div class="order-info__item">
-                <span>Проміжна сума</span>
+                <span>Проміжна сума:</span>
                 <strong>1246.75 UAH</strong>
               </div>
 
               <div class="order-info__item">
-                <span>Сума доставки</span>
+                <span>Сума доставки:</span>
                 <strong>122.75 UAH</strong>
               </div>
 
               <div class="order-info__item">
-                <span>Загальна сума</span>
+                <span>Загальна сума:</span>
                 <strong>11369.5 UAH</strong>
               </div>
             </div>
@@ -153,7 +167,7 @@ formBlocks = [
           </div>
           <!-- end order-info -->
 
-          <div class="application__help">
+          <div class="application-help">
               {{ mixins.icon('lock') }}
             Здійснюйте покупки безпечно на OLMAKS.com Ваша інформація під захистом
           </div>
