@@ -126,44 +126,92 @@ fields = [
 <!-- begin section -->
 <section class="section section--pad-lg">
   <div class="container">
-    <div class="col-6">
-      <!-- begin form-block -->
-      <div class="form-block contact-block form form--block">
-        <div class="form-block__title">
-          <h6 class="h5 h5--ttn">Дорогі клієнти,</h6>
-          <div class="text text--gray text--sm">Заповнюючі форму, ви можете бути впевнені, що наш консультант відповість на будь-яке ваше питання</div>
+    <div class="row">
+      <div class="col-md-6 order-0">
+        <div class="section__title">
+          <h2 class="h2 h2--lg">контактна форма</h2>
         </div>
+      </div>
 
-        <form>
-          <div class="form__row">
-            {% for i in fields %}
-            <div class="form__field form__field-full">
-              {{ mixins.input(
-                name = i.name,
-                label = i.label | safe,
-                mod = i.mod,
-                type = i.type,
-                placeholder = i.placeholder,
-                fieldClass = ''
-              ) }}
+      <div class="col-md-6 order-2 order-md-1">
+        <div class="section__title">
+          <h2 class="h2 h2--lg">Місцезнаходження</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 order-1 order-md-2">
+        <!-- begin form-block -->
+        <div class="form-block contacts contacts--sm form form--block is-h-100">
+          <div class="form-block__title">
+            <h5 class="h5 h5--ttn">Дорогі клієнти,</h5>
+            <div class="text text--gray text--sm">Заповнюючі форму, ви можете бути впевнені, що наш консультант відповість на будь-яке ваше питання</div>
+          </div>
+
+          <form>
+            <div class="form__row">
+              {% for i in fields %}
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = i.name,
+                  label = i.label | safe,
+                  mod = i.mod,
+                  type = i.type,
+                  placeholder = i.placeholder,
+                  fieldClass = ''
+                ) }}
+              </div>
+              {% endfor %}
+              <div class="form__field form__field-full">
+                {{ mixins.btn(
+                  title = 'відправити',
+                  href = false,
+                  mod = 'btn--full'
+                ) }}
+              </div>
             </div>
-            {% endfor %}
-            <div class="form__field form__field-full">
-              {{ mixins.btn(
-                title = 'відправити',
-                href = false,
-                mod = 'btn--full'
-              ) }}
+
+            <div class="form__conf">Залишаючи ваші дані, ви погоджуєтеся з нашою <a href="#">політикою конфіденційності</a></div>
+          </form>
+        </div>
+        <!-- end form-block -->
+      </div>
+
+      
+      <div class="col-md-6 order-3">
+        <!-- begin contacts -->
+        <div class="contacts contacts--sm is-h-100">
+          <div class="contacts__block">
+            <div class="contacts__title">
+              <div class="contacts__title-comb">
+                {{ mixins.icon('location') }}
+                <h5 class="h5 h5--ttn">Адреса</h5>
+              </div>
+              
+              <div class="text text--gray text--sm">ТОВ Олмакс Груп,  м.Київ, вул. Миколи Грінченко 18</div>
             </div>
           </div>
 
-          <div class="form__conf">Залишаючи ваші дані, ви погоджуєтеся з нашою <a href="#">політикою конфіденційності</a></div>
-        </form>
-      </div>
-      <!-- end form-block -->
-    </div>
+          <div class="contacts__map">
+            <div class="map" id="map"></div>
+          </div>
 
-    <div class="col-6"></div>
+          <div class="contacts__social">
+            <div class="text text--gray title-underlined title-underlined--sm title-underlined--long title-underlined--center title-underlined--inherit">Станьте частиною нашої соціальної мережі:</div>
+
+            {{ mixins.list(
+              name = 'social',
+              list = [
+                { item: '', link: mixins.icon('facebook') , modItem: '', modLink: '' },
+                { item: '', link: mixins.icon('youtube') , modItem: '', modLink: '' }
+              ]
+            ) }}
+          </div>
+
+
+        </div>
+        <!-- end contacts -->
+      </div>
+    </div>
   </div>
 </section>
 <!-- end section -->
