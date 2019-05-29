@@ -1,0 +1,32 @@
+<!-- begin viewed-items -->
+<div class="viewed-items">
+  {% for i in range(0, 4) %}
+  <!-- begin viewed-item -->
+  <a href="#" class="viewed-items__item viewed-item">
+    <span class="viewed-item__img">
+      <img data-src="img/item/viewed-item.jpg" alt="" class="js-lazy">
+    </span>
+
+    <span class="viewed-item__content">
+      <span class="viewed-item__title">Side Bracket Bolt</span>
+
+      <span class="viewed-item__rating">
+        <span class="rating">
+          {% for i in range(0, 5) %}
+          {{ mixins.icon('star') }}
+          {% endfor %}
+          <span class="rating__grade">(0)</span>
+        </span>
+      </span>
+
+      <span class="viewed-item__price">
+        <span class="price price--sm">1246.75 UAH</span>
+      </span>
+    </span>
+
+    
+  </a>
+  <!-- end viewed-item -->
+  {% endfor %}
+</div>
+<!-- end viewed-items -->

@@ -1,0 +1,28 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <!-- begin cart-empty-block -->
+    <div class="cart-empty-block">
+      <div class="cart-empty-block__icon">
+        {{ mixins.icon('cart-fill') }}
+      </div>
+
+      <div class="cart-empty-block__title">
+        <h2 class="h2 h2--light">ваша корзина порожня</h2>
+      </div>
+
+      <div class="cart-empty-block__text text text--gray">Слідкуйте за найпопулярнішими товарами у нашому <a href="#">каталозі</a></div>
+
+      <div class="cart-empty-block__btn">
+        {{ mixins.btn(
+          title = 'перейти в каталог',
+          mod = 'btn--arrow'
+        ) }}
+      </div>
+    </div>
+    <!-- end cart-empty-block -->
+
+    {% include "partials/_viewed-items.html" %}
+  </div>
+</section>
+<!-- end section -->

@@ -325,6 +325,13 @@ strong
   +xs
     font-size: 26px
 
+  &--sm
+    font-size: 21px
+    +sm
+      font-size: 18px
+    +xs
+      font-size: 16px
+
 .check
   $this: &
   color: $c-accent
@@ -581,3 +588,62 @@ strong
   +tr(color .3s)
   +hover
     color: #acacac
+
+.viewed-items
+  --viewed-items-gap: 15px
+  +flex(flex-start, normal, row, wrap)
+  margin-left: calc(0px - var(--viewed-items-gap))
+  margin-right: calc(0px - var(--viewed-items-gap))
+  &__item
+    width: calc(#{percentage(3/12)} - (var(--viewed-items-gap) * 2))
+    margin-left: var(--viewed-items-gap)
+    margin-right: var(--viewed-items-gap)
+    margin-bottom: var(--viewed-items-gap)
+    +md
+      width: calc(#{percentage(4/12)} - (var(--viewed-items-gap) * 2))
+    +sm
+      width: calc(#{percentage(6/12)} - (var(--viewed-items-gap) * 2))
+    +xs
+      width: calc(#{percentage(12/12)} - (var(--viewed-items-gap) * 2))
+
+
+.viewed-item
+  +flex(flex-start, normal, column)
+  border: 1px solid  $c-border
+  +tr(box-shadow .3s)
+  +hover
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.18)
+  &__img
+    display: block
+    margin-bottom: 20px
+  &__title
+    display: block
+    margin-bottom: 15px
+    color: $c-gray
+    font-size: 18px
+    text-decoration: underline
+    +lg
+      margin-bottom: 10px
+  &__content
+    padding-left: 35px
+    padding-right: 35px
+    padding-bottom: 20px
+    display: block
+    +lg
+      padding-left: 20px
+      padding-right: 20px
+  &__price
+    display: block
+  &__rating
+    display: block
+    margin-bottom: 10px
+    +lg
+      margin-bottom: 5px
+
+.rating
+  color: $c-gray
+  font-size: 12px
+  display: inline-block
+  .icon
+    fill: currentColor
+

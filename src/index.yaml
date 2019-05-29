@@ -21,3 +21,4 @@ PageList:
 - file: email-send.html
 - file: news.html
 - file: confidentiality.html
+- file: empty-cart.html
