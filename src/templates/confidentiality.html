@@ -1,0 +1,25 @@
+---
+title: confidentiality
+page: confidentiality
+hero: {
+  titleSm: 'політика конфіденційності',
+  breadcrumbs: [
+    { link: 'Головна' },
+    { item: '/' },
+    { link: 'Обмін та повернення', modLink: 'is-active' }
+  ],
+  bgImage: 'bg-hero-confidentiality.jpg',
+  mod: 'hero--under'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_breadcrumbs.html" %}
+  {% include "partials/_confidentiality.html" %}
+
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

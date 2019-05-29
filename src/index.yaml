@@ -20,3 +20,4 @@ PageList:
 - file: 404.html
 - file: email-send.html
 - file: news.html
+- file: confidentiality.html

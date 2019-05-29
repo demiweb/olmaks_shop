@@ -1,0 +1,27 @@
+<!-- begin section -->
+<section class="section section--up section--no-pad-top">
+  <div class="container">
+    <div class="section__block-mb">
+      <div class="row">
+        <div class="col-lg-3">
+          {% include "partials/_aside-nav.html" %}
+        </div>
+
+        <div class="col-lg-9">
+          {{ mixins.textBlock('section-text--shadow') }}
+        </div>        
+      </div>
+    </div>
+
+    <div class="section__block-mb">
+      <div class="row">
+        <div class="col-12">
+          {% set contactsBlockFull = true %}
+          {% include "partials/_contacts-block.html" %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- end section -->

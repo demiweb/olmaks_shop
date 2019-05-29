@@ -1,43 +1,4 @@
-{%set
-contacts = [  
-  {
-    title: 'Телефони',
-    meta: mixins.list(
-      name = 'info-list',
-      descr = true,
-      modifications = { wrap: 'info-list--simple', item: '', link: '' },
-      list = [
-        { dt: 'Відділ продажу:', dd: '(068) 776-77-00' },
-        { dt: 'Підримка клієнтів:', dd: '(050) 776-77-00' }
-      ]
-    ),
-    icon: 'phone'
-  },
-  {
-    title: 'Робочі години:',
-    meta: mixins.list(
-      name = 'info-list',
-      descr = true,
-      modifications = { wrap: 'info-list--simple', item: '', link: '' },
-      list = [
-        { dt: 'Пн - Сб:', dd: '10:00 - 19:00' },
-        { dt: 'Нд:', dd: '10:00 - 17:00' }
-      ]
-    ),
-    icon: 'clock'
-  },
-  {
-    title: 'Email',
-    meta: '<a href="mailto:info@olmaks.com.ua">info@olmaks.com.ua</a>',
-    icon: 'envelope'
-  },
-  {
-    title: 'Адреса',
-    meta: 'м. Київ, вул. Миколи Грінченко, 18',
-    icon: 'location'
-  }
-]
-%}
+
 
 {%set
 fields = [
@@ -56,42 +17,7 @@ fields = [
       </div>
 
       <div class="col-lg-9">
-        <!-- begin contacts -->
-        <div class="contacts">
-          <div class="contacts__title">
-            <h1 class="h2 h2--lg">зв’яжіться з нами</h1>
-            <div class="h2-subttl--sm">Ми будемо раді будь-якому зверненню, пропозиції чи проханню. 
-  Зателефонуйте або напишіть нам!</div>
-          </div>
-
-          <div class="contacts__contacts">
-            {% for i in contacts %}
-            <!-- begin contact -->
-            <div class="contact contacts__contact">
-              <div class="contact__title">
-                <h5 class="h5 h5--ttn">{{ i.title }}</h5>
-                {{ mixins.icon(i.icon) }}
-              </div>
-
-              <div class="contact__meta">{{ i.meta | safe }}</div>
-            </div>
-            <!-- end contact -->
-            {% endfor %}
-          </div>
-
-          <div class="contacts__social">
-            <div class="text text--gray title-underlined title-underlined--sm title-underlined--long title-underlined--center title-underlined--inherit">Станьте частиною нашої соціальної мережі:</div>
-
-            {{ mixins.list(
-              name = 'social',
-              list = [
-                { item: '', link: mixins.icon('facebook') , modItem: '', modLink: '' },
-                { item: '', link: mixins.icon('youtube') , modItem: '', modLink: '' }
-              ]
-            ) }}
-          </div>
-        </div>
-        <!-- end contacts -->
+        {% include "partials/_contacts-block.html" %}
       </div>
     </div>
   </div>
@@ -206,8 +132,6 @@ fields = [
               ]
             ) }}
           </div>
-
-
         </div>
         <!-- end contacts -->
       </div>

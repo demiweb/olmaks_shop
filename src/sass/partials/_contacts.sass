@@ -89,6 +89,28 @@
       padding-right: 0
     #{$this}__map
       margin-bottom: 40px
+  &--full
+    --contacts-padding: 100px
+    padding-left: var(--contacts-padding)
+    padding-right: var(--contacts-padding)
+    +md
+      --contacts-padding: 20px
+    #{$this}__contacts
+      justify-content: space-between
+    #{$this}__contact
+      max-width: 370px
+      +sm
+        max-width: none
+    #{$this}__social
+      padding-left: var(--contacts-padding)
+      padding-right: var(--contacts-padding)
+      margin-left: calc(0px - var(--contacts-padding))
+      margin-right: calc(0px - var(--contacts-padding))
+      +md
+        padding-left: var(--contacts-padding)
+        padding-right: var(--contacts-padding)
+        margin-left: calc(0px - var(--contacts-padding))
+        margin-right: calc(0px - var(--contacts-padding))
 
 .contact
   text-align: left
