@@ -540,3 +540,38 @@ strong
   margin-right: auto
   .icon
     fill: currentColor
+
+.auth-block
+  text-align: center
+  &__title
+    margin-bottom: 10px
+  &__icon
+    margin-bottom: 20px    
+    .icon
+      fill: $c-accent
+      font-size: 60px
+      
+  &__icon-lg
+    .icon
+      font-size: 220px
+  &__text
+    +bold
+    color: $c-gray
+    font-size: 18px
+    margin-bottom: 65px
+    strong
+      color: $c-text-100
+      a
+        color: inherit
+    a
+      color: $c-link
+  &__text-mb-sm
+    margin-bottom: 35px
+  &__links
+
+.auth-link
+  color: $c-link
+  text-decoration: underline
+  +tr(color .3s)
+  +hover
+    color: #acacac

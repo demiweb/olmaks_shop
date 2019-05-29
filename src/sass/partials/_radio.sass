@@ -1,0 +1,36 @@
+.radio
+  position: relative
+  padding-left: 1.5em
+  user-select: none
+  font-size: 14px
+  cursor: pointer
+  input[type="radio"]
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    &:checked + span
+      &::after
+        content: ''        
+        top: 4px
+        left: 4px
+        position: absolute
+        display: block
+        border-radius: 50%
+        width: 8px
+        height: 8px
+        background-color: #fff
+      &::before
+        border-color: #fbcf3a
+        background-color: #fbcf3a
+  span
+    &::before
+      content: ''
+      border: 1px solid $c-border
+      border-radius: 50%
+      width: 16px
+      height: 16px
+      top: 0
+      left: 0
+      background-color: #fff
+      position: absolute
+      display: block

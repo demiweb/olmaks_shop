@@ -6,6 +6,8 @@
     max-width: 365px
     margin-left: auto
     margin-right: auto
+    font-size: 15px
+    padding-top: 5px
     a
       text-decoration: underline
       color: #8388c7
@@ -104,6 +106,8 @@
       padding-right: var(--form-block-gap)
       +sm
         width: 100%
+    #{$this}__field-mb-lg
+      margin-bottom: 35px
 
     #{$this}__field-full
       width: 100%
@@ -124,6 +128,10 @@
   &__title
     margin-bottom: 15px
 
+  &--sm
+    --form-block-padding: 50px
+    padding-top: calc(var(--form-block-padding) / 1.5)
+
 
 
 .input
@@ -142,6 +150,8 @@
     color: inherit
     +light
     font-size: 14px
+  
+  
   &--lg
     input
       height: 50px
@@ -172,9 +182,21 @@
       label
         display: block
         margin-bottom: 5px
+  &--password
+    position: relative
+    button
+      color: #4171b9
+      background-color: transparent
+      text-transform: uppercase
+      +roman
+      font-size: 12px
+      position: absolute
+      bottom: 12px
+      right: 15px
+    input
+      padding-right: 80px
 
-.textarea
-  
+.textarea  
   font-size: 15px
   label
     display: block

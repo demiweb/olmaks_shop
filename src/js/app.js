@@ -10,6 +10,7 @@ import setGallery from './components/setGallery';
 import { setBlockBgHeight } from './components/setBlockBgHeight';
 import setAccordion from './components/setAccordion';
 import toggleComponentsList from './components/toggleComponentsList';
+import showPassword from './components/showPassword';
 
 $(function() {
   setTouchClassName();
@@ -24,4 +25,5 @@ $(function() {
   setBlockBgHeight();
   setAccordion();
   toggleComponentsList();
+  showPassword();
 });
