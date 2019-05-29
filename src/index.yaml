@@ -19,3 +19,4 @@ PageList:
 - file: success.html
 - file: 404.html
 - file: email-send.html
+- file: news.html

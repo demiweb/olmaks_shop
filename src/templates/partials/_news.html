@@ -1,0 +1,71 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        <!-- begin news -->
+        <div class="news">
+          {% for i in range(0, 3) %}
+          <!-- begin news-item -->
+          <a href="#" class="news-item">
+            <span class="news-item__img js-lazy" data-background-image="img/news/car-1.jpg">
+              <span class="news-item__date-label"><strong>02</strong> вер</span>
+            </span>
+
+            <span class="news-item__content">
+              <span class="news-item__icons">
+                <span class="news-item__meta">
+                  Olmaks Group
+                </span>
+
+                <span class="news-item__meta">
+                  203
+                </span>
+              </span>
+
+              <span class="news-item__title">
+                <h5 class="h5">Тестова і оригінальна Tesla Model 3</h5>
+              </span>
+
+              <span class="news-item__text text text--gray">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</span>
+
+              <span class="news-item__more"></span>
+            </span>
+          </a>
+          <!-- end news-item -->
+          {% endfor %}
+        </div>
+        <!-- end news -->
+      </div>
+
+      <div class="col-3">
+        <!-- begin aside -->
+        <aside class="aside aside--news">
+          <!-- begin news-nav -->
+          <div class="news-nav">
+            <div class="news-nav__title title-underlined title-underlined--long">
+              <h5 class="h5">категорії новин</h5>
+            </div>
+
+            <div class="news-nav__nav">
+              {{ mixins.list(
+                name = 'nav',
+                modifications = { wrap: 'nav--news', item: '', link: '' },
+                list = [
+                  { link: 'Автоновини' },
+                  { link: 'Новини про компанію' },
+                  { link: 'Статті' },
+                  { link: 'Нові продукти' },
+                  { link: 'Огляди' }
+                ]
+              ) }}
+            </div>
+          </div>
+          <!-- end news-nav -->
+        </aside>
+        <!-- end aside -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -64,6 +64,18 @@
         ]
       ) }}
       {% endif %}
+
+      {% if page === 'news' %}
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: 'title-underlined title-underlined--long', item: '', link: '' },
+        list = [
+          { item: '', link: 'Головна ', modItem: '', modLink: '' },
+          { item: '/', link: '', modItem: '', modLink: '' },
+          { item: '', link: 'Новини', modItem: '', modLink: 'is-active' }
+        ]
+      ) }}
+      {% endif %}
     </div>
   </div>
 </div>
