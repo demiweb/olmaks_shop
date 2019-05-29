@@ -1,67 +1,98 @@
+{%set
+asideItems = [
+  { sm: true },
+  { sm: true },
+  { sm: true }
+]
+%}
+
 <!-- begin section -->
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-9">
+      <div class="col-lg-9 order-1 order-lg-0">
         <!-- begin news -->
         <div class="news">
-          {% for i in range(0, 3) %}
-          <!-- begin news-item -->
-          <a href="#" class="news-item">
-            <span class="news-item__img js-lazy" data-background-image="img/news/car-1.jpg">
-              <span class="news-item__date-label"><strong>02</strong> вер</span>
-            </span>
-
-            <span class="news-item__content">
-              <span class="news-item__icons">
-                <span class="news-item__meta">
-                  Olmaks Group
-                </span>
-
-                <span class="news-item__meta">
-                  203
-                </span>
-              </span>
-
-              <span class="news-item__title">
-                <h5 class="h5">Тестова і оригінальна Tesla Model 3</h5>
-              </span>
-
-              <span class="news-item__text text text--gray">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</span>
-
-              <span class="news-item__more"></span>
-            </span>
-          </a>
-          <!-- end news-item -->
+          {% for i in range(0, 10) %}
+          {% include "partials/_news-item.html" %}
           {% endfor %}
+
+          <div class="news__pagination">
+            {{ mixins.list(
+              name = 'pagination',
+              modifications = { wrap: '', item: '', link: '' },
+              list = [
+                { item: '', link: ' ', modItem: '', modLink: 'prev' },
+                { item: '', link: '1', modItem: '', modLink: 'is-active' },
+                { item: '', link: '2', modItem: '', modLink: '' },
+                { item: '', link: '3', modItem: '', modLink: '' },
+                { item: '', link: '...', modItem: '', modLink: 'is-inactive' },
+                { item: '', link: ' ', modItem: '', modLink: 'next' }
+              ]
+            ) }}
+          </div>
         </div>
         <!-- end news -->
       </div>
 
-      <div class="col-3">
+      <div class="col-lg-3 order-0 order-lg-1">
         <!-- begin aside -->
         <aside class="aside aside--news">
-          <!-- begin news-nav -->
-          <div class="news-nav">
-            <div class="news-nav__title title-underlined title-underlined--long">
-              <h5 class="h5">категорії новин</h5>
+          <div class="aside__block aside__block-nav">
+            <!-- begin news-nav -->
+            <div class="news-nav">
+              <div class="news-nav__title title-underlined title-underlined--long">
+                <h5 class="h5">категорії новин</h5>
+              </div>
+
+              <div class="news-nav__nav">
+                {{ mixins.list(
+                  name = 'nav',
+                  modifications = { wrap: 'nav--news', item: '', link: '' },
+                  list = [
+                    { link: 'Автоновини' },
+                    { link: 'Новини про компанію' },
+                    { link: 'Статті' },
+                    { link: 'Нові продукти' },
+                    { link: 'Огляди' }
+                  ]
+                ) }}
+              </div>
+            </div>
+            <!-- end news-nav -->
+          </div>
+
+          <div class="aside__block">
+            <div class="aside__title title-underlined title-underlined--long">
+              <h5 class="h5">фільтр за тегами</h5>
             </div>
 
-            <div class="news-nav__nav">
-              {{ mixins.list(
-                name = 'nav',
-                modifications = { wrap: 'nav--news', item: '', link: '' },
-                list = [
-                  { link: 'Автоновини' },
-                  { link: 'Новини про компанію' },
-                  { link: 'Статті' },
-                  { link: 'Нові продукти' },
-                  { link: 'Огляди' }
-                ]
-              ) }}
-            </div>
+            {{ mixins.list(
+              name = 'aside-filters',
+              modifications = { wrap: '', item: '', link: '' },
+              list = [
+                { item: '', link: 'Авто', modItem: '', modLink: '' },
+                { item: '', link: 'Tesla', modItem: '', modLink: '' },
+                { item: '', link: 'Новини', modItem: '', modLink: '' },
+                { item: '', link: 'Огляд', modItem: '', modLink: '' },
+                { item: '', link: 'Авто', modItem: '', modLink: '' },
+                { item: '', link: 'Tesla', modItem: '', modLink: '' },
+                { item: '', link: 'Новини', modItem: '', modLink: '' },
+                { item: '', link: 'Огляд', modItem: '', modLink: '' }
+
+              ]
+            ) }}
           </div>
-          <!-- end news-nav -->
+
+          <div class="aside__block">
+            <div class="aside__title title-underlined title-underlined--long">
+              <h5 class="h5">популярні статті</h5>
+            </div>
+
+            {% for i in asideItems %}
+            {% include "partials/_news-item.html" %}
+            {% endfor %}
+          </div>
         </aside>
         <!-- end aside -->
       </div>

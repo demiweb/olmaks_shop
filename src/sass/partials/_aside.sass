@@ -1,0 +1,32 @@
+.aside
+  $this: &
+  &--news
+    #{$this}__title
+      margin-bottom: 20px
+      margin-left: 25px
+      +lg
+        margin-left: 20px
+    #{$this}__block
+      margin-bottom: 25px
+      +md
+        &:not(.aside__block-nav)
+          display: none
+
+.aside-filters
+  font-size: 0
+  margin-left: -1px
+  margin-right: -1px
+  li
+    display: inline-block
+    width: 33.33333%
+    vertical-align: top
+    padding-left: 1px
+    padding-right: 1px
+    font-size: 15px
+    margin-bottom: 1px
+  a
+    display: block
+    background-color: $c-text-100
+    color: #fff
+    text-align: center
+    padding: 5px

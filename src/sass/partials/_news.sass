@@ -1,0 +1,100 @@
+.news-item
+  --news-item-padding: 25px
+  --news-item-margin: 15px
+  $this: &
+  +flex()
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.05)
+  margin-bottom: 30px
+  +tr(box-shadow .3s)
+  +lg
+    --news-item-padding: 20px
+    --news-item-margin: 10px
+  +sm
+    --news-item-padding: 15px
+    --news-item-margin: 8px
+  +xs
+    display: block
+  +hover
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.18)
+    #{$this}__title
+      .h5, h5
+        color: $c-accent
+        text-decoration: underline
+    #{$this}__more
+      .btn-arrow
+        color: $c-accent
+  &__img
+    display: block
+    +flex()
+    +cover
+    position: relative
+    width: percentage(300/870)
+    padding-top: 50%
+    +xs
+      width: 100%
+  &__title
+    margin-bottom: var(--news-item-margin)
+    display: block
+    +lg
+      font-size: 16px
+    +sm
+      font-size: 15px
+    .h5, h5
+      +lg
+        font-size: 16px
+      +sm
+        font-size: 15px
+  &__text
+    margin-bottom: var(--news-item-margin)
+    display: block
+    max-height: 75px
+    +sm
+      font-size: 14px
+  &__content
+    +flex(flex-start, normal, column)
+    width: percentage(570/870)
+    padding: var(--news-item-padding)
+    display: block
+    +xs
+      width: 100%
+  &__icons
+    +flex(flex-start, center)
+    margin-bottom: calc(var(--news-item-margin) / 1.5)
+  &__date-label
+    position: absolute
+    font-size: 10px
+    color: #fff
+    background-color: $c-accent
+    padding: 5px 14px
+    top: 5px
+    left: 5px
+    text-align: center
+    strong
+      font-size: 17px
+      line-height: .8
+      display: block
+  &__meta
+    display: block
+    color: $c-gray
+    +notlast
+      margin-right: 20px
+    +lg
+      font-size: 14px
+      +notlast
+        margin-right: 10px
+    +sm
+      font-size: 12px
+    .icon
+      fill: currentColor
+      margin-right: 5px
+  &__more
+    display: block
+
+  &--sm
+    flex-direction: column
+    #{$this}__img
+      width: 100%
+      padding-top: 70%
+      // margin-bottom: calc(var(--news-item-margin) * 1.5)
+    #{$this}__content
+      width: 100%

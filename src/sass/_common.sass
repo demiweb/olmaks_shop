@@ -243,6 +243,7 @@ strong
   padding: 15px 20px
   padding-right: 10px
   background-color: #2c2c2c
+  +tr(color .3s)
   +hover
     #{$this}__arrow
       width: 40px
@@ -262,7 +263,7 @@ strong
       content: ''
       position: absolute
       height: 1px
-      background-color: #fff
+      background-color: currentColor
       top: 50%
       right: -1px
       transform: translate(0, -50%)
@@ -270,11 +271,16 @@ strong
     &::after
       display: inline-block
       position: absolute
-      +icon-arrow(8, 8, 1, #fff, 225)
+      +icon-arrow(8, 8, 1, currentColor, 225)
       content: ''
       top: 50%
       transform: translate(0, -50%) rotate(225deg) !important
       right: 0
+
+  &--link
+    padding: 0
+    background-color: transparent
+    color: $c-text-100
 
 .counter
   input

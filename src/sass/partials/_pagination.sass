@@ -1,0 +1,37 @@
+.pagination
+  font-size: 14px
+  .prev
+    position: relative
+    +before
+      +icon-arrow(8, 8, 1, currentColor, 45)
+      display: inline-block
+      position: relative
+      left: .1em
+  .next
+    position: relative
+    +before
+      +icon-arrow(8, 8, 1, currentColor, -135)
+      display: inline-block
+      position: relative
+      right: .1em
+  li
+    display: inline-block
+    vertical-align: middle
+  a
+    display: block
+    padding: 5px
+    border: 1px solid  $c-border
+    min-width: 30px
+    height: 30px
+    color: $c-text
+    text-align: center
+    +tr(background-color .3s, color .3s)
+    +hover
+      background-color: $c-text
+      color: #fff
+    &.is-active
+      background-color: $c-text
+      color: #fff
+  .is-inactive
+    pointer-events: none
+    border: 0

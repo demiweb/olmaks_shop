@@ -1,0 +1,36 @@
+<!-- begin news-item -->
+<a href="#" class="news-item{% if i.sm %} news-item--sm{% endif %}">
+  <span class="news-item__img js-lazy" data-background-image="img/news/car-1.jpg">
+    {% if not i.sm %}
+    <span class="news-item__date-label"><strong>02</strong> вер</span>
+    {% endif %}
+  </span>
+
+  <span class="news-item__content">
+    <span class="news-item__icons">
+      <span class="news-item__meta">
+        {{ mixins.icon('user-fill') }}
+        Olmaks Group
+      </span>
+
+      <span class="news-item__meta">
+        {{ mixins.icon('eye') }}
+        203
+      </span>
+    </span>
+
+    <span class="news-item__title">
+      <h5 class="h5">Тестова і оригінальна Tesla Model 3</h5>
+    </span>
+
+    <span class="news-item__text text text--gray js-truncate-text">Після офіційного анонса в Twitter Ілона Маска електромобіля Tesla Model 3 ми можемо чітко побачити деякі з змін, які компанія внесла в електромобіль з часу анонса альфа-прототипу, показаного в березні 2016 року.</span>
+
+    <span class="news-item__more">
+      <span class="btn-arrow btn-arrow--link">
+        <span class="btn-arrow__title">Читати більше</span>
+        <span class="btn-arrow__arrow"></span>
+      </span>
+    </span>
+  </span>
+</a>
+<!-- end news-item -->
