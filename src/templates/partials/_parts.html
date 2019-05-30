@@ -46,7 +46,7 @@ parts = [
           <!-- begin part -->
           <a href="#" class="part {% if i.mod %} {{ i.mod }} {% endif %}js-lazy" data-background-image="img/parts/{{ i.img }}">
             <span class="part__title">
-              <h5 class="h5">{{ i.title }}</h5>
+              <h5 class="h5{% if i.lg %} h5--white{% endif %}">{{ i.title }}</h5>
             </span>
 
             <span class="part__btn btn-arrow">

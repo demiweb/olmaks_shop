@@ -20,7 +20,7 @@
   {% endif %}
 
   {% if button %}
-  <button class="js-password-toggle">{{ button }}</button>
+  <button class="js-password-toggle">{{ button | safe }}</button>
   {% endif %}
 </div>
 <!-- end {{ name }} -->

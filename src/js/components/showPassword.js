@@ -1,4 +1,4 @@
-import { $DOC } from '../constants';
+import { $DOC, ACTIVE } from '../constants';
 
 export default function showPassword() {
   const btn = 'js-password-toggle';
@@ -14,5 +14,7 @@ export default function showPassword() {
     } else {
       input.type = 'text';
     };
+
+    e.currentTarget.classList.toggle(ACTIVE);
   });
 };

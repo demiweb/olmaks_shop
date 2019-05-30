@@ -17,9 +17,12 @@ PageList:
 - file: application.html
 - file: authorization.html
 - file: password-change.html
+- file: password-restored.html
+- file: password-new.html
 - file: success.html
 - file: 404.html
 - file: email-send.html
 - file: news.html
 - file: confidentiality.html
 - file: empty-cart.html
+- file: registration.html

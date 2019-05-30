@@ -1,0 +1,101 @@
+<!-- begin section -->
+<section class="section section--simple section--color">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+        <div class="section__title is-center">
+          <h2 class="h2 h2--lg">Реєстрація аккаунта</h2>
+        </div>
+
+        <!-- begin form-block -->
+        <div class="form-block form-block--sm form form--block">
+          <form>
+            <div class="form-block__title">
+              <h5 class="h5 h5--ttn">Введіть ПІБ, E-mail та пароль</h5>
+            </div>
+
+            <div class="form__row">
+              
+
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm',
+                  type = 'text',
+                  placeholder = 'Введіть ПІБ',
+                  label = 'ПІБ<sup>*</sup>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm',
+                  type = 'tel',
+                  placeholder = 'Введіть телефон',
+                  label = 'Телефон<sup>*</sup>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm',
+                  type = 'email',
+                  placeholder = 'Введіть E-mail',
+                  label = 'E-mail<sup>*</sup>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm input--password',
+                  type = 'password',
+                  placeholder = 'ВВведіть пароль',
+                  label = 'Новий пароль<sup>*</sup>',
+                  button = '<span>Показати</span> <span>Сховати</span>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm input--password',
+                  type = 'password',
+                  placeholder = 'ВВведіть пароль',
+                  label = 'Підтвердження нового паролю<sup>*</sup>',
+                  button = '<span>Показати</span> <span>Сховати</span>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>Підписатися на новини</span>
+                </label>
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.btn(
+                  title = 'увійти в свій аккаунт',
+                  href= false,
+                  mod = 'btn--full'
+                ) }}
+
+                <div class="form__conf">
+                  Створюючи новий аккаунт випогоджуєтесь з нашими <a href="#">умовами</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end form-block -->
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+<!-- end section -->

@@ -5,7 +5,7 @@ import setSelects from './components/setSelects';
 import setScrollbar from './components/setScrollbar';
 import fixHeroSearch from './components/fixHeroSearch';
 import toggleMenu from './components/toggleMenu';
-import setSearchPanelHeight from './components/setSearchPanelHeight';
+// import setSearchPanelHeight from './components/setSearchPanelHeight';
 import setGallery from './components/setGallery';
 import { setBlockBgHeight } from './components/setBlockBgHeight';
 import setAccordion from './components/setAccordion';

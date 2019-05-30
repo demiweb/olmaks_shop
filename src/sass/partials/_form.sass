@@ -193,6 +193,16 @@
       position: absolute
       bottom: 12px
       right: 15px
+      &.is-active
+        span
+          &:nth-child(1)
+            display: none
+          &:nth-child(2)
+            display: inline
+      span
+        &:nth-child(1)
+        &:nth-child(2)
+          display: none
     input
       padding-right: 80px
 
