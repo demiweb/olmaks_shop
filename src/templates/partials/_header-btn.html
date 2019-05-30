@@ -1,0 +1,66 @@
+<div class="header__btn">
+  <div class="btn btn--full header-btn">
+    <span>{{ mixins.icon('profile') }}</span> МІЙ кабінет
+    
+    {% if logout %}
+    <div class="tooltip cabinet-tooltip">
+      <div class="cabinet-tooltip__title">Мій кабінет</div>
+
+      <div class="cabinet-tooltip__icon">
+        {{ mixins.icon('user-fill') }}
+      </div>
+
+      <div class="cabinet-tooltip__btn">
+        <a href="#" class="btn btn--full"><span>{{ mixins.icon('logout') }}</span>уВІЙТИ</a>
+      </div>
+
+      <div class="cabinet-tooltip__conf">Забули пароль? <a href="#">Зареєструватись</a></div>
+
+      <div class="cabinet-tooltip__links">
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('avatar-circle') }}</span>
+          Кабінет
+        </a>
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('check-circle') }}</span>
+          Замовлення
+        </a>
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('heart') }}</span>
+          Бажання
+        </a>
+      </div>
+    </div>
+
+    {% else %}
+    <div class="tooltip cabinet-tooltip">
+      <div class="cabinet-tooltip__title">Вітаємо, Дмитро Олегович!</div>
+
+      <div class="cabinet-tooltip__icon">
+        {{ mixins.icon('user-fill') }}
+      </div>
+
+
+      <div class="cabinet-tooltip__links">
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('avatar-circle') }}</span>
+          Кабінет
+        </a>
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('check-circle') }}</span>
+          Замовлення
+        </a>
+        <a href="#" class="cabinet-tooltip__link">
+          <span class="cabinet-tooltip__link-icon">{{ mixins.icon('heart') }}</span>
+          Бажання
+        </a>
+      </div>
+
+      <div class="cabinet-tooltip__btn">
+        <a href="#" class="btn btn--transp-accent btn--full"><span>{{ mixins.icon('logout') }}</span>вийти</a>
+      </div>
+    </div>
+
+    {% endif %}
+  </div>
+</div>

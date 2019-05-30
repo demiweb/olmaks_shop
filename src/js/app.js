@@ -12,6 +12,8 @@ import setAccordion from './components/setAccordion';
 import toggleComponentsList from './components/toggleComponentsList';
 import showPassword from './components/showPassword';
 import truncateText from './components/truncateText';
+import setSearchToggle from './components/setSearchToggle';
+import toggleHeroSearch from './components/toggleHeroSearch';
 
 $(function() {
   setTouchClassName();
@@ -21,11 +23,13 @@ $(function() {
   setScrollbar();
   fixHeroSearch();
   toggleMenu();
-  setSearchPanelHeight();
+  // setSearchPanelHeight();
   setGallery();
   setBlockBgHeight();
   setAccordion();
   toggleComponentsList();
   showPassword();
   truncateText();
+  setSearchToggle();
+  toggleHeroSearch();
 });

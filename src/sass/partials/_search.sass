@@ -16,6 +16,8 @@
   &__wrap
     width: 100%
     position: relative
+    +xs
+      display: none
     &.is-fixed
       position: fixed
       z-index: 15
@@ -119,3 +121,9 @@
         width: calc(100% - 50px)
         height: 1px
         box-shadow: 0px -3px 4px 0px rgba(0, 0, 2, .5)
+
+.search-toggle
+  display: none
+  margin-bottom: 20px
+  +xs
+    display: inline-flex

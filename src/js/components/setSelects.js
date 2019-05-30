@@ -41,6 +41,9 @@ export default function setSelects() {
     const $customSelectOpener = $customSelect.find('.custom-select__opener');
 
 
+    // add type to wrap
+    selectEl.parentNode.setAttribute('data-type', selectType);
+
     // set panel scroll
     const $customOptionsWrap = $customSelect.find('.custom-select__options');
     const $scroledContainer = $customOptionsWrap.length > 0

@@ -2,6 +2,7 @@ ProjectTitle: olmaks-shop
 
 PageList:
 - file: home.html
+- file: home-logout.html
 - file: product-page.html
 - file: search-by-part.html
 - file: search-car.html

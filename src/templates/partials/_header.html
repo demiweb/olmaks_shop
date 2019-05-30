@@ -1,3 +1,11 @@
+{%set
+whishList = [
+  {},
+  {},
+  {}
+]
+%}
+
 <!-- begin header -->
 <header class="header{% if header.mod %} {{ header.mod }}{% endif %} js-menu" data-menu="main">
 
@@ -6,21 +14,12 @@
   </div>
 
   <div class="header__top-right-mob">
-    <div class="header__btn">
-      <a href="#" class="btn btn--full"><span>{{ mixins.icon('profile') }}</span> МІЙ кабінет</a>
-    </div>
+    
+
+    {% include "partials/_header-btn.html" %}
 
     <div class="header__controls">
-      <!-- begin header-controls -->
-      <div class="header-controls">
-        <ul class="header-controls__list">
-          <li class="header-controls__item"><a class="header-controls__link" href="#">{{ mixins.icon('heart') }}</a></li>
-          <li class="header-controls__item"><a class="header-controls__link" href="#">{{ mixins.icon('cart') }}</a></li>
-          <li class="header-controls__item header-controls__item-search"><a class="header-controls__link" href="#">{{ mixins.icon('search') }}</a></li>
-          <li class="header-controls__item"><a class="header-controls__link" href="#">ua</a></li>
-        </ul>
-      </div>
-      <!-- end header-controls -->
+      {% include "partials/_header-controls.html" %}
     </div>
   </div>
 
@@ -53,21 +52,11 @@
 
           <div class="col-xl-4">
             <div class="header__top-right">
-              <div class="header__btn">
-                <a href="" class="btn btn--full"><span>{{ mixins.icon('profile') }}</span> МІЙ кабінет</a>
-              </div>
+              {% include "partials/_header-btn.html" %}
 
               <div class="header__controls">
-                <!-- begin header-controls -->
-                <div class="header-controls">
-                  <ul>
-                    <li><a href="#">{{ mixins.icon('heart') }}</a></li>
-                    <li><a href="#">{{ mixins.icon('cart') }}</a></li>
-                    <li><a href="#">{{ mixins.icon('search') }}</a></li>
-                    <li><a href="#">ua</a></li>
-                  </ul>
-                </div>
-                <!-- end header-controls -->
+
+                {% include "partials/_header-controls.html" %}
               </div>
             </div>
           </div>

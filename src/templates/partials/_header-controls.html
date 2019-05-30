@@ -1,0 +1,48 @@
+<!-- begin header-controls -->
+<div class="header-controls">
+  <ul class="header-controls__list">
+    <li class="header-controls__item">
+      <span class="header-controls__link" href="#">
+        {{ mixins.icon('heart') }}
+        <!-- begin whish-list -->
+        <span class="whish-list tooltip">
+          {% for i in range(0, 3) %}
+          <span href="#" class="whish-list__item">
+            <span class="whish-list__img"><img data-src="img/item/whish-list.jpg" alt="" class="js-lazy"></span>
+
+            <span class="whish-list__content">
+              <a href="#" class="whish-list__title">Trim Molding Retainer Nut Trim Molding Retainer Nut</a>
+
+              <span class="whish-list__nmb">2 шт.</span>
+
+              <span class="whish-list__price">1246.75 UAH</span>
+            </span>
+
+            <button class="whish-list__close"></button>
+          </span>
+          {% endfor %}
+
+          <span class="whish-list__btn">
+            {{ mixins.btn(
+              title = 'переглянути лист бажань',
+              mod = ''
+            ) }}
+          </span>
+        </span>
+        <!-- end whish-list -->
+      </span>
+    </li>
+    <li class="header-controls__item"><a class="header-controls__link" href="#">{{ mixins.icon('cart') }}</a></li>
+    <li class="header-controls__item header-controls__item-search header-search">
+      <button class="header-controls__link js-search" href="#">{{ mixins.icon('search') }}</button>
+      <div class="header-search__input js-search-input">
+        <input  type="text" placeholder="Введіть марку, модель, номер або назву запчастини...">
+      </div>      
+    </li>
+    <li class="header-controls__item lang">
+      <a class="header-controls__link lang__link" href="#">ua</a>
+      <a class="header-controls__link lang__link" href="#">ru</a>
+    </li>
+  </ul>
+</div>
+<!-- end header-controls -->

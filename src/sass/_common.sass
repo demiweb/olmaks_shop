@@ -82,6 +82,7 @@ strong
   font-size: 14px
   text-transform: uppercase
   color: #fff
+  cursor: pointer
   background-color: $c-accent
   +light
   +inline-flex(center, center)
@@ -190,6 +191,14 @@ strong
     background-color: transparent
     border: 1px solid #d1d1d1
     color: $c-text-100
+    +hover
+      background-color: $c-accent
+      border-color: $c-accent
+      color: #fff
+  &--transp-accent
+    background-color: transparent
+    border: 1px solid $c-accent
+    color: $c-accent
     +hover
       background-color: $c-accent
       border-color: $c-accent

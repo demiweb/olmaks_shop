@@ -5,7 +5,6 @@
     opacity: 0
     visibility: hidden
     position: absolute
-
   &--number
     &::before
       content: attr(data-number)
@@ -46,6 +45,8 @@
       &__option
         padding-left: 15px
         padding-right: 15px
+        padding-top: 5px
+        padding-bottom: 5px
 
 .custom-select
   $this: &
@@ -57,7 +58,10 @@
     #{$this}__panel
       visibility: visible
       opacity: 1
-  
+  &[data-type="with_input"]
+    #{$this}__opener
+      padding-top: 40px
+
   &__opener
     padding-top: 14px
     padding-bottom: 14px
@@ -65,6 +69,7 @@
     padding-left: 18px
     border: 1px solid  $c-border
     position: relative
+
     +text-overflow
     +after
       display: inline-block
@@ -87,17 +92,21 @@
     visibility: hidden
     opacity: 0
     border: 1px solid  $c-border
-    padding-top: 40px
+    max-height: 270px
+    // padding-top: 40px
   &__option
     padding-right: 20px
     padding-left: 18px
-    padding-top: 5px
-    padding-bottom: 5px
+    padding-top: 15px
+    padding-bottom: 15px
     +tr(background-color .3s, color .3s)
     cursor: pointer
     +hover
       background-color: $c-accent
       color: #fff
+    +sm
+      padding-top: 5px
+      padding-bottom: 5px
     &[data-value="placeholder"]
       display: none
   &__panel-item
@@ -125,3 +134,17 @@
     overflow: hidden
     position: relative
     max-height: 200px
+
+.custom-select
+  .ps
+    &:hover
+      .ps
+        &__rail-y
+          opacity: 1
+    &__rail-y
+      opacity: 1
+      background-color: #e7e7e7
+    &__thumb-y
+      width: 100%
+      right: 0
+      border-radius: 0
