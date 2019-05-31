@@ -85,7 +85,9 @@ searchFields = [
 %}
 
 <!-- begin search -->
-<a href="#" class="search-toggle btn btn--full btn--arrow js-toggle-hero-search">Пошук</a>
+{% if page !== 'home' %}
+<a href="#" class="search-toggle btn btn--full btn--arrow js-toggle-hero-search">Підбір по марці авто</a>
+{% endif %}
 
 <div class="search__wrap js-search-fixed">
   <a href="#" class="search__close js-search-fixed-close"></a>

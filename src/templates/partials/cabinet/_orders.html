@@ -6,20 +6,24 @@ orders = [
     date: '',
     ammount: '',
     price: '',
-    status: { mod: 'is-intransport', icon:  mixins.icon('truck'), title: 'В дорозі' }
+    status: { mod: 'is-intransport', icon:  mixins.icon('truck'), title: 'В дорозі' },
+    statusLabel: { title: 'В дорозі',  mod: 'is-intransport' }
   },
   {
     number: '',
     date: '',
     ammount: '',
     price: '',
-    status: { mod: 'is-rejected', title: 'Відхилено' }
-  },{
+    status: { mod: 'is-rejected', title: 'Відхилено' },
+    statusLabel: { title: 'Відхилено',  mod: 'is-rejected' }
+  },
+  {
     number: '',
     date: '',
     ammount: '',
     price: '',
-    status: ''
+    status: '',
+    statusLabel: { title: 'Виконаний',  mod: 'is-delivered' }
   }
 ]
 %}
@@ -97,7 +101,9 @@ orders = [
 
           <div class="orders-item-content__right">
             <div class="orders-item-content__right-title">Статус замовлення:</div>
-            <div class="orders-item-content__right-label"><span class="status">Виконаний</span></div>
+            <div class="orders-item-content__right-label">
+              <span class="status {{ i.statusLabel.mod }}">{{ i.statusLabel.title }}</span>
+            </div>
             <div class="orders-item-content__right-time">
               {{ mixins.icon('clock') }}
               <span>Запланований час видачі

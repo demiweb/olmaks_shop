@@ -13,7 +13,22 @@ formBlocks = [
     title: 'доставка та оплата',
     subttl: 'Укажіть спосіб доставки та оплати товару',
     fields: [
-      { name: 'input', inputMod: 'input--sm', type: 'text', placeholder: 'Введіть місто', label: 'Місто<sup>*</sup>' },
+      {
+        name: 'select',
+        inputMod: 'select--sm',
+        fieldClass: 'js-select has-placeholder',
+        type: 'with_input',
+        label: 'Місто<sup>*</sup>',
+        options: [
+          { value: 'placeholder', option: 'Введіть місто' },
+          { value: '1', option: 'місто1' },
+          { value: '1', option: 'місто1' },
+          { value: '1', option: 'місто1' },
+          { value: '1', option: 'місто1' },
+          { value: '1', option: 'місто1' },
+          { value: '2', option: 'місто2' }
+        ]
+      },
       {
         name: 'select',
         inputMod: 'select--sm',

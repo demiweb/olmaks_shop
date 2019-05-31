@@ -17,6 +17,18 @@
   padding-right: 30px
   margin-bottom: 18px
   position: relative
+  +tr(color .3s, border-color .3s)
+  +hover
+    border-color: $c-accent
+    color: $c-accent
+  +before    
+    display: inline-block
+    pointer-events: none
+    top: 50%
+    right: 14px
+    +icon-arrow(8, 8, 1, currentColor, -135)
+    transform: translate(0, -50%) rotate(-135deg)
+    position: absolute
   +md
     padding-left: 10px
     margin-bottom: 10px
@@ -44,14 +56,7 @@
     +xs
       max-width: calc(100% - 25px)
     
-  +before    
-    display: inline-block
-    pointer-events: none
-    top: 50%
-    right: 14px
-    +icon-arrow(8, 8, 1, $c-text, -135)
-    transform: translate(0, -50%) rotate(-135deg)
-    position: absolute
+  
 
 .parts
   .row

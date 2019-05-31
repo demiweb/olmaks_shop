@@ -1,7 +1,7 @@
 <!-- begin section -->
 <section class="section section--no-pad-bottom cabinet section--color">
   <div class="container">
-    <div class="cabinet__block">
+    <div class="cabinet__block js-scroll-to-target js-cabinet-section" id="personal_data">
       <div class="row">
         <div class="col-12">
           <div class="section__title-mb-sm">
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="cabinet__block">
+    <div class="cabinet__block js-scroll-to-target js-cabinet-section" id="history">
       <div class="row">
         <div class="col-12">
           <div class="section__title-mb-sm">
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="cabinet__block">
+    <div class="cabinet__block js-scroll-to-target js-cabinet-section" id="products">
       <div class="row">
         <div class="col-12">
           <div class="section__title-mb-sm">
@@ -47,12 +47,19 @@
       </div>
     </div>
 
-    <div class="section__title-mb-sm">
-      <h2 class="h2 h2--lg">Підписка на новини</h2>
-      <div class="h2-subttl--sm">Дізнавайтеся першими про наші новини та будьте в курсі про всі наші акції</div>
-    </div>
+    
   </div>
 
-  {% include "partials/_subscribe.html" %}
+  <div class="cabinet__block cabinet__block--last js-scroll-to-target js-cabinet-section" id="subscribe">
+    <div class="container">
+      <div class="section__title-mb-sm">
+        <h2 class="h2 h2--lg">Підписка на новини</h2>
+        <div class="h2-subttl--sm">Дізнавайтеся першими про наші новини та будьте в курсі про всі наші акції</div>
+      </div>
+    </div>
+    {% include "partials/_subscribe.html" %}
+  </div>
+
+  
 </section>
 <!-- end section -->

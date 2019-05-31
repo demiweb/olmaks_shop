@@ -56,6 +56,7 @@ body
   background: #FFF
   line-height: 1.4
   font-size: 15px
+  overflow-x: hidden
   +light
   color: $c-text
   +no-scroll
@@ -63,7 +64,7 @@ body
     font-size: 14px
 
 .out
-  overflow-x: hidden
+  // overflow-x: hidden
 
 img
   max-width: 100%
@@ -502,11 +503,12 @@ strong
 
 .cabinet
   &__block
-    margin-bottom: 60px
-    +sm
-      margin-bottom: 40px
-    +xs
-      margin-bottom: 30px
+    &:not(.cabinet__block--last)
+      margin-bottom: 60px
+      +sm
+        margin-bottom: 40px
+      +xs
+        margin-bottom: 30px
 
 .more
   position: relative
@@ -535,6 +537,15 @@ strong
   font-size: 14px
   +medium
   +rotate(-10)
+  &.is-rejected
+    color: #ad1010
+    border-color: #ad1010
+    background-color: rgba(#ad1010, .3)
+  &.is-intransport
+    color: $c-text
+    border-color: $c-text
+    background-color: rgba($c-text, .3)
+
 
 .subscribe
   background-color: #fff
@@ -551,6 +562,9 @@ strong
 
 .map
   padding-top: 60%
+  position: relative
+  iframe
+    +coverdiv
 
 .application-help
   color: $c-gray

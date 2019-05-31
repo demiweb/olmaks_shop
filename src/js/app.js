@@ -14,6 +14,13 @@ import showPassword from './components/showPassword';
 import truncateText from './components/truncateText';
 import setSearchToggle from './components/setSearchToggle';
 import toggleHeroSearch from './components/toggleHeroSearch';
+import scrollTo from './components/scrollTo';
+import setCabinetNav from './components/setCabinetNav';
+import initStickyPolyfill from './components/initStickyPolyfill';
+
+
+
+// import setStickyPanels from './components/setStickyPanels';
 
 $(function() {
   setTouchClassName();
@@ -32,4 +39,7 @@ $(function() {
   truncateText();
   setSearchToggle();
   toggleHeroSearch();
+  scrollTo();
+  initStickyPolyfill();
+  setCabinetNav();
 });

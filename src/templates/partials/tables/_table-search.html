@@ -230,9 +230,9 @@ resultsBtnClose = [
       <div class="table__th">Ціна</div>
     </div>
     {% for i in resultsNumber %}
-    <div class="table__tr{% if i.mod %} {{ i.mod }}{% endif %}">
+    <div class="table__tr table__tr--number{% if i.mod %} {{ i.mod }}{% endif %}">
       {% for j in i.cols %}
-      <div class="table__td">{{ j.inner | safe }}</div>
+      <div class="table__td{% if j.mod %} {{ j.mod }}{% endif %}">{{ j.inner | safe }}</div>
       {% endfor %}
     </div>
     {% endfor %}

@@ -18,6 +18,8 @@
     position: relative
     +xs
       display: none
+      .is-home &
+        display: block
     &.is-fixed
       position: fixed
       z-index: 15
@@ -124,6 +126,10 @@
 
 .search-toggle
   display: none
-  margin-bottom: 20px
+  // margin-bottom: 20px
+  margin-top: 20px
+  +tr(margin-bottom .3s)
+  &.is-active
+    margin-bottom: 20px
   +xs
     display: inline-flex

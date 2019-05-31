@@ -1,15 +1,15 @@
 <!-- begin cabinet-nav -->
-<div class="cabinet-nav has-bd-bottom">
+<div class="cabinet-nav has-bd-bottom js-sticky-polyfill js-cabinet-nav">
   <div class="container">
     {{ mixins.list(
       name = 'nav',
       modifications = { wrap: 'nav--cabinet', item: '', link: '' },
       list = [
         { item: 'Мій кабінет', link: '', modItem: '', modLink: '' },
-        { item: '', link: 'Зміна особистих даних', modItem: '', modLink: 'is-active' },
-        { item: '', link: 'Історія замовлень', modItem: '', modLink: '' },
-        { item: '', link: 'Обрані товари', modItem: '', modLink: '' },
-        { item: '', link: 'Підписка на новини', modItem: '', modLink: '' }
+        { item: '', href: '#personal_data', link: 'Зміна особистих даних', modItem: '', modLink: 'is-active js-scroll-to-btn' },
+        { item: '', href: '#history', link: 'Історія замовлень', modItem: '', modLink: 'js-scroll-to-btn' },
+        { item: '', href: '#products', link: 'Обрані товари', modItem: '', modLink: 'js-scroll-to-btn' },
+        { item: '', href: '#subscribe', link: 'Підписка на новини', modItem: '', modLink: 'js-scroll-to-btn' }
       ]
     ) }}
   </div>  

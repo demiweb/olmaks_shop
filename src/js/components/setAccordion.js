@@ -2,7 +2,16 @@ import { $DOC, ACTIVE } from '../constants';
 import { setHeight } from './setBlockBgHeight';
 
 class Accordion {
+  constructor() {
+    this.$contentItems = $(`.${Accordion.classNames.content}`);
+  };
   init() {
+    this.$contentItems.each((i, item) => {
+      if ($(item).hasClass(ACTIVE)) {
+        $(item).slideDown();
+      };
+    });
+    
     $DOC.on('click', '.'+Accordion.classNames.title, this._toggleAccordion.bind(this));
   };
 

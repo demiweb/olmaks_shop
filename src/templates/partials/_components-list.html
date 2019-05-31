@@ -41,6 +41,7 @@ components = [
     ]
   },
   {
+    active: true,
     title: 'Кузовне обладнання',
     links: [
       { link: 'Interior Trim' },
@@ -141,8 +142,8 @@ components = [
 <div class="components-list js-accordion">
   {% for i in components %}
   <div class="components-list__item">
-    <a href="#" class="components-list__title js-accordion-title">{{ i.title }}</a>
-    <ul class="components-list__list js-accordion-content">
+    <a href="#" class="components-list__title js-accordion-title{% if i.active %} is-active{% endif %}">{{ i.title }}</a>
+    <ul class="components-list__list js-accordion-content{% if i.active %} is-active{% endif %}">
       {% for j in i.links %}
       <li class="components-list__list-item"><a href="#" class="components-list__list-link">{{ j.link }}</a></li>      
       {% endfor %}
