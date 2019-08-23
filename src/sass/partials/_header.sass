@@ -18,7 +18,9 @@
       position: absolute
   &.is-active
     .header__inner
-      transform: translate(0, 0)  
+      transform: translate(0, 0)
+    .header__top-right-mob
+      // z-index: 1
   &__inner
     position: relative
     transition: transform .3s
@@ -82,10 +84,15 @@
       position: absolute
       top: 0
       right: 60px
-      z-index: 20
+      z-index: 19
     +xs
       top: 45px
       right: 0
+      z-index: 22
+    .header-controls__item
+      &.lang
+        +xs
+          display: none
   &__btn
       flex-grow: 1
       // +lg
@@ -241,8 +248,7 @@
   .icon-heart
     font-size: 25px
   &__item-search
-    +xs
-      display: none !important
+    
 
 .tooltip
   opacity: 0
@@ -415,14 +421,24 @@
 
 .lang
   position: relative
+  +lg
+    width: 90px !important
+    font-size: 0
   &:hover
     .lang__link, a
-      &:last-child
+      &:nth-child(2)
         visibility: visible
         opacity: 1
   &__link, a
     +tr(visibility .3s, opacity .3s)
-    &:last-child
+    +lg
+      display: inline-flex !important
+      &:nth-child(2)
+        position: static
+        width: auto
+        visibility: visible
+        opacity: 1
+    &:nth-child(2)
       position: absolute
       top: 100%
       width: 100%
@@ -433,6 +449,8 @@
 
 .header-search
   position: relative
+  form
+    height: 100%
   input    
     width: 100%
     padding: 10px 30px    
@@ -444,6 +462,8 @@
     +placeholder
       font-family: inherit
       color: $c-gray
+    +xs
+      padding: 10px 15px
   &__input
     width: 0
     overflow: hidden

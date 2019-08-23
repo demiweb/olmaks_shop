@@ -107,6 +107,14 @@ strong
     background-color: transparent
     color: $c-accent
     font-size: 16px
+    padding-left: 0
+    padding-right: 0
+    +tr(padding .3s, background-color .3s, border-color .3s, color .3s)
+    +hover
+      background-color: $c-accent
+      color: #fff
+      padding-left: 10px
+      padding-right: 10px
   &--sm
     padding: 8px
     .icon
@@ -137,9 +145,6 @@ strong
       right: 15px
       transform: translate(0, -50%) rotate(-135deg)
       +tr(transform .3s)
-  &--link
-    padding-left: 0
-    padding-right: 0
   &--combine
     padding-right: 52px
     padding-left: 15px

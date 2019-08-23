@@ -12,15 +12,17 @@ class Menu {
   toggle(e) {
     e.preventDefault();
 
-    const name = e.currentTarget.getAttribute('data-target');
-    const $menu = $(`.js-menu[data-menu="${name}"]`);
+    this.btn = e.currentTarget;
 
-    $(e.currentTarget).toggleClass(ACTIVE);
-    $menu.toggleClass(ACTIVE);
+    this.name = this.btn.getAttribute('data-target');
+    this.$menu = $(`.js-menu[data-menu="${this.name}"]`);
+
+    $(this.btn).toggleClass(ACTIVE);
+    this.$menu.toggleClass(ACTIVE);
     $BODY.toggleClass(NOSCROLL);
 
     if (this.onToggle) {
-      this.onToggle(e.currentTarget, $menu);
+      this.onToggle(this.btn, this.$menu);
     }
   };
 };

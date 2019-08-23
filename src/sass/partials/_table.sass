@@ -5,7 +5,8 @@
   background-color: #fff
   width: 100%
   +md
-    display: block
+    &:not(table)
+      display: block
   +light
   #{$this}__td,
   #{$this}__th

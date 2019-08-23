@@ -14,12 +14,19 @@ export default function setSearchToggle() {
       const $logo =  $header.find('.logo');
       const $burger = $header.find('.header__burger');
 
-      const rightOffset = $burger.css('display') === 'none'
+      let rightOffset = $burger.css('display') === 'none'
         ? $parent.width() + $parent.siblings('.lang').width()
         : $parent.width() + $parent.siblings('.lang').width() + $burger.width();
       const leftOffset = $logo.width();
       const containerWidth = $container.width();
-      const width = containerWidth - rightOffset - leftOffset + 'px';
+      let width;
+
+      if (window.matchMedia('(max-width: 575px)').matches) {
+        rightOffset = $parent.width();
+        width = containerWidth - rightOffset + 'px';
+      } else {
+        width = containerWidth - rightOffset - leftOffset + 'px';
+      }
       
       input.style.setProperty('--width', width);
     });
