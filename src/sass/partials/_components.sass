@@ -9,6 +9,7 @@
     padding-top: 25px
     padding-bottom: 45px
     position: relative
+    overflow: hidden
     img
       position: relative
       z-index: 1
@@ -27,6 +28,29 @@
       transform: translate(-50%, 0)
       +md
         display: none
+  &__img-in
+    // overflow: auto
+    // overflow: hidden
+    display: inline-block
+    font-size: 0
+  &__img-controls
+    position: absolute
+    z-index: 1
+    bottom: 20px
+    left: 0
+  &__img-button
+    background-color: $c-gray
+    color: #fff
+    width: 30px
+    height: 30px
+    +inline-flex(center, center)
+    font-size: 1.5em
+    vertical-align: middle
+  &__img-reset
+    font-size: 1em
+    width: auto
+    padding-left: 10px
+    padding-right: 10px
   &__list
     position: relative
     z-index: 1

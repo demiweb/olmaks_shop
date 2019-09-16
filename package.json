@@ -73,6 +73,8 @@
     "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
+    "draggabilly": "^2.2.0",
+    "interactjs": "^1.6.2",
     "lozad": "^1.9.0"
   }
 }

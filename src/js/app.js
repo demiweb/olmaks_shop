@@ -17,6 +17,7 @@ import toggleHeroSearch from './components/toggleHeroSearch';
 import scrollTo from './components/scrollTo';
 import setCabinetNav from './components/setCabinetNav';
 import initStickyPolyfill from './components/initStickyPolyfill';
+import scaleImg from './components/scaleImg';
 
 
 
@@ -42,4 +43,5 @@ $(function() {
   scrollTo();
   initStickyPolyfill();
   setCabinetNav();
+  scaleImg();
 });
