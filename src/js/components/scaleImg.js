@@ -10,20 +10,15 @@ class Zoom {
     this.resetBtn = 'js-scale-reset';
     this.index = 0;
     this.imgSize = {};
-    this.step = 1;
+    this.step = 2;
     this.iteration = 0;
     this.iterationsNumber = 9;
     this.dragDisable = true;
+    this.direction = undefined;
   }
 
   initDrag() {
-    this.draggie = new Draggabilly(this.$imgWrap[0], {
-      // containment: this.$wrap[0]
-    });
-
-    // this.draggie.on( 'dragMove', (event, pointer, moveVector) => {
-    //   console.log( this.draggie.position.x);
-    // });
+    this.draggie = new Draggabilly(this.$imgWrap[0]);
   }
 
   disableDrag() {
@@ -31,22 +26,13 @@ class Zoom {
     this.dragDisable = true;
   }
 
-  scale(state, e) {
-    if(this.iteration > this.iterationsNumber && state === 'plus') return;
-    if(this.iteration < 0 ) return;
-
-    e.preventDefault();
-    this.$btn = $(e.currentTarget);
-    this.$wrap = this.$btn.closest('.js-scale-container');
-    this.$img = this.$wrap.find('img[data-loaded="true"]');
-    this.$imgWrap = this.$wrap.find('.js-scale-img-wrap');
-
+  scaleImg() {
     if (this.dragDisable) {
       this.initDrag();
       this.dragDisable = false;
     }
 
-    if (state === 'plus') {
+    if (this.direction > 0) {
       if(this.iteration > this.iterationsNumber) {
         this.iteration = this.iterationsNumber;
 
@@ -68,13 +54,39 @@ class Zoom {
       if(this.iteration < 0) this.iteration = 0;
     }
 
-    this.scaleNmb = 1 + (this.index/10); 
+    this.scaleNmb = 1 + (this.index/10);
+
 
     this.$img.css({
       transform: `scale(${this.scaleNmb})`
     });
+  }
 
+  scale(state, e) {
+    console.log('handle click');
+    if(this.iteration > this.iterationsNumber && state === 'plus') return;
+    if(this.iteration < 0 ) return;
+
+    e.preventDefault();
+    this.$btn = $(e.currentTarget);
+    this.$wrap = this.$btn.closest('.js-scale-container');
+    this.$img = this.$wrap.find('img[data-loaded="true"]');
+    this.$imgWrap = this.$wrap.find('.js-scale-img-wrap');
+    this.direction = state === 'plus' ? 1 : -1;
+
+    this.scaleImg();
   };
+
+  handleMouseWheel(e) {
+    const $wrap = $(e.target).closest('.js-scale-container');
+    if(!$wrap.length) return;
+    this.direction = e.deltaY > 0 ? 1 : -1;
+    if(this.iteration > this.iterationsNumber && this.direction > 0) return;
+    if(this.iteration < 0 ) return;
+
+    e.preventDefault();
+    this.scaleImg();
+  }
 
   reset() {
     this.$img.css({
@@ -94,6 +106,8 @@ class Zoom {
     });
 
     $DOC.on('click', `.${this.resetBtn}`, this.reset.bind(this));
+
+    window.addEventListener('wheel', this.handleMouseWheel.bind(this), { passive: false });
   }
 }
 
@@ -101,8 +115,6 @@ export default function scaleImg() {
   const $imgContainer = $('.js-scale-container');
   if(!$imgContainer.length) return;
 
-  window.onload = () => {
-    const zoom = new Zoom($imgContainer);
-    zoom.init();
-  };  
+  const zoom = new Zoom($imgContainer);
+  zoom.init();
 }

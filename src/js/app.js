@@ -42,6 +42,11 @@ $(function() {
   toggleHeroSearch();
   scrollTo();
   initStickyPolyfill();
-  setCabinetNav();
-  scaleImg();
+  setCabinetNav();  
 });
+
+window.onload = () => {
+  setTimeout(() => {
+    scaleImg();
+  }, 1000);  
+};
