@@ -1,0 +1,59 @@
+<!-- begin  -->
+<section class="">
+  <div class="container">
+    <!-- begin model -->
+    <div class="model">
+      <div class="row">
+        <div class="col-lg-8 order-1 order-lg-0">
+          <div class="model__gallery">
+            {% include "partials/_model-gallery.html" %}
+          </div>
+        </div>
+
+        <div class="col-lg-4 order-0 order-lg-1">
+          <div class="model__content">
+            <div class="model__content-block">
+              <div class="model__title">
+                <h2 class="h2 h2--lg">tesla model s 85 2014</h2>
+              </div>
+
+              <div class="model__btn">
+                {{ mixins.btn(
+                  title = 'замовити запчастини',
+                  mod = 'btn--sm'
+                ) }}
+              </div>
+
+              <div class="model__status">
+                <div class="check">
+                  <div class="check__icon"></div>
+                  <div class="check__title">в наявності</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="model__content-block">
+              {{ mixins.list(
+                name = 'model-meta-list',
+                descr = true,
+                modifications = { wrap: '', item: '', link: '' },
+                list = [
+                  { dt: 'Марка:', dd: 'Tesla' },
+                  { dt: 'Модель:', dd: 'Tesla Model S' },
+                  { dt: 'Рік:', dd: '2014' },
+                  { dt: 'Колір:', dd: 'Чорний <span class="color-thumb" style="background-color: #000"></span>' }
+                ]
+              ) }}
+            </div>
+
+            <div class="model__content-block">
+              <div class="model__text text">BMW 3-Series 2018, Engine Coolant Thermostat with Housing by Gates®. If you want to keep your vehicle safe on the road for many years to come, go with this Gates product. Developed with the utmost attention to detail and manufactured from the highest quality materials, it is sure to provide a long-lasting service life. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end model -->
+  </div>
+</section>
+<!-- end  -->

@@ -1,0 +1,64 @@
+<!-- begin card -->
+<div class="card">
+  <div class="card__img js-lazy" data-background-image="./img/car-new/{{ i.img }}"></div>
+
+  <div class="card__content">
+    <div class="card__title">
+      <h5 class="h5 h5--light h5--accent h5--ttn">
+        <a href="#">{{ i.title | safe }}</a>
+      </h5>
+    </div>
+    <div class="card__content-in">
+      <div class="card__meta">
+        {% if i.meta %}
+        <!-- begin card-meta -->
+        <div class="card-meta">
+          <div class="card-meta__item">6007352-00-F</div>
+          <div class="card-meta__item">
+            <strong>Тип:</strong>
+            нова
+          </div>
+          <div class="card-meta__item">
+            <div class="check">
+              <div class="check__icon"></div>
+              <div class="check__title">в наявності</div>
+            </div>
+          </div>
+          <div class="card-meta__item">
+            <strong>На складі:</strong>
+            <span class="highlighted">26</span>
+          </div>
+        </div>
+        <!-- end card-meta -->
+        {% else %}
+        <div class="check">
+          <div class="check__icon"></div>
+          <div class="check__title">в наявності</div>
+        </div>
+        {% endif %}
+      </div>
+      {% if i.text %}
+      <div class="card__text">
+        {{ i.text | safe }}
+      </div>
+      {% endif %}
+  
+      <div class="card__btn">
+        {% if i.btn.cart %}
+        {{ mixins.btn(
+          title = '1246.75 UAH',
+          icon = mixins.icon('cart'),
+          mod = 'btn--combine btn--combine-sm btn--full',
+          combine = { one: true }
+        ) }}
+        {% else %}        
+        {{ mixins.btn(
+          title = 'перейти',
+          mod = 'btn--full btn--sm'
+        ) }}
+        {% endif %}        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end card -->

@@ -1,0 +1,179 @@
+{%set
+asideSearch = {
+  title: 'оберіть потрібне авто',
+  fields: [
+    {
+      name: 'select',
+      mod: '',
+      type: '',
+      fieldClass: '',
+      options: [
+        { value: 'placeholder', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' },
+        { value: 'Марка', option: 'Марка' }
+      ]
+    },
+    {
+      name: 'select',
+      mod: '',
+      type: '',
+      fieldClass: '',
+      options: [
+        { value: 'placeholder', option: 'Модель' },
+        { value: 'Модель', option: 'Модель Модель Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' },
+        { value: 'Модель', option: 'Модель' }
+      ]
+    },
+    {
+      name: 'select',
+      mod: '',
+      type: '',
+      fieldClass: '',
+      options: [
+        { value: 'placeholder', option: 'Рік' },
+        { value: 'рік', option: 'рік' },
+        { value: 'рік', option: 'рік' },
+        { value: 'рік', option: 'рік' }
+      ]
+    },
+    {
+      name: 'select',
+      mod: '',
+      type: '',
+      fieldClass: '',
+      options: [
+        { value: 'placeholder', option: 'Колір' },
+        { value: '1', option: 'Колір' },
+        { value: '2', option: 'Колір' },
+        { value: '3', option: 'Колір' }
+      ]
+    }
+  ]
+}
+%}
+
+{%set
+cards = [
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  },
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  },
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  },
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  },
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  },
+  {
+    img: '570.jpg',
+    title: 'TESLA MODEL S 85 2014',
+    text: 'Електромобіль відрізняється 
+          своїми чималими габаритами, 
+          він навіть ширшим і довшим 
+        деяких позашляховиків.',
+    btn: ''
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4">
+        <div class="aside aside--sticky">
+          {% include "partials/_aside-form.html" %}
+        </div>
+      </div>
+
+      <div class="col-xl-9 col-lg-8">
+        <div class="section__title title-underlined title-underlined--long">
+          <h2 class="h2">авто в наявності</h2>
+        </div>
+
+        <div class="row">
+          {% for i in cards %}
+          <div class="col-xl-4 col-sm-6">            
+              {% include "partials/_card.html" %}
+          </div>
+          {% endfor %}
+        </div>
+
+        {{ mixins.list(
+          name = ' pagination',
+          modifications = { wrap: 'section__pagination pagination--accent pagination--right', item: '', link: '' },
+          list = [
+            { item: '', link: ' ', modItem: '', modLink: 'prev' },
+            { item: '', link: '1', modItem: '', modLink: 'is-active' },
+            { item: '', link: '2', modItem: '', modLink: '' },
+            { item: '', link: '3', modItem: '', modLink: '' },
+            { item: '', link: '4', modItem: '', modLink: '' },
+            { item: '', link: '...', modItem: '', modLink: 'is-inactive' },
+            { item: '', link: '55', modItem: '', modLink: '' },
+            { item: '', link: ' ', modItem: '', modLink: 'next' }
+          ]
+        ) }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -26,3 +26,5 @@ PageList:
 - file: confidentiality.html
 - file: empty-cart.html
 - file: registration.html
+- file: car-new.html
+- file: new-cart-of-car.html

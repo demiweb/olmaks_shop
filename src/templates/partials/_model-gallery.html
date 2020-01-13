@@ -1,0 +1,35 @@
+<!-- begin model-gallery -->
+<div class="model-gallery">
+  <div class="model-gallery__slider">
+    <div class="model-gallery__icon">
+      {{ mixins.icon('360-degrees') }}
+    </div>
+
+    <div class="swiper-container js-model-gallery-slider">
+      <div class="swiper-wrapper">
+        {% for i in range(0, 5) %}
+        <button
+          class="swiper-slide model-gallery__img js-popup-open js-lazy"
+          data-popup-target="gallery"
+          data-background-image="./img/model-gallery/863.jpg">
+        </button> 
+        {% endfor %}
+      </div>
+    </div>
+    <button class="model-gallery__prev js-model-gallery-prev"></button>
+    <button class="model-gallery__next js-model-gallery-next"></button>
+  </div>
+
+  <div class="model-gallery__thumbs">
+    <div class="swiper-container js-model-gallery-thumbs">
+      <div class="swiper-wrapper">
+        {% for i in range(0, 5) %}
+        <button
+          class="swiper-slide model-gallery__thumb js-lazy"
+          data-background-image="./img/model-gallery/thumb.jpg"></button> 
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end model-gallery -->

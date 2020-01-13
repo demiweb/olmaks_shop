@@ -144,3 +144,20 @@
       padding-top: 100%
     #{$this}__title
       color: #fff
+  &--model
+    background-size: cover
+    +before
+      display: none
+    +hover
+      #{$this}__title
+        transform: translate(0, -45px)
+    #{$this}__title
+      @extend .h5
+      text-align: center
+      padding-top: 10px
+      padding-bottom: 10px
+      background-color: #fff
+      width: 100%      
+      margin-bottom: 0
+      bottom: 0
+      +tr(transform .3s)

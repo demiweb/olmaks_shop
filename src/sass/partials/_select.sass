@@ -1,29 +1,46 @@
 .select
   position: relative
   width: 100%
-  select
-    opacity: 0
-    visibility: hidden
+  +after
+    display: inline-block
+    +icon-arrow(7, 7, 1, $c-text, -45)
     position: absolute
+    right: 10px
+    top: 50%
+    transform: translate(0, -50%) rotate(-45deg)
+    pointer-events: none
+  select
+    // opacity: 0
+    // visibility: hidden
+    // position: absolute
+    opacity: 1
+    visibility: visible
+    position: static
+    appearance: none
+    width: 100%
+    @extend .custom-select__opener
+    +after
+      display: none
+
   &--number
     position: relative
-    +after
-      display: inline-block
-      +icon-arrow(7, 7, 1, $c-text, -45)
-      position: absolute
-      right: 10px
-      top: 50%
-      transform: translate(0, -50%) rotate(-45deg)
-      pointer-events: none
-    select
-      opacity: 1
-      visibility: visible
-      position: static
-      appearance: none
-      width: 100%
-      @extend .custom-select__opener
-      +after
-        display: none
+    // +after
+    //   display: inline-block
+    //   +icon-arrow(7, 7, 1, $c-text, -45)
+    //   position: absolute
+    //   right: 10px
+    //   top: 50%
+    //   transform: translate(0, -50%) rotate(-45deg)
+    //   pointer-events: none
+    // select
+    //   opacity: 1
+    //   visibility: visible
+    //   position: static
+    //   appearance: none
+    //   width: 100%
+    //   @extend .custom-select__opener
+    //   +after
+    //     display: none
     &::before
       content: attr(data-number)
       +inline-flex(center, center)

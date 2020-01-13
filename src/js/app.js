@@ -1,3 +1,4 @@
+import Popup from 'popup-simple';
 import setTouchClassName from './components/setTouchClassName';
 import lazyLoading from './components/lazyLoading';
 import setTabs from './components/setTabs';
@@ -18,6 +19,8 @@ import scrollTo from './components/scrollTo';
 import setCabinetNav from './components/setCabinetNav';
 import initStickyPolyfill from './components/initStickyPolyfill';
 import scaleImg from './components/scaleImg';
+import setModelGallery from './components/setModelGallery';
+
 
 
 
@@ -42,7 +45,11 @@ $(function() {
   toggleHeroSearch();
   scrollTo();
   initStickyPolyfill();
-  setCabinetNav();  
+  setCabinetNav();
+  setModelGallery();
+  
+  const popup = new Popup();
+  popup.init();
 });
 
 window.onload = () => {

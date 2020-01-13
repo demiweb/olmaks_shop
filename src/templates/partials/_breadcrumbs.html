@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      {% if page === 'product-page' %}
+      {% if page === 'product-page' or page === 'new-cart-of-car' %}
       {{ mixins.list(
         name = 'breadcrumbs',
         modifications = { wrap: 'title-underlined title-underlined--long', item: '', link: '' },

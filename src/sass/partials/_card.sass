@@ -1,0 +1,32 @@
+.card
+  height: calc(100% - 30px)
+  margin-bottom: 30px  
+  border: 1px solid  $c-border
+  &__img
+    padding-top: 100%
+    +cover
+  &__title, &__content-in
+    padding: 12px 25px
+    +sm
+      padding: 10px
+  &__title    
+    border-bottom: 1px solid  $c-border
+  &__content    
+    margin-bottom: 10px
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+  &__text
+    flex-grow: 1
+    margin-bottom: 12px
+  &__meta
+    margin-bottom: 10px
+
+.card-meta
+  +flex(flex-start, normal, row, wrap)
+  margin-bottom: -10px
+  &__item
+    width: 50%
+    margin-bottom: 10px
+    &:nth-child(odd)
+      padding-right: 5px

@@ -1,0 +1,21 @@
+---
+title: new-cart-of-car
+page: new-cart-of-car
+hero: {
+  mod: 'hero--md',
+  bgImage: 'bg-hero-new-cart-of-car.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_breadcrumbs.html" %}
+  
+  {% include "partials/_car-model.html" %}
+  {% include "partials/_s-other-models.html" %}
+
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

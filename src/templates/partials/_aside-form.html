@@ -1,0 +1,32 @@
+<!-- begin aside-search -->
+<div class="aside-search">
+  <form>
+    <div class="aside-search__inner">
+      <div class="aside-search__title">
+        <h5 class="h5 h5--sm">{{ asideSearch.title | safe }}</h5>
+      </div>
+
+      {% for i in asideSearch.fields %}
+      <div class="aside-search__field">
+        {{ mixins.input(
+          name = i.name,
+          mod = i.mod,
+          type = i.type,
+          fieldClass= i.fieldClass,
+          options = i.options,
+          attributes = i.attributes
+        ) }}
+      </div>
+      {% endfor %}
+
+      <div class="aside-search__field">
+        {{ mixins.btn(
+          title = asideSearch.btn.title or 'Пошук',
+          mod = 'btn--full btn--arrow',
+          href = false
+        ) }}
+      </div>
+    </div>
+  </form>
+</div>
+<!-- end aside-search -->

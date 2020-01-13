@@ -35,3 +35,14 @@
   .is-inactive
     pointer-events: none
     border: 0
+
+  &--right
+    text-align: right
+  &--accent
+    .prev, .next
+      border-color: transparent
+    a
+      +hover
+        background-color: $c-accent
+      &.is-active
+        background-color: $c-accent

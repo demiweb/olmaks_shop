@@ -86,6 +86,7 @@
 .components-list
   box-shadow: 0px 0px 6px 0px rgba(0, 1, 1, 0.19)
   background-color: #fff
+  margin-bottom: 30px
   &__title
     font-size: 14px
     color: #383838
@@ -118,8 +119,32 @@
   &__list
     display: none
   &__list-item
-    padding-top: 10px
-    padding-bottom: 10px
+    // padding-top: 10px
+    // padding-bottom: 10px
+    // bgc
+  &__subttl
+    display: block
+    background-color: #f5f5f5
+    width: 100%
+    padding: 10px 12px  
+    text-decoration: underline
+    position: relative
+    font-size: 14px
+    +bold
+    +tr(color .3s)
+    +hover
+      color: $c-accent
+    +before
+      +icon-arrow(10, 10, 1, currentColor, -135)
+      display: inline-block
+      position: absolute
+      top: 50%
+      right: 10px
+      transform: translate(0, -50%) rotate(-135deg)
+      +tr(transform .3s)
+    &.is-active
+      +before
+        transform: translate(0, -50%) rotate(-45deg)
   &__list-link
     +light
     font-size: 14px
@@ -131,3 +156,15 @@
     +hover
       color: $c-accent
       text-decoration: none
+  &__sublist
+    display: none
+
+.components-sublist
+  font-size: 14px
+  &__item
+    padding: 10px 12px
+  &__link
+    text-decoration: underline
+    +tr(color .3s)
+    +hover
+      color: $c-accent

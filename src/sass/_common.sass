@@ -189,6 +189,24 @@ strong
       #{$this}__icon
         +hover
           background-color: $c-text-100
+  &--combine-sm
+    @extend .btn--sm
+    +bold
+    +hover
+      #{$this}__icon
+        background-color: #282822
+    #{$this}__title
+      justify-content: center
+    #{$this}__icon
+      background-color: $c-accent
+      +before
+        height: 60%
+        width: 1px
+        background-color: #70df95
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translate(0, -50%)
   &--square
     padding: 0
     width: 40px
@@ -674,4 +692,20 @@ strong
   display: inline-block
   .icon
     fill: currentColor
+
+.top-search-line
+  +flex(space-between)
+  +sm
+    display: block
+  .select
+    width: 210px
+    margin-left: 15px
+    +sm
+      margin-left: 0
+      margin-top: 15px
+
+.color-thumb
+  width: 11px
+  height: 11px
+  display: inline-block
 

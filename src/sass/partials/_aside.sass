@@ -11,6 +11,11 @@
       +md
         &:not(.aside__block-nav)
           display: none
+  &--sticky
+    position: sticky
+    top: 0
+    +md
+      position: static
 
 .aside-filters
   font-size: 0
@@ -30,3 +35,18 @@
     color: #fff
     text-align: center
     padding: 5px
+
+.aside-search
+  background-color: #fff
+  box-shadow: 0px 0px 6px 0px rgba(0, 1, 1, 0.19)
+  margin-bottom: 30px
+  &__inner
+    padding: 30px
+    +lg
+      padding: 20px
+    +md
+      padding: 15px
+
+  &__title, &__field
+    +notlast
+      margin-bottom: 20px

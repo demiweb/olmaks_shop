@@ -75,6 +75,8 @@
   "dependencies": {
     "draggabilly": "^2.2.0",
     "interactjs": "^1.6.2",
-    "lozad": "^1.9.0"
+    "lozad": "^1.9.0",
+    "popup-simple": "^1.0.5",
+    "swiper": "^5.3.0"
   }
 }

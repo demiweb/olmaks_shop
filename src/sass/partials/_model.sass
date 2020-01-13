@@ -1,0 +1,114 @@
+.model
+  &__gallery
+    height: 100%
+    border: 1px solid  $c-border
+  &__title, &__btn
+    margin-bottom: 12px
+  &__content
+    +flex(center, normal, column)
+    height: 100%
+    padding-top: 35px
+    padding-bottom: 35px
+    +md
+      padding-top: 0
+      padding-bottom: 0
+  &__content-block
+    padding-top: 12px
+    padding-bottom: 12px
+    +notlast
+      border-bottom: 1px solid  $c-border
+
+.model-meta-list
+  .color-thumb
+    margin-left: .2em
+  dl
+    +flex(flex-start, normal, row, wrap)
+  dt, dd
+    margin-bottom: 10px
+  dt
+    width: 30%
+    padding-right: 10px
+  dd
+    width: 70%
+
+.model-gallery
+  height: 100%
+  +flex(center, normal, column)
+  padding-top: 10px
+  padding-bottom: 10px
+  &__prev,
+  &__next
+    display: inline-flex
+    justify-content: center
+    align-items: center    
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    background-color: transparent
+    +before
+      +icon-arrow(20, 20, 1, currentColor, 45)
+      display: block
+  &__prev
+    left: 45px
+    +sm
+      left: 5px
+  &__next
+    right: 45px
+    transform: translate(0, -50%) scaleX(-1)
+    +sm
+      right: 5px
+  &__slider
+    padding-left: 90px
+    padding-right: 90px
+    position: relative
+    margin-bottom: 10px
+    +sm
+      padding-left: 20px
+      padding-right: 20px
+  &__img
+    font-size: 0
+    padding-top: 60%
+    background-color: $c-gray
+    +cover
+    // img
+    //   width: 100%
+    //   min-width: 10px
+    //   min-height: 10px
+  &__thumbs
+    padding-left: 90px
+    padding-right: 90px
+    +sm
+      padding-left: 20px
+      padding-right: 20px
+  &__thumb
+    padding-top: 20%    
+    position: relative
+    background-color: $c-gray
+    +cover
+    +before
+      position: absolute
+      top: 0
+      left: 0
+      width: calc(100% - 4px)
+      height: calc(100% - 4px)
+      border: 2px solid  $c-border
+    &.swiper-slide-thumb-active
+      +before
+        border-color: $c-accent
+  &__icon
+    +flex(center, center)
+    position: absolute
+    top: 15px
+    right: 90px + 15px
+    z-index: 2
+    width: 55px
+    height: 55px
+    background-color: rgba(#000, .85)
+    color: #fff
+    pointer-events: none
+    +sm
+      right: 20px + 10px
+      top: 10px
+    .icon
+      fill: currentColor
+      font-size: 30px

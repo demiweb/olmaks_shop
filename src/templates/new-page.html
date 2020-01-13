@@ -1,0 +1,18 @@
+---
+title: new-page
+page: new-page
+hero: {
+  mod: 'hero--md',
+  bgImage: 'bg-hero-new-page.jpg'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_s-new-page.html" %}
+  
+  {% include "partials/_features.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
