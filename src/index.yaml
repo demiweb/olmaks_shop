@@ -28,3 +28,4 @@ PageList:
 - file: registration.html
 - file: car-new.html
 - file: new-cart-of-car.html
+- file: new-page.html
