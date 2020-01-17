@@ -20,7 +20,9 @@
               <div class="model__btn">
                 {{ mixins.btn(
                   title = 'замовити запчастини',
-                  mod = 'btn--sm'
+                  mod = 'btn--sm js-popup-open',
+                  href = false,
+                  attributes = { 'data-popup-target': 'order' }
                 ) }}
               </div>
 

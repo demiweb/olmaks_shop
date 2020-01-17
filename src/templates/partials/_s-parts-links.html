@@ -1,28 +1,132 @@
 {%set
 blocks = [
   {
-    models: [ { title: 'Tesla Model 3 2017 - present Tesla Model 3 2017 - present Tesla Model 3 2017 - present' }, {}, {}, {}, {} ]
+    logo: 'teslalogo',
+    title: 'Tesla',
+    models: [
+      {
+        title: 'Tesla Model 3
+2017 - present',
+        img: 'tesla-model-3-1'
+      },
+      {
+        title: 'Tesla Model S
+2012 - 2015',
+        img: 'tesla_model_s_01'
+      },
+      {
+        title: 'Tesla Model S
+from 2016',
+        img: 'tesla_model_s_01'
+      },
+      {
+        title: 'Tesla Roadster
+2008 - 2012',
+        img: 'tesla-roadster1.png.pagespeed.ce.I3bB0W88wN'
+      },
+      {
+        title: 'Tesla Model X
+2015 - present
+',
+        img: 'prevyu-1.png.pagespeed.ce.XTUvpDO8x9'
+      }
+    ]
   },
   {
-    models: [ {}, {}, {} ]
+    logo: 'bmw',
+    title: 'bmw',
+    models: [
+      {
+        title: 'BMW I3 
+(2013 - present)',
+        img: 'prevyu-10.png.pagespeed.ce.2nuB74PzO5'
+      },
+      {
+        title: 'BMW I3s 
+(2018 - 2019)',
+        img: 'prevyu-10.png.pagespeed.ce.2nuB74PzO5'
+      },
+      {
+        title: 'BMW i8 (I12)
+(2014 - present)',
+        img: 'yO0nt4ui0E'
+      }
+    ]
   },
   {
-    models: [ {} ]
+    logo: 'merc',
+    title: 'Mercedes',
+    models: [
+      {
+        title: 'Mercedes B250e
+2014 - 2017',
+        img: 'mercedesbenzb.png.pagespeed.ce.bxrl7mdgQQ'
+      }
+    ]
   },
   {
-    models: [ {} ]
+    logo: 'chevrolet-.eps-logo-vector-400x400',
+    title: 'Chevrolet',
+    models: [
+      {
+        title: 'Chevrolet Bolt EV 
+2017 - present',
+        img: 'prevyu-7.png.pagespeed.ce.NB1tCT8nPP'
+      }
+    ]
   },
   {
-    models: [ {} ]
+    logo: 'vwlogo.png.pagespeed.ce.0V8ue4i_Yk',
+    title: 'volkswagen',
+    models: [
+      {
+        title: 'Volkswagen E-golf
+2015 - present',
+        img: 'prevyu-4.png.pagespeed.ce.W2pweSi1ul'
+      }
+    ]
   },
   {
-    models: [ {}, {} ]
+    logo: 'fiatlogo.png.pagespeed.ce.IokdpGvXUK',
+    title: 'fiat',
+    models: [
+      {
+        title: 'Fiat 500e
+2013 - present',
+        img: 'prevyu-17.png.pagespeed.ce.oKQF1cuUK-'
+      },
+      {
+        title: 'Fiat 500 E-Sport
+2019 - present',
+        img: 'abarth-5002'
+      }
+    ]
+  },  
+  {
+    logo: 'kialogo.png.pagespeed.ce.Q73rnTjFp7',
+    title: 'Kia',
+    models: [
+      {
+        title: 'Kia Soul EV
+2015 - 2018',
+        img: 'kia-soul.png.pagespeed.ce.g1vT1bRMmb'
+      }
+    ]
   },
   {
-    models: [ {}, {} ]
-  },
-  {
-    models: [ {} ]
+    logo: 'nissan',
+    title: 'nissan',
+    models: [
+      {
+        title: 'Nissan Leaf 
+2011 - 2017',
+        img: 'prevyu-5-min-min.png.pagespeed.ce.YU3Se_YHxn'
+      },
+      {
+        title: '2018 - Present',
+        img: 'prevyu-2-1.png.pagespeed.ce.J5WgcqRLFe'
+      }
+    ]
   }
 ]
 %}
@@ -40,18 +144,18 @@ blocks = [
         <div class="parts-links-block">
           <div class="parts-links-block__title">
             <div class="parts-links-block__logo">
-              <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png"/>
+              <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/{{ i.logo }}.png"/>
             </div>
             
 
-            <div class="parts-links-block__label">Tesla</div>
+            <div class="parts-links-block__label">{{ i.title | safe }}</div>
           </div>
 
           <div class="parts-links-block__models">
             {% for j in i.models %}
             <div class="parts-links-block__model">
               <div class="parts-links-block__img">
-                <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png"/>
+                <img class="js-lazy" alt="" src="" data-src="./img/parts-links/{{ j.img }}.png"/>
               </div>
               
               <div class="parts-links-block__link-wrap">
