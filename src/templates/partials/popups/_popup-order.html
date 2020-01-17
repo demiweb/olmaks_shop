@@ -1,0 +1,57 @@
+<!-- begin popup -->
+<div class="popup popup--sm js-popup{% if popup.order %} popup--active{% endif %}" data-popup="order">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <h2 class="popup__title h2 h2--lg">Форма замовлення</h2>
+
+    <!-- begin form-block -->
+        <div class="popup__form form form--block">
+          <form>
+            <div class="form__row">
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm',
+                  type = 'text',
+                  placeholder = 'Введіть ваше ім’я',
+                  label = 'Ім’я<sup>*</sup>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'input',
+                  mod = 'input--sm',
+                  type = 'tel',
+                  placeholder = 'Введіть ваш телефон',
+                  label = 'Телефон<sup>*</sup>'
+                ) }}
+              </div>
+
+              <div class="form__field form__field-full">
+                {{ mixins.input(
+                  name = 'textarea',
+                  mod = '',
+                  type = '',
+                  placeholder = 'Які запчастини бажаєте придбати?',
+                  label = 'Коротке повідомлення'
+                ) }}
+              </div>
+
+              
+
+              <div class="form__field form__field-full">
+                {{ mixins.btn(
+                  title = 'Замовити',
+                  href= false,
+                  mod = 'btn--full'
+                ) }}
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end form-block -->
+  </div>
+</div>
+<!-- end popup -->

@@ -20,6 +20,7 @@ import setCabinetNav from './components/setCabinetNav';
 import initStickyPolyfill from './components/initStickyPolyfill';
 import scaleImg from './components/scaleImg';
 import setModelGallery from './components/setModelGallery';
+import setGrid from './components/setGrid';
 
 
 
@@ -50,6 +51,8 @@ $(function() {
   
   const popup = new Popup();
   popup.init();
+
+  setGrid();
 });
 
 window.onload = () => {

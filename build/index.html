@@ -3,6 +3,8 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>olmaks-shop</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <style>
     @font-face {
         font-family: 'oswald_lightregular';
@@ -24,6 +26,9 @@
       --white: #fff;
       --reg: 'oswaldregular', sans-serif;
       --light: 'oswald_lightregular',sans-serif;
+      --fz: 20px;
+      --padding-vertical: 30px;
+      --padding-sides: 30px;
     }
 
     *{
@@ -42,14 +47,14 @@
     body {
       color: var(--black);
       margin: 0;
-      padding: 0 40px;
-      font-size: 20px;
+      padding: 0;
+      font-size: var(--fz);
       line-height: 1.6;
       font-family: var(--light);
     }    
 
     section{
-      padding: 30px 0;
+      padding: var(--padding-vertical) var(--padding-sides);
     }
     
     iframe{
@@ -63,6 +68,10 @@
       z-index: 1;
       top: 100%;
       left: 50%;
+    }
+
+    .pagelist {
+      padding-left: 20px;
     }
 
     .pagelist li:not(:last-child){
@@ -97,11 +106,10 @@
     }
 
     @media (max-width: 767px){
-      body{
-        padding: 0;
-      }
-      section{
-        padding: 0;
+      :root {
+        --padding-vertical: 15px;
+        --padding-sides: 10px;
+        --fz: 18px;
       }
     }
   </style>
@@ -114,196 +122,210 @@
           <li>
             <a class="pagelist__title" target="_blank" href="home.html">
               <em>home</em>
-              <iframe width="1600" height="1000" src="home.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="home.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="home-logout.html">
               <em>home-logout</em>
-              <iframe width="1600" height="1000" src="home-logout.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="home-logout.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="product-page.html">
               <em>product-page</em>
-              <iframe width="1600" height="1000" src="product-page.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="product-page.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="search-by-part.html">
               <em>search-by-part</em>
-              <iframe width="1600" height="1000" src="search-by-part.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="search-by-part.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="search-car.html">
               <em>search-car</em>
-              <iframe width="1600" height="1000" src="search-car.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="search-car.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="search-car-category-2.html">
               <em>search-car-category-2</em>
-              <iframe width="1600" height="1000" src="search-car-category-2.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="search-car-category-2.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="search-car-category-3.html">
               <em>search-car-category-3</em>
-              <iframe width="1600" height="1000" src="search-car-category-3.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="search-car-category-3.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="delivery.html">
               <em>delivery</em>
-              <iframe width="1600" height="1000" src="delivery.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="delivery.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="cabinet.html">
               <em>cabinet</em>
-              <iframe width="1600" height="1000" src="cabinet.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="cabinet.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="contacts.html">
               <em>contacts</em>
-              <iframe width="1600" height="1000" src="contacts.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="contacts.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="cart.html">
               <em>cart</em>
-              <iframe width="1600" height="1000" src="cart.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="cart.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="about.html">
               <em>about</em>
-              <iframe width="1600" height="1000" src="about.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="about.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="conditions.html">
               <em>conditions</em>
-              <iframe width="1600" height="1000" src="conditions.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="conditions.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="application.html">
               <em>application</em>
-              <iframe width="1600" height="1000" src="application.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="application.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="authorization.html">
               <em>authorization</em>
-              <iframe width="1600" height="1000" src="authorization.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="authorization.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="password-change.html">
               <em>password-change</em>
-              <iframe width="1600" height="1000" src="password-change.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="password-change.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="password-restored.html">
               <em>password-restored</em>
-              <iframe width="1600" height="1000" src="password-restored.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="password-restored.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="password-new.html">
               <em>password-new</em>
-              <iframe width="1600" height="1000" src="password-new.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="password-new.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="success.html">
               <em>success</em>
-              <iframe width="1600" height="1000" src="success.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="success.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="404.html">
               <em>404</em>
-              <iframe width="1600" height="1000" src="404.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="404.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="email-send.html">
               <em>email-send</em>
-              <iframe width="1600" height="1000" src="email-send.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="email-send.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="news.html">
               <em>news</em>
-              <iframe width="1600" height="1000" src="news.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="news.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="confidentiality.html">
               <em>confidentiality</em>
-              <iframe width="1600" height="1000" src="confidentiality.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="confidentiality.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="empty-cart.html">
               <em>empty-cart</em>
-              <iframe width="1600" height="1000" src="empty-cart.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="empty-cart.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="registration.html">
               <em>registration</em>
-              <iframe width="1600" height="1000" src="registration.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="registration.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="car-new.html">
               <em>car-new</em>
-              <iframe width="1600" height="1000" src="car-new.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="car-new.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="new-cart-of-car.html">
               <em>new-cart-of-car</em>
-              <iframe width="1600" height="1000" src="new-cart-of-car.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="new-cart-of-car.html"  frameborder="0"></iframe>
             </a>            
           </li>
         
           <li>
             <a class="pagelist__title" target="_blank" href="new-page.html">
               <em>new-page</em>
-              <iframe width="1600" height="1000" src="new-page.html"  frameborder="0"></iframe>
+              <iframe width="1600" height="1000" data-src="new-page.html"  frameborder="0"></iframe>
+            </a>            
+          </li>
+        
+          <li>
+            <a class="pagelist__title" target="_blank" href="home-2.html">
+              <em>home-2</em>
+              <iframe width="1600" height="1000" data-src="home-2.html"  frameborder="0"></iframe>
+            </a>            
+          </li>
+        
+          <li>
+            <a class="pagelist__title" target="_blank" href="popup-order.html">
+              <em>popup-order</em>
+              <iframe width="1600" height="1000" data-src="popup-order.html"  frameborder="0"></iframe>
             </a>            
           </li>
           
@@ -315,12 +337,38 @@
       return 'ontouchstart' in window || navigator.maxTouchPoints;
     };
 
-    function setTouchClassName() {      
+    function setTouchClassName() {
       if(!isTouch()) {
         document.documentElement.classList.add('no-touch');
       };
     };
+
+    function loadIframe() {
+      var links = [].slice.call(document.querySelectorAll('.pagelist__title'));
+
+      if(!links.length) return;
+
+      links.forEach(function(link) {
+        var iframe = link.querySelector('iframe');
+        var src = iframe.dataset.src;
+        if(!src) return;
+
+
+
+        link.addEventListener('mouseenter', function (e) {
+         iframe.setAttribute('src', src);
+       });
+        link.addEventListener('mouseleave', function (e) {
+          setTimeout(function(){
+            iframe.removeAttribute('src');
+          }, 100);
+          
+        });
+      });
+    };
+
     setTouchClassName();
+    loadIframe();
   </script>
 </body>
 </html>

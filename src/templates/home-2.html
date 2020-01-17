@@ -1,0 +1,29 @@
+---
+title: home-2
+page: home-2
+hero: {
+  mod: 'hero--lg',
+  bgBlock: 'bg-hero-lg.jpg',
+  title: 'пошук запчастин',
+  subttl: 'Великий вибір нових та б/у запчастин для вашого автомобіля'  
+}
+search: {
+  lg: true
+}
+partsSection: {
+  title: 'запчастини та аксесуари для твого електромобіля'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_features.html" %}
+  
+  {% include "partials/_s-parts-links.html" %}
+
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+

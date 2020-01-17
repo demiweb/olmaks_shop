@@ -1,6 +1,7 @@
 .popup
+  $this: &
   position: fixed
-  z-index: 15
+  z-index: 30
   top: 0
   bottom: 0
   left: 0
@@ -20,6 +21,9 @@
     background-color: #fff
     padding: 50px 20px
     position: relative
+    +sm
+      padding-left: 15px
+      padding-right: 15px
     +xs
       font-size: 14px
   &__close
@@ -31,6 +35,23 @@
     +tr(color .3s)
     +hover
       color: $c-accent
+  &__form
+    text-align: left
+  &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+
   &--active
     visibility: visible
     opacity: 1
+  &--sm
+    #{$this}__inner
+      max-width: 570px
+      padding: 50px
+      +md
+        padding-left: 25px
+        padding-right: 25px
+      +sm
+        padding-left: 15px
+        padding-right: 15px

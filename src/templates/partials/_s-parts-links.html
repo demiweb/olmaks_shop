@@ -1,0 +1,78 @@
+{%set
+blocks = [
+  {
+    models: [ { title: 'Tesla Model 3 2017 - present Tesla Model 3 2017 - present Tesla Model 3 2017 - present' }, {}, {}, {}, {} ]
+  },
+  {
+    models: [ {}, {}, {} ]
+  },
+  {
+    models: [ {} ]
+  },
+  {
+    models: [ {} ]
+  },
+  {
+    models: [ {} ]
+  },
+  {
+    models: [ {}, {} ]
+  },
+  {
+    models: [ {}, {} ]
+  },
+  {
+    models: [ {} ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title h2 h2--lg title-underlined title-underlined--long">доступні запчастини та аксесуари для вашого електромобіля:</h2>
+
+    <!-- begin parts-links -->
+    <div class="parts-links-blocks js-grid">
+      {% for i in blocks %}
+      <div class="parts-links-blocks__block js-grid-item">
+        <!-- begin parts-links-block -->
+        <div class="parts-links-block">
+          <div class="parts-links-block__title">
+            <div class="parts-links-block__logo">
+              <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png"/>
+            </div>
+            
+
+            <div class="parts-links-block__label">Tesla</div>
+          </div>
+
+          <div class="parts-links-block__models">
+            {% for j in i.models %}
+            <div class="parts-links-block__model">
+              <div class="parts-links-block__img">
+                <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png"/>
+              </div>
+              
+              <div class="parts-links-block__link-wrap">
+                <a href="#" class="parts-links-block__link">
+                  {% if j.title %}
+                  {{ j.title }}
+                  {% else %}
+                  Tesla Model 3 2017 - present
+                  {% endif %}
+                </a>
+              </div>
+              
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- end parts-links-block -->
+     </div>
+      {% endfor %}
+    </div>
+    <!-- end parts-links -->
+  </div>
+</section>
+<!-- end section -->
