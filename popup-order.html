@@ -2,14 +2,14 @@
 <html class="">
   <head>
     <meta charset="utf-8" />
-    <title>registration</title>
+    <title>popup-order</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
-  <body>
+  <body class="no-scroll">
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
@@ -350,80 +350,465 @@
         </div>
       </header>
       <!-- end header -->
-      <!-- begin section -->
-      <section class="section section--simple section--color">
+      <!-- begin hero -->
+      <section class="hero hero--lg">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
-              <div class="section__title is-center">
-                <h2 class="h2 h2--lg">Реєстрація аккаунта</h2>
+            <div class="col-12">
+              <div class="hero__block">
+                <div class="hero__title title-underlined title-underlined--center title-underlined--white">
+                  <h1 class="h1">пошук запчастин</h1>
+                  <div class="text text--white text--ttu">Великий вибір нових та б/у запчастин для вашого автомобіля</div>
+                </div>
               </div>
-              <!-- begin form-block -->
-              <div class="form-block form-block--sm form form--block">
-                <form>
-                  <div class="form-block__title">
-                    <h5 class="h5 h5--ttn">Введіть ПІБ, E-mail та пароль</h5>
+            </div>
+            <div class="col-12">
+              <!-- begin search -->
+              <a href="#" class="search-toggle btn btn--full btn--arrow js-toggle-hero-search">Підбір по марці авто</a>
+              <div class="search__wrap js-search-fixed">
+                <a href="#" class="search__close js-search-fixed-close"></a>
+                <div class="search js-tabs">
+                  <div class="search__tabs">
+                    <a href="#" class="search__tab is-active js-tab" data-target-tab="model">пошук по марці авто</a>
+                    <a href="#" class="search__tab js-tab" data-target-tab="number">пошук по номеру запчастини</a>
                   </div>
-                  <div class="form__row">
-                    <div class="form__field form__field-full">
-                      <!-- begin input -->
-                      <div class="input input--sm">
-                        <label>ПІБ<sup>*</sup></label>
-                        <input type="text" placeholder="Введіть ПІБ">
+                  <div class="search__content">
+                    <div class="search__block js-tabs-item is-active" data-tab="model">
+                      <!-- begin form -->
+                      <div class="form form--hor">
+                        <form>
+                          <div class="form__field">
+                            <!-- begin select -->
+                            <div class="select select--number" data-number="1">
+                              <select class="js-select has-placeholder" data-type="default">
+                                <option value="placeholder">Оберіть рік ...</option>
+                                <option value="рік">рік</option>
+                                <option value="рік">рік</option>
+                                <option value="рік">рік</option>
+                              </select>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="form__field">
+                            <!-- begin select -->
+                            <div class="select select--number" data-number="2">
+                              <select class="js-select has-placeholder" data-type="default">
+                                <option value="placeholder">Марка ...</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                                <option value="Марка">Марка</option>
+                              </select>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="form__field">
+                            <!-- begin select -->
+                            <div class="select select--number" data-number="3">
+                              <select class="js-select has-placeholder" data-type="default">
+                                <option value="placeholder">Модель ...</option>
+                                <option value="Модель">Модель Модель Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                                <option value="Модель">Модель</option>
+                              </select>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="form__field">
+                            <!-- begin select -->
+                            <div class="select select--number" data-number="4">
+                              <select class="js-select has-placeholder" data-type="default">
+                                <option value="placeholder">Комплектація ...</option>
+                                <option value="Комплектація">Комплектація</option>
+                                <option value="Комплектація">Комплектація</option>
+                              </select>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="form__field form__field-lg-100">
+                            <button class="btn btn--lg btn--arrow btn--full">пошук запчастин</button>
+                          </div>
+                        </form>
                       </div>
-                      <!-- end input -->
+                      <!-- end form -->
                     </div>
-                    <div class="form__field form__field-full">
-                      <!-- begin input -->
-                      <div class="input input--sm">
-                        <label>Телефон<sup>*</sup></label>
-                        <input type="tel" placeholder="Введіть телефон">
+                    <div class="search__block js-tabs-item" data-tab="number">
+                      <!-- begin form -->
+                      <div class="form form--hor">
+                        <form>
+                          <div class="form__field form__field-4 form__field-lg-100">
+                            <!-- begin input -->
+                            <div class="input input--lg">
+                              <input type="text">
+                            </div>
+                            <!-- end input -->
+                          </div>
+                          <div class="form__field form__field-lg-100">
+                            <button class="btn btn--lg btn--arrow btn--full">пошук запчастин</button>
+                          </div>
+                        </form>
                       </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field form__field-full">
-                      <!-- begin input -->
-                      <div class="input input--sm">
-                        <label>E-mail<sup>*</sup></label>
-                        <input type="email" placeholder="Введіть E-mail">
-                      </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field form__field-full">
-                      <!-- begin input -->
-                      <div class="input input--sm input--password">
-                        <label>Новий пароль<sup>*</sup></label>
-                        <input type="password" placeholder="ВВведіть пароль">
-                        <button class="js-password-toggle"><span>Показати</span> <span>Сховати</span></button>
-                      </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field form__field-full">
-                      <!-- begin input -->
-                      <div class="input input--sm input--password">
-                        <label>Підтвердження нового паролю<sup>*</sup></label>
-                        <input type="password" placeholder="ВВведіть пароль">
-                        <button class="js-password-toggle"><span>Показати</span> <span>Сховати</span></button>
-                      </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field form__field-full">
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        <span>Підписатися на новини</span>
-                      </label>
-                    </div>
-                    <div class="form__field form__field-full">
-                      <button class="btn btn--full">увійти в свій аккаунт</button>
-                      <div class="form__conf"> Створюючи новий аккаунт випогоджуєтесь з нашими <a href="#">умовами</a>
-                      </div>
+                      <!-- end form -->
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
-              <!-- end form-block -->
+              <!-- end search -->
             </div>
           </div>
+        </div>
+        <div class="hero__bg js-lazy" data-background-image="img/hero/bg-hero-lg.jpg"></div>
+      </section>
+      <!-- end hero -->
+      <!-- begin features -->
+      <section class="features">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <!-- begin feature -->
+              <div class="feature">
+                <div class="feature__icon">
+                  <!-- begin icon-security -->
+                  <svg height="1em" viewBox="-41 0 374 374.10622" width="1.000em" class="icon icon-security">
+                    <path d="M287.664 75.746L147.06.824a6.986 6.986 0 0 0-6.657.04L3.688 75.784a7 7 0 0 0-3.633 6.14v97.868c.082 80.45 47.746 153.23 121.457 185.46l18.976 8.27a6.992 6.992 0 0 0 5.57.008l21.383-9.234c75.079-31.531 123.922-105.016 123.93-186.445V81.926a7.003 7.003 0 0 0-3.707-6.18zm-10.293 102.106c-.016 75.816-45.504 144.226-115.41 173.566l-.047.023-18.621 8.04-16.18-7.06C58.5 322.422 14.13 254.68 14.051 179.794V86.07l129.762-71.117L277.37 86.121zm0 0" />
+                    <path d="M92.168 175.254a7 7 0 0 0-9.871-.777 6.995 6.995 0 0 0-.777 9.867l36.976 43.3a6.998 6.998 0 0 0 9.738.887l86.118-70.062a7 7 0 0 0-8.836-10.86l-80.813 65.743zm0 0" />
+                  </svg>
+                  <!-- end icon-security -->
+                </div>
+                <div class="feature__content">
+                  <div class="feature__title">Гарантована якість</div>
+                  <div class="feature__text">Завжди правильна частина</div>
+                </div>
+              </div>
+              <!-- end feature -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- begin feature -->
+              <div class="feature">
+                <div class="feature__icon">
+                  <!-- begin icon-security -->
+                  <svg height="1em" viewBox="-41 0 374 374.10622" width="1.000em" class="icon icon-security">
+                    <path d="M287.664 75.746L147.06.824a6.986 6.986 0 0 0-6.657.04L3.688 75.784a7 7 0 0 0-3.633 6.14v97.868c.082 80.45 47.746 153.23 121.457 185.46l18.976 8.27a6.992 6.992 0 0 0 5.57.008l21.383-9.234c75.079-31.531 123.922-105.016 123.93-186.445V81.926a7.003 7.003 0 0 0-3.707-6.18zm-10.293 102.106c-.016 75.816-45.504 144.226-115.41 173.566l-.047.023-18.621 8.04-16.18-7.06C58.5 322.422 14.13 254.68 14.051 179.794V86.07l129.762-71.117L277.37 86.121zm0 0" />
+                    <path d="M92.168 175.254a7 7 0 0 0-9.871-.777 6.995 6.995 0 0 0-.777 9.867l36.976 43.3a6.998 6.998 0 0 0 9.738.887l86.118-70.062a7 7 0 0 0-8.836-10.86l-80.813 65.743zm0 0" />
+                  </svg>
+                  <!-- end icon-security -->
+                </div>
+                <div class="feature__content">
+                  <div class="feature__title">сертифіковано</div>
+                  <div class="feature__text">Текст опис переваги компанії</div>
+                </div>
+              </div>
+              <!-- end feature -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- begin feature -->
+              <div class="feature">
+                <div class="feature__icon">
+                  <!-- begin icon-security -->
+                  <svg height="1em" viewBox="-41 0 374 374.10622" width="1.000em" class="icon icon-security">
+                    <path d="M287.664 75.746L147.06.824a6.986 6.986 0 0 0-6.657.04L3.688 75.784a7 7 0 0 0-3.633 6.14v97.868c.082 80.45 47.746 153.23 121.457 185.46l18.976 8.27a6.992 6.992 0 0 0 5.57.008l21.383-9.234c75.079-31.531 123.922-105.016 123.93-186.445V81.926a7.003 7.003 0 0 0-3.707-6.18zm-10.293 102.106c-.016 75.816-45.504 144.226-115.41 173.566l-.047.023-18.621 8.04-16.18-7.06C58.5 322.422 14.13 254.68 14.051 179.794V86.07l129.762-71.117L277.37 86.121zm0 0" />
+                    <path d="M92.168 175.254a7 7 0 0 0-9.871-.777 6.995 6.995 0 0 0-.777 9.867l36.976 43.3a6.998 6.998 0 0 0 9.738.887l86.118-70.062a7 7 0 0 0-8.836-10.86l-80.813 65.743zm0 0" />
+                  </svg>
+                  <!-- end icon-security -->
+                </div>
+                <div class="feature__content">
+                  <div class="feature__title">сертифіковано</div>
+                  <div class="feature__text">Текст опис переваги компанії</div>
+                </div>
+              </div>
+              <!-- end feature -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- begin feature -->
+              <div class="feature">
+                <div class="feature__icon">
+                  <!-- begin icon-security -->
+                  <svg height="1em" viewBox="-41 0 374 374.10622" width="1.000em" class="icon icon-security">
+                    <path d="M287.664 75.746L147.06.824a6.986 6.986 0 0 0-6.657.04L3.688 75.784a7 7 0 0 0-3.633 6.14v97.868c.082 80.45 47.746 153.23 121.457 185.46l18.976 8.27a6.992 6.992 0 0 0 5.57.008l21.383-9.234c75.079-31.531 123.922-105.016 123.93-186.445V81.926a7.003 7.003 0 0 0-3.707-6.18zm-10.293 102.106c-.016 75.816-45.504 144.226-115.41 173.566l-.047.023-18.621 8.04-16.18-7.06C58.5 322.422 14.13 254.68 14.051 179.794V86.07l129.762-71.117L277.37 86.121zm0 0" />
+                    <path d="M92.168 175.254a7 7 0 0 0-9.871-.777 6.995 6.995 0 0 0-.777 9.867l36.976 43.3a6.998 6.998 0 0 0 9.738.887l86.118-70.062a7 7 0 0 0-8.836-10.86l-80.813 65.743zm0 0" />
+                  </svg>
+                  <!-- end icon-security -->
+                </div>
+                <div class="feature__content">
+                  <div class="feature__title">сертифіковано</div>
+                  <div class="feature__text">Текст опис переваги компанії</div>
+                </div>
+              </div>
+              <!-- end feature -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end features -->
+      <!-- begin section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title h2 h2--lg title-underlined title-underlined--long">доступні запчастини та аксесуари для вашого електромобіля:</h2>
+          <!-- begin parts-links -->
+          <div class="parts-links-blocks js-grid">
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present Tesla Model 3 2017 - present Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+            <div class="parts-links-blocks__block js-grid-item">
+              <!-- begin parts-links-block -->
+              <div class="parts-links-block">
+                <div class="parts-links-block__title">
+                  <div class="parts-links-block__logo">
+                    <img class="js-lazy" alt="" src="" data-src="./img/brand-logos/teslalogo.png" />
+                  </div>
+                  <div class="parts-links-block__label">Tesla</div>
+                </div>
+                <div class="parts-links-block__models">
+                  <div class="parts-links-block__model">
+                    <div class="parts-links-block__img">
+                      <img class="js-lazy" alt="" src="" data-src="./img/tesla-model-3-1.png" />
+                    </div>
+                    <div class="parts-links-block__link-wrap">
+                      <a href="#" class="parts-links-block__link"> Tesla Model 3 2017 - present </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end parts-links-block -->
+            </div>
+          </div>
+          <!-- end parts-links -->
         </div>
       </section>
       <!-- end section -->
@@ -504,7 +889,7 @@
     </div>
     <!-- end popup -->
     <!-- begin popup -->
-    <div class="popup popup--sm js-popup" data-popup="order">
+    <div class="popup popup--sm js-popup popup--active" data-popup="order">
       <div class="popup__inner">
         <button class="popup__close js-popup-close"></button>
         <h2 class="popup__title h2 h2--lg">Форма замовлення</h2>
