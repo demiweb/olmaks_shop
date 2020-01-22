@@ -183,6 +183,7 @@
       width: 100%
 
 .parts-links-block
+  $this: &
   border: 1px solid  $c-border
   border-bottom: 0
   &__title
@@ -207,6 +208,10 @@
     +flex
     padding: 15px
     border-bottom: 1px solid  $c-border
+    +hover
+      #{$this}__link
+        text-decoration: underline
+        color: $c-accent
     +md
       padding: 10px 15px
   &__img
@@ -228,8 +233,5 @@
       +vcenter
   &__link
     +tr(color .3s)
-    +hover
-      color: $c-accent
-      text-decoration: underline
   &__link-wrap
     +flex(center, normal, column)

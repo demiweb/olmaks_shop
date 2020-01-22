@@ -153,22 +153,22 @@ from 2016',
 
           <div class="parts-links-block__models">
             {% for j in i.models %}
-            <div class="parts-links-block__model">
-              <div class="parts-links-block__img">
+            <a href="#" class="parts-links-block__model">
+              <span class="parts-links-block__img">
                 <img class="js-lazy" alt="" src="" data-src="./img/parts-links/{{ j.img }}.png"/>
-              </div>
+              </span>
               
-              <div class="parts-links-block__link-wrap">
-                <a href="#" class="parts-links-block__link">
+              <span class="parts-links-block__link-wrap">
+                <span class="parts-links-block__link">
                   {% if j.title %}
                   {{ j.title }}
                   {% else %}
                   Tesla Model 3 2017 - present
                   {% endif %}
-                </a>
-              </div>
+                </span>
+              </span>
               
-            </div>
+            </a>
             {% endfor %}
           </div>
         </div>
