@@ -184,15 +184,15 @@
 
 .parts-links-block
   $this: &
-  border: 1px solid  $c-border
-  border-bottom: 0
+  border-bottom: 0  
   &__title
     +flex(flex-start, center)
     +bold
     text-transform: uppercase
     padding: 8px 20px
     background-color: #f6f6f6
-    border-bottom: 1px solid  $c-border
+    border: 1px solid  $c-border
+    margin-bottom: 10px
     +md
       padding: 8px 15px
   &__logo
@@ -207,13 +207,32 @@
   &__model
     +flex
     padding: 15px
-    border-bottom: 1px solid  $c-border
+    border: 1px solid  $c-border
+    margin-bottom: 10px
+    position: relative
+    +tr(background-color .3s, transform .3s)
     +hover
+      // background-color: $c-black
       #{$this}__link
         text-decoration: underline
         color: $c-accent
+      #{$this}__img
+        transform: translate(10px, 0)
+      #{$this}__model-bg
+        visibility: visible
+        opacity: 1
+        transform: translate(-50%, -50%) scale(1.02)
     +md
       padding: 10px 15px
+  &__model-bg    
+    +vcenter
+    width: 100%
+    height: 100%
+    z-index: 0
+    background-color: $c-black
+    +tr(oacity .3s, visibiltiy .3s, transform .3s)
+    opacity: 0
+    visibility: hidden
   &__img
     // +flex(center, normal, column)
     flex: 0 0 154px
@@ -221,6 +240,8 @@
     margin-right: 45px
     font-size: 0
     position: relative
+    z-index: 1
+    +tr(transform .3s)
     +lg
       flex: 0 0 100px
       margin-right: 20px
@@ -235,3 +256,5 @@
     +tr(color .3s)
   &__link-wrap
     +flex(center, normal, column)
+    position: relative
+    z-index: 1
