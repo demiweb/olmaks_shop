@@ -1,4 +1,3 @@
-import Popup from 'popup-simple';
 import setTouchClassName from './components/setTouchClassName';
 import lazyLoading from './components/lazyLoading';
 import setTabs from './components/setTabs';
@@ -22,7 +21,7 @@ import scaleImg from './components/scaleImg';
 import setModelGallery from './components/setModelGallery';
 import setGrid from './components/setGrid';
 
-
+import MyPopup from './components/setPopups';
 
 
 // import setStickyPanels from './components/setStickyPanels';
@@ -49,7 +48,7 @@ $(function() {
   setCabinetNav();
   setModelGallery();
   
-  const popup = new Popup();
+  const popup = new MyPopup();
   popup.init();
 
   setGrid();
@@ -60,3 +59,5 @@ window.onload = () => {
     scaleImg();
   }, 1000);  
 };
+
+
