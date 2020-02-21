@@ -23,8 +23,6 @@ import setGrid from './components/setGrid';
 
 import setPopups from './components/setPopups';
 
-import './lib/js-cloudimage-360-view';
-
 
 
 // import setStickyPanels from './components/setStickyPanels';
