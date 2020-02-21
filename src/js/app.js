@@ -21,7 +21,10 @@ import scaleImg from './components/scaleImg';
 import setModelGallery from './components/setModelGallery';
 import setGrid from './components/setGrid';
 
-import MyPopup from './components/setPopups';
+import setPopups from './components/setPopups';
+
+import './lib/js-cloudimage-360-view';
+
 
 
 // import setStickyPanels from './components/setStickyPanels';
@@ -48,8 +51,7 @@ $(function() {
   setCabinetNav();
   setModelGallery();
   
-  const popup = new MyPopup();
-  popup.init();
+  setPopups();
 
   setGrid();
 });

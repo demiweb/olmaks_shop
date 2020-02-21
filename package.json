@@ -75,6 +75,7 @@
   "dependencies": {
     "draggabilly": "^2.2.0",
     "interactjs": "^1.6.2",
+    "js-cloudimage-360-view": "^2.3.2",
     "lozad": "^1.9.0",
     "masonry-layout": "^4.2.2",
     "popup-simple": "^1.0.5",
