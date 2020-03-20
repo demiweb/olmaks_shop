@@ -1,22 +1,25 @@
 <!-- begin model-gallery -->
 <div class="model-gallery">
   <div class="model-gallery__slider">
-    <div class="model-gallery__icon">
+    <button
+      class="model-gallery__icon js-popup-open"
+      data-popup-target="gallery"
+      data-image-list='["360rotate/bmw/bmw_001.webp", "360rotate/bmw/bmw_002.webp", "360rotate/bmw/bmw_003.webp", "360rotate/bmw/bmw_004.webp"]'
+    >
       {{ mixins.icon('360-degrees') }}
-    </div>
+    </button>
 
     <div
       class="swiper-container js-model-gallery-slider"
-      data-image-list='["360rotate/bmw/bmw_001.webp", "360rotate/bmw/bmw_002.webp", "360rotate/bmw/bmw_003.webp", "360rotate/bmw/bmw_004.webp"]'
     >
       <div class="swiper-wrapper">
         {% for i in range(0, 5) %}
-        <button
-          class="swiper-slide model-gallery__img js-popup-open js-lazy"
-          data-popup-target="gallery"
+        <div
+          class="swiper-slide model-gallery__img js-lazy"
+          
           data-background-image="./img/model-gallery/863.jpg"
           >
-        </button> 
+        </div>
         {% endfor %}
       </div>
     </div>

@@ -8,13 +8,20 @@ class MyPopup extends Popup {
   }
   onOpen() {
     if (this.name === 'gallery') {
-      if (this.spinnerInited) return;
+      if (this.spinnerInited) return;      
 
-      this.gallery = this.btn.closest('.js-model-gallery-slider');
+      // this.gallery = this.btn.closest('.js-model-gallery-slider');
       this.spinner = this.popup.querySelector('.js-spinner');
-      if(!this.gallery || !this.spinner) return;
+      // if(!this.gallery || !this.spinner) return;
+      if(!this.spinner) return;
+      
 
-      this.spinnerSource = this.gallery.dataset.imageList;
+      this.spinnerSource = this.btn.dataset.imageList;
+      if (!this.spinnerSource) {
+        console.error('`data-image-list` attribute is empty on', this.btn );        
+        return;
+      }
+      
       this.spinner.setAttribute('data-image-list', this.spinnerSource);
 
       window.CI360.init();
